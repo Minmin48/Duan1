@@ -33,10 +33,10 @@
                         <a href="index.php?act=listkhoahoc"><i class="fa-solid fa-book"></i> Quản lý khóa học</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-solid fa-landmark"></i> Quản lý lớp học </a>
+                        <a href="index.php?act=listlop"><i class="fa-solid fa-landmark"></i> Quản lý lớp học </a>
                     </li>
                     <li>
-                        <a href="index.php?act=addgv"><i class="fa-solid fa-user"></i> Quản lý giảng viên</a>
+                        <a href="index.php?act=listgv"><i class="fa-solid fa-user"></i> Quản lý giảng viên</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa-solid fa-circle-user"></i> Quản lý người dùng</a>

@@ -105,17 +105,70 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $tengv = $_POST['name'];
                 $hinh = $_FILES['hinh'];
                 $text = $_POST['text'];
-                $malop = $_POST['trangthai'];
                 if (isset($hinh)) {
                     $dir = "../img/";
                     $anh = $hinh['name'];
                     $file = $dir . $anh;
                     move_uploaded_file($hinh['tmp_name'], $file);
-                    add_giangvien($tengv, $anh, $text, $malop);
+                    add_giangvien($tengv, $anh, $text);
                     $thongbao = "Thêm thành công";
                 }
             }
             include_once "giangvien/add.php";
+            break;
+        case 'listgv':
+            include_once "giangvien/list.php";
+            break;
+        case 'deletegv':
+            $id = $_GET['id'];
+            delete_giangvien($id);
+            include_once "giangvien/list.php";
+            break;
+        case 'updategv':
+            if (isset($_GET['id']) && $_GET['id']) {
+                $id = $_GET['id'];
+                $sua = getid_giangvien($id);
+                include_once "giangvien/update.php";
+            }
+            if (isset($_POST['update']) && $_POST['update']) {
+                $tengv = $_POST['name'];
+                $text = $_POST['text'];
+                $hinh = $_FILES['hinh']['name'];
+                $id = $_POST['id'];
+                $sua = getid_giangvien($id);
+                if (!empty($hinh)) {
+                    $dir = "../img/";
+                    $file = $dir . $hinh;
+                    move_uploaded_file($_FILES['hinh']['tmp_name'], $file);
+                } else {
+                    $hinh = $sua['hinh_gv'];
+                }
+                update_giangvien($id, $tengv, $text, $hinh);
+                include_once "giangvien/list.php";
+                echo '<span>Cập nhật thành công</span>';
+            }
+            break;
+            //Lớp
+        case 'addlop':
+            if (isset($_POST['submit']) && ($_POST['submit'])) {
+                $tenlop = $_POST['lop'];
+                $thoigian = $_POST['thoigian'];
+                $cahoc = $_POST['cahoc'];
+                $khoahoc = $_POST['dmkhoahoc'];
+                $giangvien = $_POST['dmgiangvien'];
+                $soluong = $_POST['soluong'];
+                add_lop($tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong);
+                $thongbao = "Thêm thành công";
+            }
+            include_once "lop/add.php";
+            break;
+        case 'listlop':
+            include_once "lop/list.php";
+            break;
+        case 'deletelop':
+            $id = $_GET['id'];
+            delete_lop($id);
+            include_once 'lop/list.php';
             break;
         default:
             include_once "home.php";

@@ -15,14 +15,10 @@
             <label class="form-label" for="">Thông Tin Giảng Viên</label>
             <textarea class="form-control" name="text" cols="20" rows="6"></textarea>
         </div>
-        <div class="form-group">
-            <label class="form-label" for="">Mã Lớp</label>
-            <input type="text" name="trangthai" class="form-control">
-        </div>
 
         <div class="form-group">
             <input class="btn btn-primary" type="submit" name="submit" value="THÊM MỚI">
-            <a class="btn btn-success" href="index.php?act=listdm">DANH SÁCH</a>
+            <a class="btn btn-success" href="index.php?act=listgv">DANH SÁCH</a>
         </div>
         <?php
         if (isset($thongbao) && ($thongbao != ""))
