@@ -1,162 +1,171 @@
-<!--FOOTER-->
-<footer>
-    <div id="lgx-footer" class="lgx-footer">
-        <div class="lgx-getintouch-area">
-            <div class="lgx-getintouch-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h3 class="lgx-getintouch">
-                                If you Have Any Questions Call Us On <span>(088)920-456-7890</span>
-                                <a class="lgx-btn lgx-btn-contact rippler rippler-default" href="contact.html">Get In Touch</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lgx-footer-middle"> <!--lgx-footer-middle-white-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lgx-footer-single">
-                            <a class="logo" href="index.html"><img src="assets/img/logo2.png" alt="Logo"></a>
-                            <address>
-                                51 Francis Street, Darlinghurst <br>
-                                NSW 2010, United States
-                            </address>
-                            <ul class="list-unstyled lgx-address-info">
-                                <li><i class="fa fa-phone"></i>+61 1900 654 368</li>
-                                <li><i class="fa fa-envelope"></i><a href="https://themearth.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1beb7b7b8b2b491b4b5a4b2b0a5b8bebfa1bda4a2ffb2bebc">[email&#160;protected]</a></li>
-                                <li><i class="fa fa-envelope"></i><a href="https://themearth.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f101919161c1a4d3f1a1b0a1c1e0b1610110f130a0c511c1012511e0a">[email&#160;protected]</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lgx-footer-single">
-                            <h2 class="title">The Education</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#">Admision Area</a></li>
-                                <li><a href="#">Guidance Documents</a></li>
-                                <li><a href="#">Help Desk</a></li>
-                                <li><a href="#">FAQ Area</a></li>
-                                <li><a href="#">Professional Point</a></li>
-                                <li><a href="#">Courses in Education</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lgx-footer-single">
-                            <h2 class="title">Cources</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#">Interactive Python</a></li>
-                                <li><a href="#">Advance Oracle</a></li>
-                                <li><a href="#">Basic PHP</a></li>
-                                <li><a href="#">Electronics</a></li>
-                                <li><a href="#">Java Resources</a></li>
-                                <li><a href="#">Courses Education</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lgx-footer-single">
-                            <h2 class="title">Instagram Feed</h2>
-                            <div id="instafeed">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lgx-footer-bottom">
-                    <div class="lgx-copyright">
-                        <ul class="list-inline">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                        <p>© 2017 EducationPlus is powered by <a href="http://www.themearth.com/">themearth.</a> Brands are the property of their respective owners.</p>
-                    </div>
-                    <ul class=" list-inline lgx-social-footer">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                    </ul>
-                </div>
+       <!-- Footer Start -->
+       <div class="footer-section section">
+           <div class="container">
 
-            </div>
-            <!-- //.CONTAINER -->
-        </div>
-        <!-- //.footer Middle -->
-    </div>
-</footer>
-<!--FOOTER END-->
+               <!-- Footer Widget Wrapper Start -->
+               <div class="footer-widget-wrap">
+                   <div class="row">
 
+                       <div class="col-lg-3 col-sm-6">
+                           <!-- Footer Widget Start -->
+                           <div class="footer-widget widget-about">
+                               <div class="footer-logo">
+                                   <a href="index.html"><img src="assets/images/logo-white.png" alt=""></a>
+                               </div>
+                               <p class="text">World largest online learning platform. Download our apps to start learning.</p>
+                               <div class="widget-info">
+                                   <div class="info-icon">
+                                       <i class="flaticon-phone-call"></i>
+                                   </div>
+                                   <div class="info-text">
+                                       <p class="call-text">Call Us Free</p>
+                                       <a href="tel:+91458654528">+91 458 654 528</a>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- Footer Widget End -->
+                       </div>
 
-</div>
-<!--//.LGX SITE CONTAINER-->
-<!-- *** ADD YOUR SITE SCRIPT HERE *** -->
-<!-- JQUERY  -->
-<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+                       <div class="col-lg-3 col-sm-6">
+                           <!-- Footer Widget Start -->
+                           <div class="footer-widget">
+                               <h4 class="footer-widget-title">Trending Courses</h4>
+                               <div class="widget-link">
+                                   <ul class="link">
+                                       <li><a href="index.html">Home </a></li>
+                                       <li><a href="#">Pricing</a></li>
+                                       <li><a href="about.html">Compare plans</a></li>
+                                       <li><a href="contact.html">Contact us</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <!-- Footer Widget End -->
+                       </div>
 
-<!-- BOOTSTRAP JS  -->
-<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+                       <div class="col-lg-3 col-sm-6">
+                           <!-- Footer Widget Start -->
+                           <div class="footer-widget">
+                               <h4 class="footer-widget-title">Study material</h4>
+                               <div class="widget-link">
+                                   <ul class="link">
+                                       <li><a href="blog.html">Blog</a></li>
+                                       <li><a href="#">Weekly webinar</a></li>
+                                       <li><a href="#">Academy</a></li>
+                                       <li><a href="#">Free eBooks & checklists</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <!-- Footer Widget End -->
+                       </div>
+                       <div class="col-lg-3 col-sm-6">
+                           <!-- Footer Widget Start -->
+                           <div class="footer-widget">
+                               <h4 class="footer-widget-title">Download Now</h4>
+                               <div class="widget-download">
+                                   <a href="#"><img src="assets/images/app-1.jpg" alt=""></a>
+                                   <a href="#"><img src="assets/images/app-2.png" alt=""></a>
+                               </div>
+                           </div>
+                           <!-- Footer Widget End -->
+                       </div>
+                   </div>
+               </div>
+               <!-- Footer Widget Wrapper End -->
 
+               <!-- Footer Copyright Start -->
+               <div class="footer-copyright">
+                   <div class="copyright-wrapper">
+                       <div class="row align-items-center">
+                           <div class="col-lg-6 col-md-6">
+                               <!-- Footer Copyright Text Start -->
+                               <div class="copyright-text">
+                                   <p>© Copyright 2023 upstudy All rights reserved. </p>
+                               </div>
+                               <!-- Footer Copyright Text End -->
+                           </div>
+                           <div class="col-lg-6 col-md-6">
+                               <!-- Footer Copyright Social Start -->
+                               <div class="copyright-social">
+                                   <ul class="social">
+                                       <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                       <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                       <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                   </ul>
+                               </div>
+                               <!-- Footer Copyright Social End -->
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <!-- Footer Copyright End -->
 
-<script src="assets/libs/jquery.smooth-scroll.js"></script>
+           </div>
+       </div>
+       <!-- Footer End -->
 
-<!-- SKILLS SCRIPT  -->
-<script src="assets/libs/jquery.validate.js"></script>
-
-<!-- if load google maps then load this api, change api key as it may expire for limit cross as this is provided with any theme -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQvRGGtL6OrpP5xVMxq_0NgiMiRhm3ycI"></script>
-
-<!-- CUSTOM GOOGLE MAP -->
-<script type="text/javascript" src="assets/libs/gmap/jquery.googlemap.js"></script>
-
-<!-- adding magnific popup js library -->
-<script type="text/javascript" src="assets/libs/maginificpopup/jquery.magnific-popup.min.js"></script>
-
-<!-- Owl Carousel  -->
-<script src="assets/libs/owlcarousel/owl.carousel.min.js"></script>
+       <!-- back to top start -->
+       <div class="progress-wrap">
+           <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+               <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+           </svg>
+       </div>
+       <!-- back to top end -->
 
 
-<!-- COUNTDOWN   -->
-<script src="assets/libs/countdown.js"></script>
+       <!-- course hover Start -->
+       <div id="course-hover">
+           <div class="course-hover">
+               <div class="courses-content">
+                   <div class="top-meta"><a class="tag" href="#">Beginner</a></div>
+                   <h3 class="title"><a href="course-details.html">Design 101: Product & Web Design Course</a></h3>
+               </div>
+               <div class="rating">
+                   <div class="rating-star">
+                       <div class="rating-active" style="width: 60%;"></div>
+                   </div>
+                   <span>(4.5)</span>
+               </div>
+               <p class="price">Free</p>
+               <p>World-class training and programs developed by top teachers Lorem ipsum dolor sit amet consectur adip iscing elit sed eiusmod tempor.</p>
+               <div class="courses-meta">
+                   <p class="student"><i class="flaticon-google-docs"></i> 10 Lessons</p>
+                   <p class="student"><i class="far fa-clock"></i> 03 Hours</p>
+               </div>
+               <div class="courses-btn"><a class="btn" href="course-details.html">Course Full Details</a></div>
+           </div>
+       </div>
+       <!-- course hover End -->
 
-<!-- Counter JS -->
-<script src="assets/libs/waypoints.min.js"></script>
-<script src="assets/libs/counterup/jquery.counterup.min.js"></script>
+       </div>
 
-<!-- PORTFOLIO FILTER   -->
-<script src="assets/libs/isotope/isotope.pkgd.min.js"></script>
+       <!-- JS
+    ============================================ -->
+       <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+       <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
 
-<!-- SMOTH SCROLL -->
-<script src="assets/libs/jquery.smooth-scroll.min.js"></script>
-<script src="assets/libs/jquery.easing.min.js"></script>
+       <!-- Bootstrap JS -->
+       <script src="assets/js/plugins/popper.min.js"></script>
+       <script src="assets/js/plugins/bootstrap.min.js"></script>
 
-<!-- type js -->
-<script src="assets/libs/typed/typed.min.js"></script>
+       <!-- Plugins JS -->
+       <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+       <script src="assets/js/plugins/aos.js"></script>
+       <script src="assets/js/plugins/waypoints.min.js"></script>
+       <script src="assets/js/plugins/jquery.counterup.min.js"></script>
+       <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
+       <script src="assets/js/plugins/back-to-top.js"></script>
+       <script src="assets/js/plugins/jquery.powertip.min.js"></script>
+       <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
 
-<!-- instafeed js -->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>-->
-<script src="assets/libs/instafeed.min.js"></script>
-
-<!-- CUSTOM SCRIPT  -->
-<script src="assets/js/custom.script.js"></script>
-
-<div class="lgx-switcher-loader"></div>
-<!-- For Demo Purpose Only// Remove From Live -->
-<script src="switcher/js/switcherd41d.js?"></script>
-<!-- For Demo Purpose Only //Remove From Live-->
+       <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
 
 
-</body>
+       <!-- Main JS -->
+       <script src="assets/js/main.js"></script>
 
-<!-- Mirrored from themearth.com/demo/html/educationplus/view/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Nov 2023 15:07:43 GMT -->
-<footer>Bản quyền ADM</footer>
+       </body>
 
-</html>
+
+       <!-- Mirrored from thepixelcurve.com/html/upstudy/upstudy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Nov 2023 14:27:16 GMT -->
+
+       </html>
