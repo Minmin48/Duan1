@@ -99,7 +99,8 @@
 <!--//.LGX SITE CONTAINER-->
 <!-- *** ADD YOUR SITE SCRIPT HERE *** -->
 <!-- JQUERY  -->
-<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
 
 <!-- BOOTSTRAP JS  -->
 <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
@@ -156,4 +157,6 @@
 </body>
 
 <!-- Mirrored from themearth.com/demo/html/educationplus/view/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Nov 2023 15:07:43 GMT -->
+<footer>Bản quyền ADM</footer>
+
 </html>

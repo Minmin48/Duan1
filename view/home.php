@@ -125,12 +125,12 @@
 
                     <div class="row">
                         <div id="lgx-grid-wrapper" class="lgx-grid-wrapper"> <!--lgx-list-wrapper-->
-
+                            <?php $list_khoa_hoc =join_giangvien(); foreach($list_khoa_hoc as $value): ?>
                             <div class="lgx-grid-item col-xs-12 col-sm-6 col-md-4 design">
                                 <div class="lgx-single-course">
                                     <div class="lgx-single-course-inner">
                                         <figure>
-                                            <img src="assets/img/courses/course1.jpg" alt="course">
+                                            <img src="img/<?php echo $value['hinh'] ?>" alt="course">
                                             <figcaption>
                                                 <div class="lgx-hover-link">
                                                     <div class="lgx-vertical">
@@ -145,16 +145,16 @@
                                             <div class="course-author">
                                                 <img src="assets/img/news/author1.jpg" alt="course">
                                                 <div class="author-info">
-                                                    <h4 class="title"><a href="#">Jonathon Doe</a></h4>
-                                                    <h5 class="subtitle">Lecturar of Eduplus</h5>
+                                                    <h4 class="title"><a href="#"><?php echo $value['hinh'] ?></a></h4>
+                                                    <h5 class="subtitle"><?php echo $value['thongtin_gv'] ?></h5>
                                                 </div>
                                             </div>
-                                            <h3 class="title"><a href="course-single.html"> Learn Python – Interactive Python</a></h3>
+                                            <h3 class="title"><a href="course-single.html"> <?php echo $value['ten_kh'] ?></a></h3>
                                             <div class="course-bottom">
                                                 <ul class="list-inline">
                                                     <li><a href="#"><i class="fa fa-user-circle"></i>558</a></li>
                                                     <li><a href="#"><i class="fa fa-commenting"></i>55</a></li>
-                                                    <li><a href="#">75 <span>$</span></a></li>
+                                                    <li><a href="#"><?php echo number_format($value['hoc_phi']) ?> <span>đ</span></a></li>
                                                 </ul>
 
                                             </div>
@@ -162,8 +162,8 @@
                                     </div>
                                 </div>
                             </div><!--//ITEM-->
-
-                            <div class="lgx-grid-item col-xs-12 col-sm-6 col-md-4 html">
+                                <?php endforeach?>
+                            <!-- <div class="lgx-grid-item col-xs-12 col-sm-6 col-md-4 html">
                                 <div class="lgx-single-course">
                                     <div class="lgx-single-course-inner">
                                         <figure>
@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--//ITEM-->
+                            </div>
 
                             <div class="lgx-grid-item col-xs-12 col-sm-6 col-md-4 joomla design">
                                 <div class="lgx-single-course">
@@ -235,7 +235,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--//ITEM-->
+                            </div>
 
                             <div class="lgx-grid-item col-xs-12 col-sm-6 col-md-4 wordpress">
                                 <div class="lgx-single-course">
@@ -272,7 +272,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--//ITEM-->
+                            </div>
 
                             <div class="lgx-grid-item col-xs-12 col-sm-6 col-md-4 html design">
                                 <div class="lgx-single-course">
@@ -309,7 +309,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--//ITEM-->
+                            </div>
 
                             <div class="lgx-grid-item col-xs-12 col-sm-6 col-md-4 joomla">
                                 <div class="lgx-single-course">
@@ -346,7 +346,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--//ITEM-->
+                            </div> -->
                         </div>
                     </div><!--//. ROW-->
                 </div>

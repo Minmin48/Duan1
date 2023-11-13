@@ -1,6 +1,3 @@
-<?php
-    include_once "index.php";
-?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -90,95 +87,79 @@
 </head>
 <body class="home">
 
-<!--[if lt IE 8]>
+    <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="lgx-container ">
-<!-- ***  ADD YOUR SITE CONTENT HERE *** -->
+    <div class="lgx-container ">
+        <!-- ***  ADD YOUR SITE CONTENT HERE *** -->
 
 
-<!--HEADER-->
-<header>
-    <div id="lgx-header" class="lgx-header"> <!--lgx-header-container lgx-header-container-white lgx-header-container-brand lgx-header-singlemenu-->
-        <div class="header-top"> <!--header-top-white header-top-brand-->
-            <div class="header-top-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="contact">
-                                <ul class="list-inline">
-                                    <li><span class="question-text">Questions?</span> <i class="fa fa-phone" aria-hidden="true"></i> +123 125 145 </li>
-                                    <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="https://themearth.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a1f190f18040b070f2a0e05070b030444090507">[email&#160;protected]</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="right-menu">
-                                <ul class="list-inline">
-                                    <li class="login-register"><a href="#">Login/Register</a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                                </ul>
+        <!--HEADER-->
+        <header>
+            <div id="lgx-header" class="lgx-header"> <!--lgx-header-container lgx-header-container-white lgx-header-container-brand lgx-header-singlemenu-->
+                <div class="header-top"> <!--header-top-white header-top-brand-->
+                    <div class="header-top-inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="contact">
+                                        <ul class="list-inline">
+                                            <li><span class="question-text">Questions?</span> <i class="fa fa-phone" aria-hidden="true"></i> +123 125 145 </li>
+                                            <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="https://themearth.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a1f190f18040b070f2a0e05070b030444090507">[email&#160;protected]</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="right-menu">
+                                        <ul class="list-inline">
+                                            <li class="login-register"><a href="#">Login/Register</a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div> <!--//.header-top-->
-        <div class="lgx-header-bottom lgx-header-bottom-fixed-black lgx-header-bottom-fixed-transparent lgx-header-bottom-scrol-black"> <!--lgx-header-bottom-black lgx-header-bottom-brand--><!--lgx-header-bottom-fixed lgx-header-bottom-fixed-black lgx-header-bottom-fixed-brand lgx-header-bottom-fixed-transparent--><!--lgx-header-bottom-scrol-black lgx-header-bottom-scrol-brand-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <nav class="navbar navbar-default lgx-navbar">
-                            <div class="container">
-                                <nav class="navbar navbar-default lgx-navbar lgx-navbar-search">
-                                    <div class="lgxcontainer">
-                                        <div class="navbar-header">
-                                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                                    data-target=".navbar-collapse">
-                                                <span class="sr-only">Toggle navigation</span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                            </button>
-                                            <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                            <div class="lgx-logo">
-                                                <a href="index.html" class="lgx-scroll">
-                                                    <img src="assets/img/logo2.png" alt="Logo"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="collapse navbar-collapse">  
-                                            <ul class="nav navbar-nav lgx-nav">
-                                            <?php
-                                                
-                                                foreach($danhmuc as $dm){
+                </div> <!--//.header-top-->
+                <div class="lgx-header-bottom lgx-header-bottom-fixed-black lgx-header-bottom-fixed-transparent lgx-header-bottom-scrol-black"> <!--lgx-header-bottom-black lgx-header-bottom-brand--><!--lgx-header-bottom-fixed lgx-header-bottom-fixed-black lgx-header-bottom-fixed-brand lgx-header-bottom-fixed-transparent--><!--lgx-header-bottom-scrol-black lgx-header-bottom-scrol-brand-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <nav class="navbar navbar-default lgx-navbar">
+                                    <div class="container">
+                                        <nav class="navbar navbar-default lgx-navbar lgx-navbar-search">
+                                            <div class="lgxcontainer">
+                                                <div class="navbar-header">
+                                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </button>
+                                                    <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
+                                                    <div class="lgx-logo">
+                                                        <a href="index.html" class="lgx-scroll">
+                                                            <!-- <img src="assets/img/logo2.png" alt="Logo" /> -->
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse navbar-collapse">
+                                                    <ul class="nav navbar-nav lgx-nav">
 
-                                                    extract($dm);
-                                                    $linkdm="index.php?act=sanpham&id_dm=".$id;
-                                                    echo'<li><a href="'.$linkdm.'">'.$name.'</a></li>';
-                                                }
-
-                                                ?>
-                                                <!-- <li>
-                                                    <a href="index.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
-                                                     <ul class="dropdown-menu multi-level">
-                                                        <li><a href="index.html">Home (Default)</a></li>
-                                                        <li><a href="home-slider.html">Home Slider</a></li>
-                                                        <li><a href="home-contentslider.html">Home Content Slider</a></li>
-                                                        <li><a href="home-typed.html">Home Typed</a></li>
-                                                        <li><a href="home-five.html">Home Five</a></li>
-                                                        <li><a href="home-six.html">Home Six</a></li>
-                                                        <li><a href="home-seven.html">Home Seven</a></li>
-                                                        <li><a href="home-eight.html">Home Eight</a></li>
-                                                    </ul>
-                                                <li>
-                                                <li>
+                                                         <li>
+                                                    
+                                                     
+                                                        <?php foreach($listDanhMuc as $value):?>
+                                                        <li><a href="?act=page&id=<?php echo $value['id_dm']?>"><?php echo $value['ten_dm']?></a></li>
+                                                        <?php endforeach?>
+                                                    </li>
+                                                <!--<li>
                                                     <a href="index.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
                                                     <ul class="dropdown-menu multi-level">
                                                         <li><a href="about.html">About</a></li>
@@ -236,60 +217,60 @@
                                                 <li><a class="lgx-scroll" href="#lgx-news">News</a></li>
                                                 <li><a class="lgx-scroll" href="contact.html">Contact</a></li>
                                                 <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>  -->
-                                            </ul>
-                                        </div>
-                                        <!--/.nav-collapse -->
-                                    </div>
-                                    <div class="lgx-menu-search search-animate">
-                                        <div class="container">
-                                            <form action="#" method="GET" role="search">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" name="q" placeholder="Search for snippets and hit enter">
-                                                    <span class="input-group-btn">
-                                                        <button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-remove"></span></button>
-                                                    </span>
+                                                    </ul>
                                                 </div>
-                                            </form>
-                                        </div>
+                                                <!--/.nav-collapse -->
+                                            </div>
+                                            <div class="lgx-menu-search search-animate">
+                                                <div class="container">
+                                                    <form action="#" method="GET" role="search">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="q" placeholder="Search for snippets and hit enter">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-remove"></span></button>
+                                                            </span>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </nav>
                                     </div>
+                                    <!-- /.container -->
                                 </nav>
                             </div>
-                            <!-- /.container -->
-                        </nav>
+                        </div>
+                        <!--//.ROW-->
                     </div>
+                    <!-- //.CONTAINER -->
                 </div>
-                <!--//.ROW-->
+                <!-- //.INNER-->
             </div>
-            <!-- //.CONTAINER -->
-        </div>
-        <!-- //.INNER-->
-    </div>
-</header>
-<!--BANNER-->
-<section>
-    <div class="lgx-banner">
-        <div class="lgx-banner-style">
-            <div class="lgx-inner lgx-inner-fixed">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="lgx-banner-info  lgx-banner-info-white">
-                                <h3 class="subtitle">Premeum Quality</h3>
-                                <h2 class="title">Education <span>Template</span></h2>
-                                <p class="text">Aentegers sollicitudin molestie ante et dictum laoreet we are the Excilent. <br/> Nascetur ridiculus mus. Proin porta lectus eleifend. </p>
-                                <div class="btn-area">
-                                    <a class="lgx-btn" href="registration.html">Registration</a>
-                                    <a class="lgx-btn lgx-btn-border" href="courses.html">All Cources</a>
+        </header>
+        <!--BANNER-->
+        <section>
+            <div class="lgx-banner">
+                <div class="lgx-banner-style">
+                    <div class="lgx-inner lgx-inner-fixed">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="lgx-banner-info  lgx-banner-info-white">
+                                        <h3 class="subtitle">Premeum Quality</h3>
+                                        <h2 class="title">Education <span>Template</span></h2>
+                                        <p class="text">Aentegers sollicitudin molestie ante et dictum laoreet we are the Excilent. <br /> Nascetur ridiculus mus. Proin porta lectus eleifend. </p>
+                                        <div class="btn-area">
+                                            <a class="lgx-btn" href="registration.html">Registration</a>
+                                            <a class="lgx-btn lgx-btn-border" href="courses.html">All Cources</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <!--//.ROW-->
                         </div>
+                        <!-- //.CONTAINER -->
                     </div>
-                    <!--//.ROW-->
+                    <!-- //.INNER -->
                 </div>
-                <!-- //.CONTAINER -->
             </div>
-            <!-- //.INNER -->
-        </div>
-    </div>
-</section>
-<!--BANNER END-->
+        </section>
+        <!--BANNER END-->

@@ -20,29 +20,24 @@
         <tbody>
             <?php
             $index = 0;
-            $khoc = join_giangvien();
-            $hihi = join_khoahoc();
-            foreach ($khoc as $value) : $index++ ?>
-                <?php
+            $listkh = join_giangvien();
+           
+            foreach ($listkh as $value) : $index++ ?>
+                <tr class="table-primary">
+                    <td><?php echo $index; ?></td>
+                    <td><?php echo $value['ten_lop'] ?></td>
+                    <td><?php echo $value['thoi_gian_hoc'] ?></td>
+                    <td> <?php echo $value['ca_hoc'] ?></td>
+                    <td><?php echo $value['ten_kh'] ?></td>
+                    <td><?php echo $value['ten_gv'] ?></td>
+                    <td><?php echo $value['soluong_hs'] ?></td>
+                    <td>
+                        <a href="index.php?act=updatelop&id=<?php echo $value['id_lop'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
 
-                foreach ($hihi as $kkk) : ?>
-
-                    <tr class="table-primary">
-                        <td><?php echo $index; ?></td>
-                        <td><?php echo $value['ten_lop']; ?></td>
-                        <td><?php echo $value['thoi_gian_hoc'] ?></td>
-                        <td> <?php echo $value['ca_hoc'] ?></td>
-                        <td><?php echo $kkk['ten_kh'] ?></td>
-                        <td><?php echo $value['ten_gv'] ?></td>
-                        <td><?php echo $value['soluong_hs'] ?></td>
-                        <td>
-                            <a href="index.php?act=updatelop&id=<?php echo $value['id_lop'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
-                            <a href="index.php?act=deletelop&id=<?php echo $value['id_lop'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
-                        </td>
-                    </tr>
-                    
-                <?php endforeach; ?>
-            <?php  endforeach; ?>
+                        <a href="index.php?act=deletelop&id=<?php echo $value['id_lop'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
+                    </td>
+                </tr>
+            <?php endforeach ?>
         </tbody>
     </table>
 </div>

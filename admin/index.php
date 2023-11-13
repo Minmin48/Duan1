@@ -145,7 +145,6 @@ if (isset($_GET['act']) && $_GET['act']) {
                 }
                 update_giangvien($id, $tengv, $text, $hinh);
                 include_once "giangvien/list.php";
-                echo '<span>Cập nhật thành công</span>';
             }
             break;
             //Lớp
@@ -169,6 +168,25 @@ if (isset($_GET['act']) && $_GET['act']) {
             $id = $_GET['id'];
             delete_lop($id);
             include_once 'lop/list.php';
+            break;
+        case 'updatelop':
+            if (isset($_GET['id']) && $_GET['id']) {
+                $id = $_GET['id'];
+                $sua = getid_lop($id);
+                include_once "lop/update.php";
+            }
+            if (isset($_POST['update']) && $_POST['update']) {
+                $tenlop = $_POST['lop'];
+                $thoigian = $_POST['thoigian'];
+                $cahoc = $_POST['cahoc'];
+                $khoahoc = $_POST['dmkhoahoc'];
+                $giangvien = $_POST['dmgiangvien'];
+                $soluong = $_POST['soluong'];
+                $id = $_POST['id'];
+                $sua = getid_lop($id);
+                update_lop($id, $tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong);
+                include_once "lop/list.php";
+            }
             break;
         default:
             include_once "home.php";

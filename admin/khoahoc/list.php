@@ -37,7 +37,7 @@
                     <td>
                         <a href="index.php?act=updatekhoahoc&id=<?php echo $value['id_kh'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
                         <a href="index.php?act=deletekhoahoc&id=<?php echo $value['id_kh'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
-                        a
+                        <a href="index.php?act=addlop" class="btn btn-success"><i class="fa-solid fa-user-plus"></i> Thêm Lớp</a>
                     </td>
                 </tr>
             <?php endforeach ?>

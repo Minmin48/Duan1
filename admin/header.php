@@ -49,7 +49,7 @@
                     <br>
                     <hr>
                     <li>
-                        <a href="#"><i class="fa-solid fa-paper-plane"></i> Vào giao diện người dùng</a>
+                        <a href="../index.php"><i class="fa-solid fa-paper-plane"></i> Vào giao diện người dùng</a>
                     </li>
                 </ul>
             </nav>

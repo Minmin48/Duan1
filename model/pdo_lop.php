@@ -21,14 +21,30 @@ function join_khoahoc()
 function join_giangvien()
 {
     $con = connection();
-    $sql = "select * from lop join giang_vien on lop.id_gv = giang_vien.id_gv";
+    $sql = "select * from lop join giang_vien on lop.id_gv = giang_vien.id_gv join khoa_hoc on lop.id_kh = khoa_hoc.id_kh";
     $stmt = $con->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll();
 }
-function delete_lop($id){
+function delete_lop($id)
+{
     $con = connection();
     $sql = "DELETE FROM lop WHERE id_lop='$id'";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+}
+function getid_lop($id)
+{
+    $con = connection();
+    $sql = "select * from lop where id_lop = '$id'";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetch();
+}
+function update_lop($id, $tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong)
+{
+    $con = connection();
+    $sql = "update lop set ten_lop = '$tenlop', thoi_gian_hoc = '$thoigian', ca_hoc = '$cahoc', id_kh = '$khoahoc',id_gv = '$giangvien',soluong_hs = '$soluong' where id_lop = '$id'";
     $stmt = $con->prepare($sql);
     $stmt->execute();
 }
