@@ -81,28 +81,18 @@
                             <div class="header-menu d-none d-lg-block">
                                 <ul class="main-menu">
                                     <li class="active-menu">
-                                        <a href="index.html">Home</a>
-                                        <ul class="sub-menu">
-                                            <li class="active"><a href="index.html">Main Demo</a></li>
-                                            <li><a href="index-2.html">Course Hub</a></li>
-                                            <li><a href="index-3.html">Distant Learning</a></li>
-                                            <li><a href="index-4.html">Kindergarten</a></li>
-                                            <li><a href="index-5.html">Language</a></li>
-                                            <li><a href="index-6.html">University</a></li>
-                                        </ul>
+                                        <a href="../index.php">Trang chủ</a>
                                     </li>
-                                    <li><a href="#">Pages</a>
+                                    <li><a href="#">Khóa Học</a>
                                         <ul class="sub-menu">
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="team-details.html">Team Single</a></li>
-                                            <li><a href="event.html">Event</a></li>
-                                            <li><a href="faq.html">Faq's</a></li>
-                                            <li><a href="error.html">404 Page</a></li>
-                                            <li><a href="login-register.html">Login Register</a></li>
-                                        </ul>
+                                            <li><?php foreach ($listDanhMuc as $value) : ?>
+                                            <li><a href="?act=khoahoc&id=<?php echo $value['id_dm'] ?>"><?php echo $value['ten_dm'] ?></a></li>
+                                        <?php endforeach ?>
                                     </li>
-                                    <li><a href="course-grid.html">Courses</a>
+
+                                </ul>
+                                </li>
+                                <!-- <li><a href="course-grid.html">Courses</a>
                                         <ul class="sub-menu">
                                             <li><a href="course-grid.html">Course Grid</a></li>
                                             <li><a href="course-list.html">Course List</a></li>
@@ -116,7 +106,7 @@
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.html">Contact</a></li> -->
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->
@@ -128,14 +118,14 @@
                         <div class="header-meta">
                             <div class="header-search d-none d-xl-block">
                                 <form action="#">
-                                    <input type="text" placeholder="Search Courses">
+                                    <input type="text" placeholder="Tìm kiếm...">
                                     <button><i class="flaticon-loupe"></i></button>
                                 </form>
                             </div>
 
                             <div class="header-login d-none d-lg-block">
-                                <a class="link" href="login-register.html"><i class="far fa-user"></i> Login</a>
-                                <a class="link" href="login-register.html">Register</a>
+                                <a class="link" href="login-register.html"><i class="far fa-user"></i> Đăng nhập</a>
+                                <a class="link" href="login-register.html">Đăng ký</a>
                             </div>
 
                             <div class="header-cart dropdown">

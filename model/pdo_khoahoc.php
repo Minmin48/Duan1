@@ -46,3 +46,11 @@ function update_khoahoc($id, $tenkh, $tendm, $thoigian, $text, $hinh, $hocphi, $
     $stmt = $con->prepare($sql);
     $stmt->execute();
 }
+function get_khoahoc()
+{
+    $conn = connection();
+    $sql = "SELECT * FROM khoa_hoc";
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll();
+}

@@ -48,3 +48,11 @@ function update_lop($id, $tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $solu
     $stmt = $con->prepare($sql);
     $stmt->execute();
 }
+function list_kh()
+{
+    $con = connection();
+    $sql = "select * from lop join giang_vien on lop.id_gv = giang_vien.id_gv join khoa_hoc on lop.id_kh = khoa_hoc.id_kh";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
