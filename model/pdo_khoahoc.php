@@ -54,3 +54,11 @@ function get_khoahoc()
     $stm->execute();
     return $stm->fetchAll();
 }
+function get_khoahoc_by_id($id_kh)
+{
+    $conn = connection();
+    $sql = "SELECT * FROM khoa_hoc WHERE id_kh='$id_kh'";
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetch();
+}

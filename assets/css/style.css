@@ -230,6 +230,11 @@ img {
   -webkit-animation: up 0.7s ease-out;
           animation: up 0.7s ease-out;
 }
+.tab-content .tab-pane.active .row{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 20px;
+}
 
 @-webkit-keyframes up {
   0% {
@@ -11081,4 +11086,9 @@ textarea:-ms-input-placeholder {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+}
+.tab-content .row .tab-pane{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }

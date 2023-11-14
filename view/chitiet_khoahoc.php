@@ -1,4 +1,7 @@
 <!-- Page Banner Start -->
+<?php
+$listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
+?>
 <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
     <div class="shape-1">
         <img src="assets/images/shape/shape-7.png" alt="">
@@ -11,14 +14,14 @@
         <!-- Course Details Banner Content Start -->
         <div class="course-details-banner-content">
 
-            <h2 class="title">Getting Started with the Linux Command Line </h2>
+            <h2 class="title"><?php echo $listKhoaHoc['ten_kh'] ?></h2>
 
-            <p class="text">Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games</p>
+            <p class="text"><?php echo $listKhoaHoc['thongtin_kh'] ?></p>
 
             <div class="course-details-meta">
                 <div class="meta-action">
                     <div class="meta-author">
-                        <img src="assets/images/author-3.jpg" alt="Author">
+                        <img src="img/<?php echo $listKhoaHoc['hinh'] ?>" alt="Author">
                     </div>
                     <div class="meta-name">
                         <p class="name">Adam Helen</p>
@@ -26,7 +29,7 @@
                 </div>
 
                 <div class="meta-action">
-                    <h5 class="date">Last Update: <span>2/12/2023</span></h5>
+                    <h5 class="date">Last Update: <span><?php echo $listKhoaHoc['thoi_gian'] ?></span></h5>
                 </div>
                 <div class="meta-action">
                     <div class="rating">
@@ -45,31 +48,34 @@
 
 <!-- Course Details Start -->
 <div class="section section-padding">
-    <div class="container">
 
+    <div class="container">
+        <h3 style="color:mediumblue">Ai nên tham gia khóa học này:</h3>
+        <H5>Khóa học tiếng Anh HR được thiết kế phù hợp cho:</H5>
+        <ul>
+            <li>● Những người đang muốn nâng cao vốn từ vựng và văn phong ngành nhân sự.</li>
+            <li>● Củng cố ngữ pháp, bổ sung vốn vựng cần thiết.</li>
+            <li>● Quỹ thời gian ít, công việc bận rộn cả ngày. Nhưng đang muốn nâng cao khả năng giao tiếp tiếng Anh và <br> có thể dành 40 phút để học mỗi ngày.
+                Rèn luyện cả 4 kỹ năng: Nghe-Nói-Đọc-Viết.</li>
+            <li>● Đã từng tham gia các khóa học tiếng Anh ADM nhưng không hiệu quả do lớp học quá đông <br> và nội dung bài học hoàn toàn lệch với thực tế công việc cần.</li>
+                <li>● Làm việc bằng tiếng Anh có khả năng đọc-viết và ngữ pháp khá nhưng không sử dụng kỹ năng nghe-nói <br> nên gần như không thể giao tiếp được. Nói khó nghe, nghe không hiểu.</li>
+        </ul>
         <div class="row justify-content-between">
+
             <div class="col-xl-7 col-lg-8">
 
                 <!-- Course Details Wrapper Start -->
                 <div class="course-details-wrapper">
-
-                    <!-- Course Overview Start -->
-                    <div class="course-overview">
-                        <h3 class="title">Course Overview</h3>
-                        <p>World-class training and development programs developed by top teachers. Build skills with courses, certificates, and degrees online from world-class universities and companies. from the National Research University Higher School of Economics (HSE University) is the first fully online.</p>
-                    </div>
-                    <!-- Course Overview End -->
-
                     <!-- Course Learn List Start -->
                     <div class="course-learn-list">
-                        <h3 class="title">What you will learn</h3>
+                        <h3 class="title">Khóa học tiếng Anh ADM sẽ giúp người học:</h3>
                         <ul>
-                            <li>Become a UX designer.</li>
-                            <li>Become a UX designer.</li>
-                            <li>You will be able to add UX designer to your CV</li>
-                            <li>You will be able to add UX designer to your CV</li>
-                            <li>Build & test a full website design.</li>
-                            <li>Build & test a full website design.</li>
+                            <li>Có thể thuyết trình, trình bày và giao tiếp bằng tiếng Anh</li>
+                            <li>Sử dụng tiếng Anh tự tin hơn trong môi trường làm việc.</li>
+                            <li>Nâng cao cả 4 kỹ năng phục vụ cho công việc</li>
+                            <li>Cải thiện phản xạ nghe nói một cách nhanh nhất.</li>
+                            <li>Mở rộng cơ hội nghề nghiệp.</li>
+                            <li>Làm giàu kiến thức.</li>
                         </ul>
                     </div>
                     <!-- Course Learn List End -->
@@ -78,9 +84,9 @@
                     <div class="course-lessons">
 
                         <div class="lessons-top">
-                            <h3 class="title">Course Content</h3>
+                            <h3 class="title">Bài Tập</h3>
                             <div class="lessons-time">
-                                <span>10 Lessons</span>
+                                <span>1 Ngày</span>
                                 <span>6h 40m</span>
                             </div>
                         </div>
@@ -88,39 +94,39 @@
                         <!-- Course Accordion Start -->
                         <div class="course-accordion accordion" id="accordionCourse">
                             <div class="accordion-item">
-                                <button data-bs-toggle="collapse" data-bs-target="#collapseOne">Introduction </button>
+                                <button data-bs-toggle="collapse" data-bs-target="#collapseOne">Dễ </button>
                                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionCourse">
                                     <div class="accordion-body">
                                         <ul class="lessons-list">
-                                            <li><a href="#"><i class="fa fa-play-circle"></i> Greetings and Introductions <span>5:00</span></a></li>
-                                            <li><a href="#"><i class="fa fa-play-circle"></i> 5 Business English Phrasal Verbs <span>3:17</span></a></li>
-                                            <li><a href="#"><i class="fa fa-question-circle"></i> Quizz 1 : How to start?</a></li>
+                                            <li><a href="index.php?act=video"><i class="fa fa-play-circle"></i> Video kiến thức<span>5:00</span></a></li>
+                                            <li><a href="index.php?act=video1"><i class="fa fa-play-circle"></i> Video phát âm<span>3:17</span></a></li>
+                                            <li><a href="https://quizizz.com/join/pre-game/running/U2FsdGVkX187Iv9wxQcUGv%252Bwkls9mMGrufvAXWF65MEM7oGgqWrUVd3bLwoYszplwhZHUU6vn5%252BCsGHcZH3I0n9P2YxjKRwgdzDeyJCjSWg%253D/start"><i class="fa fa-question-circle"></i> Quizz 1 : bài tập</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="accordion-item">
-                                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Analysis</button>
+                                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Trung Bình</button>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionCourse">
                                     <div class="accordion-body">
                                         <ul class="lessons-list">
-                                            <li><a href="#"><i class="fa fa-play-circle"></i> Greetings and Introductions <span>5:00</span></a></li>
-                                            <li><a href="#"><i class="fa fa-play-circle"></i> 5 Business English Phrasal Verbs <span>3:17</span></a></li>
-                                            <li><a href="#"><i class="fa fa-question-circle"></i> Quizz 1 : How to start?</a></li>
+                                            <li><a href="#"><i class="fa fa-play-circle"></i> Video kiến thức <span>5:00</span></a></li>
+                                            <li><a href="#"><i class="fa fa-play-circle"></i> Video phát âm <span>3:17</span></a></li>
+                                            <li><a href="https://quizizz.com/join/pre-game/running/U2FsdGVkX19Vp3axyn2Nis%252BJvBeBdutgcEiJz4TUYdRlr7wTXKv4CiT6az8%252FSBuUFRyZHO0XqAct8AsIxLyuw59F%252FVvTivKwv0ezQby%252BFHk%253D/start"><i class="fa fa-question-circle"></i> Quizz 1 : bài tập</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="accordion-item">
-                                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Practical</button>
+                                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Nâng Cao</button>
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionCourse">
                                     <div class="accordion-body">
                                         <ul class="lessons-list">
-                                            <li><a href="#"><i class="fa fa-play-circle"></i> Greetings and Introductions <span>5:00</span></a></li>
-                                            <li><a href="#"><i class="fa fa-play-circle"></i> 5 Business English Phrasal Verbs <span>3:17</span></a></li>
-                                            <li><a href="#"><i class="fa fa-question-circle"></i> Quizz 1 : How to start?</a></li>
+                                            <li><a href="#"><i class="fa fa-play-circle"></i> Video kiến thức <span>5:00</span></a></li>
+                                            <li><a href="#"><i class="fa fa-play-circle"></i> Video phát âm <span>3:17</span></a></li>
+                                            <li><a href="https://quizizz.com/join/pre-game/running/U2FsdGVkX1%252Byl3XZpFk6RRi3hCAVX6tkrnTRJWyig3CNGKK6EB4CXBa8SDwHVojzax4SMUlN8uNW30K6ZFIFHXiJCAcGectGQ6uue%252BwOUzQ%253D/start"><i class="fa fa-question-circle"></i> Quizz 1 :  bài tập</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -290,31 +296,31 @@
 
                     <!-- Sidebar Details Video Description Start -->
                     <div class="sidebar-details-video-description">
-                        <div class="sidebar-video">
-                            <img src="assets/images/courses/sidebar-video.jpg" alt="video">
-                            <a href="https://www.youtube-nocookie.com/embed/Ga6RYejo6Hk" class="popup-video play"><i class="fa fa-play"></i></a>
+                        <div class="sidebar-image">
+                            <img src="img/<?php echo $listKhoaHoc['hinh'] ?>" alt="video">
                         </div>
                         <div class="sidebar-description">
+                            <!-- <h3 class="title"><a href="index.php?act=ct_khoahoc&id=<?php echo $listKhoaHoc['id_kh'] ?>"><?php echo $listKhoaHoc['ten_kh'] ?></a></h3> -->
                             <div class="price-wrap">
-                                <span class="label">Price :</span>
+                                <span class="label">Sale :</span>
                                 <div class="price">
-                                    <span class="sale-price">$49.99</span>
-                                    <span class="regular-price">$102</span>
+                                    <span class="sale-price">567,000 đ</span>
+                                    <span class="regular-price">$<?php echo number_format($listKhoaHoc['hoc_phi']) ?>đ</span>
                                 </div>
                             </div>
                             <ul class="description-list">
-                                <li><i class="flaticon-wall-clock"></i> Duration <span>52 mins</span></li>
-                                <li><i class="fas fa-sliders-h"></i> Level <span>Expert</span></li>
-                                <li><i class="far fa-file-alt"></i> Lectures <span>4 Lectures</span></li>
-                                <li><i class="fas fa-language"></i> Language <span>English</span></li>
-                                <li><i class="far fa-user"></i> Enrolled <span>4 Enrolled</span></li>
+                                <li><i class="flaticon-wall-clock"></i> Khóa Học <span><?php echo $listKhoaHoc['ten_kh'] ?> </span></li>
+                                <li><i class="fas fa-sliders-h"></i> Thời Gian <span><?php echo $listKhoaHoc['thoi_gian'] ?></span></li>
+                                <li><i class="far fa-file-alt"></i> Lớp <span>4 Lectures</span></li>
+                                <li><i class="fas fa-language"></i> Giảng Viên <span><?php echo $listLop['ten_gv'] ?></span></li>
+                                <li><i class="far fa-user"></i> Số Lượng Học Sinh <span></span></li>
                             </ul>
-                            <a class="btn w-100" href="#">Add To Cart</a>
+                            <a class="btn w-100" href="#">Đăng Ký Ngay</a>
                             <div class="share-link">
                                 <div class="link-icon">
                                     <i class="fas fa-share-alt"></i>
                                 </div>
-                                <a class="share-btn" href="#"> Share This Course</a>
+                                <a class="share-btn" href="#"> Chia Sẻ</a>
                                 <div class="social-share-wrapper">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>

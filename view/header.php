@@ -73,7 +73,7 @@
 
                             <!--  Header Logo Start  -->
                             <div class="header-logo">
-                                <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                                <a href="index.php"><img src="img/anh4.png" alt="logo" width="100%" height="80px"></a>
                             </div>
                             <!--  Header Logo End  -->
 
