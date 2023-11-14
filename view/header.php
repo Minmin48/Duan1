@@ -81,12 +81,12 @@
                             <div class="header-menu d-none d-lg-block">
                                 <ul class="main-menu">
                                     <li class="active-menu">
-                                        <a href="../index.php">Trang chủ</a>
+                                        <a href="index.php">Trang chủ</a>
                                     </li>
                                     <li><a href="#">Khóa Học</a>
                                         <ul class="sub-menu">
                                             <li><?php foreach ($listDanhMuc as $value) : ?>
-                                            <li><a href="?act=khoahoc&id=<?php echo $value['id_dm'] ?>"><?php echo $value['ten_dm'] ?></a></li>
+                                            <li><a href="?act=toeic&id=<?php echo $value['id_dm'] ?>"><?php echo $value['ten_dm'] ?></a></li>
                                         <?php endforeach ?>
                                     </li>
 

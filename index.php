@@ -9,7 +9,7 @@ if (isset($_GET['act'])) {
         case 'page':
 
             break;
-        case 'khoahoc':
+        case 'toeic':
             include_once 'view/khoahoc.php';
             break;
 
