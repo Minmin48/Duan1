@@ -241,7 +241,7 @@
                     <div class="courses-tab">
 
                         <!-- Courses Tab Content Start -->
-                        <div class="tab-content courses-tab-content">
+                        <div>
                             <div class="tab-pane fade show active" id="tab1">
 
                                 <div class="row">
