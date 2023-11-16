@@ -62,3 +62,16 @@ function get_khoahoc_by_id($id_kh)
     $stm->execute();
     return $stm->fetch();
 }
+function show_khoahoc($idkh)
+{
+    $sql = "SELECT * FROM khoa_hoc where id_dm = '$idkh' ORDER BY id_kh DESC ";
+    // if ($idkh > 0) {
+    //     $sql .= " AND id_dm=" . $idkh;
+    // }
+
+
+    $conn = connection();
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll();
+}

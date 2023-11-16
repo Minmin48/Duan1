@@ -1,17 +1,16 @@
 <?php
 include_once 'model/pdo_danhmuc.php';
 include_once 'model/pdo_lop.php';
+include_once 'model/pdo_khoahoc.php';
 $listDanhMuc = list_danhmuc();
 include_once 'view/header.php';
 if (isset($_GET['act'])) {
     switch ($_GET['act']) {
-        case 'page':
-            break;
-        case 'toeic':
-            include_once 'view/kh_toeic.php';
+        case 'khoahoc':
+            include_once 'view/khoahoc.php';
             break;
         case 'ct_khoahoc':
-            include_once 'view/chitiet_khoahoc.php';
+            include_once 'view/ct_khoahoc.php';
             break;
         case 'video':
             include_once 'view/video.php';

@@ -298,7 +298,7 @@
                             <!-- Course Collapse End -->
 
                             <div class="tab-content">
-                                <div  id="grid">
+                                <div id="grid">
                                     <div class="single-course-list">
                                         <div class="row">
                                             <?php

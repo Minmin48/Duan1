@@ -1,7 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-
+<?php
+$list = get_khoahoc()
+?>
 <!-- Mirrored from thepixelcurve.com/html/upstudy/upstudy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Nov 2023 14:26:50 GMT -->
 
 <head>
@@ -83,10 +85,10 @@
                                     <li class="active-menu">
                                         <a href="index.php">Trang chủ</a>
                                     </li>
-                                    <li><a href="#">Khóa Học</a>
+                                    <li><a href="index.php?act=khoahoc">Khóa Học</a>
                                         <ul class="sub-menu">
                                             <li><?php foreach ($listDanhMuc as $value) : ?>
-                                            <li><a href="?act=toeic&id=<?php echo $value['id_dm'] ?>"><?php echo $value['ten_dm'] ?></a></li>
+                                            <li><a href="index.php?act=khoahoc&idkh=<?php echo $value['id_dm'] ?>"><?php echo $value['ten_dm'] ?></a></li>
                                         <?php endforeach ?>
                                     </li>
 
