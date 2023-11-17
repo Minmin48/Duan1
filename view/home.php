@@ -1,4 +1,13 @@
-        <!-- Hero Start -->
+<?php
+if (isset($_GET['idkh']) && $_GET['idkh']) {
+    $iddm = $_GET['idkh'];
+    $dssp = show_khoahoc($iddm);
+} else {
+    $dssp = get_khoahoc();
+}
+?>
+
+<!-- Hero Start -->
         <div class="upstudy-hero-section section" style="background-image: url(assets/images/bg/hero-bg.jpg);">
             <div class="shape-3">
                 <img src="assets/images/shape/shape-1.png" alt="">
@@ -17,12 +26,12 @@
                     <div class="col-lg-6">
                         <!-- Hero Content Start -->
                         <div class="hero-content">
-                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt=""> Learn From 20,000+ Powerful Courses</p>
-                            <h2 class="title" data-aos="fade-up" data-aos-delay="700">Best <span>platform</span> to Empower Skills</h2>
+                            <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt=""> Học từ hơn 20,000+ khóa học mạnh mẽ</p>
+                            <h2 class="title" data-aos="fade-up" data-aos-delay="700">Tự Tin <span>giao tiếp</span> Tiếng Anh</h2>
                             <div class="hero-btn" data-aos="fade-up" data-aos-delay="900">
-                                <a class="btn" href="login-register.html">Try 7 days Free Trial</a>
+                                <a class="btn" href="login-register.html">Đăng Ký Ngay</a>
                             </div>
-                            <p class="link-text" data-aos="fade-up" data-aos-delay="1000"><span>No credit card required.</span> By clicking ‘Start a Free Trial’</p>
+                            <p class="link-text" data-aos="fade-up" data-aos-delay="1000"><span>Được giảm 8%</span>  Khi đăng ký qua Website</p>
                         </div>
                         <!-- Hero Content End -->
                     </div>
@@ -40,7 +49,7 @@
                                     <img src="assets/images/student-img.png" alt="">
                                     <div class="image-text">
                                         <h3 class="number">100k+</h3>
-                                        <p>Total Enrolled Students</p>
+                                        <p>Tổng số người theo học</p>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +68,7 @@
                 <div class="category-wrap">
                     <div class="row">
                         <div class="section-title text-center">
-                            <h2 class="title">Top <span>Categories</span></h2>
+                            <h2 class="title">Danh Mục<span> Hàng Đầu</span></h2>
                         </div>
                     </div>
                     <div class="category-content-wrap">
@@ -71,7 +80,7 @@
                                         <img src="assets/images/cat-icon1.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Mathmetics</h3>
+                                        <h3 class="title">TOEIC</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -83,7 +92,7 @@
                                         <img src="assets/images/cat-icon2.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Idea Generate</h3>
+                                        <h3 class="title">IELTS</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -95,7 +104,7 @@
                                         <img src="assets/images/cat-icon3.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Chemistry</h3>
+                                        <h3 class="title">LẤY GỐC</h3>
                                     </div>
                                 </a>
                                 <!-- Category Item End -->
@@ -107,59 +116,10 @@
                                         <img src="assets/images/cat-icon4.png" alt="">
                                     </div>
                                     <div class="category-content">
-                                        <h3 class="title">Business Analysis</h3>
+                                        <h3 class="title">CẤP 3</h3>
                                     </div>
                                 </a>
-                                <!-- Category Item End -->
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item color-4">
-                                    <div class="category-icon">
-                                        <img src="assets/images/cat-icon5.png" alt="">
-                                    </div>
-                                    <div class="category-content">
-                                        <h3 class="title">Development</h3>
-                                    </div>
-                                </a>
-                                <!-- Category Item End -->
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item">
-                                    <div class="category-icon">
-                                        <img src="assets/images/cat-icon6.png" alt="">
-                                    </div>
-                                    <div class="category-content">
-                                        <h3 class="title">Email Marketing</h3>
-                                    </div>
-                                </a>
-                                <!-- Category Item End -->
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item color-2">
-                                    <div class="category-icon">
-                                        <img src="assets/images/cat-icon7.png" alt="">
-                                    </div>
-                                    <div class="category-content">
-                                        <h3 class="title">Arestogoy</h3>
-                                    </div>
-                                </a>
-                                <!-- Category Item End -->
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-sm-6">
-                                <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item color-3">
-                                    <div class="category-icon">
-                                        <img src="assets/images/cat-icon8.png" alt="">
-                                    </div>
-                                    <div class="category-content">
-                                        <h3 class="title">IT / Technology </h3>
-                                    </div>
-                                </a>
-                                <!-- Category Item End -->
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -180,10 +140,10 @@
                                     <img src="assets/images/offer-1.jpg" alt="offer">
                                 </div>
                                 <div class="offer-content">
-                                    <h4 class="sub-title">Learn together with</h4>
-                                    <h3 class="title">For Enterprise!</h3>
-                                    <p>If you’ve been researching exactly what skill you want</p>
-                                    <a href="login-register.html" class="btn">Join for Business</a>
+                                    <h4 class="sub-title">Cùng học với</h4>
+                                    <h3 class="title">TOEIC</h3>
+                                    <p>Khóa học được nhiều bạn trẻ chọn đến nhất</p>
+                                    <a href="login-register.html" class="btn">Đăng Ký Ngay</a>
                                 </div>
                             </div>
                             <!-- Single Offer End -->
@@ -195,10 +155,10 @@
                                     <img src="assets/images/offer-2.jpg" alt="offer">
                                 </div>
                                 <div class="offer-content">
-                                    <h4 class="sub-title">Get the skills</h4>
-                                    <h3 class="title">For Individuals</h3>
-                                    <p>If you’ve been researching exactly what skill you want</p>
-                                    <a href="login-register.html" class="btn">Try It For Free Now</a>
+                                    <h4 class="sub-title">Cùng học với</h4>
+                                    <h3 class="title">IELTS</h3>
+                                    <p>Khóa học có nhiều thầy cô tâm huyết.</p>
+                                    <a href="login-register.html" class="btn">Đăng Ký Ngay</a>
                                 </div>
                             </div>
                             <!-- Single Offer End -->
@@ -218,18 +178,7 @@
                 <div class="course-header">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h2 class="title"><span>Popular</span> Courses</h2>
-                    </div>
-                    <!-- Section Title End -->
-
-                    <div class="tab-menu">
-                        <ul class="nav justify-content-center justify-content-lg-start">
-                            <li><button class="active" data-bs-toggle="tab" data-bs-target="#tab1">Javascript</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab2">Python</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab3">Web Development</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab4">Art & Design</button></li>
-                            <li><button data-bs-toggle="tab" data-bs-target="#tab5">Business</button></li>
-                        </ul>
+                        <h2 class="title"><span>Khóa Học</span> Phổ Biến</h2>
                     </div>
                 </div>
                 <!-- Course Header End -->
@@ -244,128 +193,30 @@
                         <div>
                             <div class="tab-pane fade show active" id="tab1">
 
-                                <div class="row">
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
+                            <div class="row">
+                                    <?php
+                                    // $list_kh = get_khoahoc();
+                                    foreach ($dssp as $value) : ?>
+                                        <div class="col-3">
                                             <div class="courses-image">
-                                                <a href="course-details.html"><img src="assets/images/courses/courses-1.jpg" alt="Courses"></a>
+                                                <a href="index.php?act=ct_khoahoc&id=<?php echo $value['id_kh'] ?>"><img width="300px" src="img/<?php echo $value['hinh'] ?>" alt="Courses"></a>
                                             </div>
                                             <div class="courses-content">
                                                 <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
+
                                                     <span class="price">
-                                                        <span class="sale-price">Free</span>
+                                                        <span style="color: red;" class="sale-price"><?php echo number_format($value['hoc_phi'])  ?> VNĐ</span>
                                                     </span>
                                                 </div>
-                                                <h3 class="title"><a href="course-details.html">Getting Started with the Linux Command Line</a></h3>
+                                                <h3 class="title"><a href="index.php?act=ct_khoahoc&id=<?php echo $value['id_kh'] ?>"><?php echo $value['ten_kh'] ?></a></h3>
                                                 <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
+                                                    <p class="author-name"><span><?php echo $value['thoi_gian'] ?></span> Hà Nội</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.html"><img src="assets/images/courses/courses-2.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                        <span class="sale-price">$49</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.html">Learn PHP Programming From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.html"><img src="assets/images/courses/courses-3.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                        <span class="sale-price">$25</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.html">Build A Full Web Chat App From Scratch</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Mike Hussy</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <!-- Single Courses Start -->
-                                        <div class="single-course">
-                                            <div class="courses-image">
-                                                <a href="course-details.html"><img src="assets/images/courses/courses-4.jpg" alt="Courses"></a>
-                                            </div>
-                                            <div class="courses-content">
-                                                <div class="top-meta">
-                                                    <div class="tag-time">
-                                                        <a class="tag" href="#">Beginner</a>
-                                                        <p class="time"><i class="far fa-clock"></i> 2h 30m</p>
-                                                    </div>
-                                                    <span class="price">
-                                                        <span class="sale-price">Free</span>
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="course-details.html">Getting Started with the Linux Command Line</a></h3>
-                                                <div class="courses-meta">
-                                                    <p class="author-name"><span>By</span> Andrew paker</p>
-                                                    <div class="rating">
-                                                        <div class="rating-star">
-                                                            <div class="rating-active" style="width: 60%;"></div>
-                                                        </div>
-                                                        <span>(4.5)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Courses End -->
-                                    </div>
-                                    
+                                    <?php endforeach; ?>
+
+                                </div>      
                             </div>
                                 </div>
 
@@ -404,9 +255,9 @@
                                 </div>
                                 <div class="counter-content">
                                     <h3 class="title">
-                                        <sapn class="counter">24</sapn>k+
+                                        <sapn class="counter">100</sapn>k+
                                     </h3>
-                                    <p>Total Students Enrolled</p>
+                                    <p>Tổng số học sinh theo học</p>
                                 </div>
                             </div>
                             <!-- Single Counter End -->
@@ -421,7 +272,7 @@
                                     <h3 class="title">
                                         <sapn class="counter">3</sapn>M+
                                     </h3>
-                                    <p>Total Video Lessons</p>
+                                    <p>Tổng số bài học video</p>
                                 </div>
                             </div>
                             <!-- Single Counter End -->
@@ -436,7 +287,7 @@
                                     <h3 class="title">
                                         <sapn class="counter">2.5</sapn>k+
                                     </h3>
-                                    <p>Daily live Classes</p>
+                                    <p>Lớp học trực tiếp hàng ngày</p>
                                 </div>
                             </div>
                             <!-- Single Counter End -->
@@ -451,7 +302,7 @@
                                     <h3 class="title">
                                         <sapn class="counter">75</sapn>+
                                     </h3>
-                                    <p>Total Exam Categories</p>
+                                    <p>Tổng số hạng mục thi</p>
                                 </div>
                             </div>
                             <!-- Single Counter End -->
@@ -469,8 +320,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="brand-title-wrap">
-                                <h2 class="title">The trusted market leader in talent transformation through education </h2>
-                                <a href="login-register.html" class="btn">Start Learning Now</a>
+                                <h2 class="title">Người dẫn đầu thị trường đáng tin cậy trong việc chuyển đổi nhân tài thông qua giáo dục</h2>
+                                <a href="login-register.html" class="btn">Bắt đầu học ngay</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -542,19 +393,19 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide single-testimonial-content">
 
-                                    <h3 class="title">Success Stories</h3>
-                                    <p>In total, it was a big success, I would get emails about what a fantastic resource it was.</p>
-                                    <h5 class="name">Vergenia Radar</h5>
+                                    <h3 class="title">Câu chuyện thành công</h3>
+                                    <p>Hóa ra phương pháp để đạt mục đích trong cuộc sống thật đơn giản, cứ tuần tự, từng bước, đừng nhảy vọt từ số 1 đến số 10.</p>
+                                    <h5 class="name">Trần Đình Minh</h5>
                                 </div>
                                 <div class="swiper-slide single-testimonial-content">
-                                    <h3 class="title">Success Stories</h3>
-                                    <p>In total, it was a big success, I would get emails about what a fantastic resource it was.</p>
-                                    <h5 class="name">Martney Holder</h5>
+                                    <h3 class="title">Câu chuyện thành công</h3>
+                                    <p>Hãy thực hiện theo những lời góp ý chân thành, đừng để tính lười biếng của bạn làm hại bản thân mình.</p>
+                                    <h5 class="name">Nguyễn Văn Đạt</h5>
                                 </div>
                                 <div class="swiper-slide single-testimonial-content">
-                                    <h3 class="title">Success Stories</h3>
-                                    <p>In total, it was a big success, I would get emails about what a fantastic resource it was.</p>
-                                    <h5 class="name">Andrew Paker</h5>
+                                    <h3 class="title">Câu chuyện thành công</h3>
+                                    <p>Hãy thực hiện theo những lời góp ý chân thành, đừng để tính lười biếng của bạn làm hại bản thân mình.</p>
+                                    <h5 class="name">Nguyễn Tuấn Anh</h5>
                                 </div>
                             </div>
 
@@ -597,7 +448,7 @@
                 <!-- Latest Blog Wrap Start -->
                 <div class="blog-wrap">
                     <div class="section-title text-center">
-                        <h2 class="title">Latest <span>News</span></h2>
+                        <h2 class="title">Giảng<span> Viên</span></h2>
                     </div>
                     <div class="blog-content-wrap">
                         <div class="row">
@@ -609,11 +460,11 @@
                                     </div>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <span><i class="far fa-user"></i> <a href="#">Admin</a></span>
-                                            <span><i class="far fa-calendar-alt"></i> 09 Jun, 2023</span>
+                                            <span><i class="far fa-user"></i> <a href="#">Mr. Minh</a></span>
+                                            <span><i class="far fa-calendar-alt"></i> 08 năm 2012</span>
                                         </div>
-                                        <h3 class="title"><a href="blog-details.html">How to Make Your UX Design Portfolio Stand Out</a></h3>
-                                        <a class="blog-btn" href="blog-details.html"> Read More</a>
+                                        <h3 class="title"><a href="blog-details.html">Giảng viên dậy Toeic người mới, Lấy gốc người mới</a></h3>
+                                        <a class="blog-btn" href="blog-details.html">Xem thêm</a>
                                     </div>
                                 </div>
                                 <!-- Latest Blog Item End -->
@@ -626,11 +477,11 @@
                                     </div>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <span><i class="far fa-user"></i> <a href="#">Admin</a></span>
-                                            <span><i class="far fa-calendar-alt"></i> 11 Jun, 2023</span>
+                                            <span><i class="far fa-user"></i> <a href="#">Mr. Tuấn Anh</a></span>
+                                            <span><i class="far fa-calendar-alt"></i> 11 năm 2015</span>
                                         </div>
-                                        <h3 class="title"><a href="blog-details.html">The Complete Digital Marketing Learning Path</a></h3>
-                                        <a class="blog-btn" href="blog-details.html"> Read More</a>
+                                        <h3 class="title"><a href="blog-details.html">Giảng viên dậy Toeic Nâng Cao, Ielts người mới</a></h3>
+                                        <a class="blog-btn" href="blog-details.html"> Xem thêm</a>
                                     </div>
                                 </div>
                                 <!-- Latest Blog Item End -->
@@ -643,11 +494,11 @@
                                     </div>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <span><i class="far fa-user"></i> <a href="#">Admin</a></span>
-                                            <span><i class="far fa-calendar-alt"></i> 15 Jun, 2023</span>
+                                            <span><i class="far fa-user"></i> <a href="#">Mr.Đạt</a></span>
+                                            <span><i class="far fa-calendar-alt"></i> 04 năm 2016</span>
                                         </div>
-                                        <h3 class="title"><a href="blog-details.html">How To Start Learn Online Study From Your Home</a></h3>
-                                        <a class="blog-btn" href="blog-details.html"> Read More</a>
+                                        <h3 class="title"><a href="blog-details.html">Giảng viên dậy Telts Nâng Cao, Lấy gốc người mới</a></h3>
+                                        <a class="blog-btn" href="blog-details.html"> Xem thêm</a>
                                     </div>
                                 </div>
                                 <!-- Latest Blog Item End -->
@@ -686,9 +537,9 @@
                             <div class="cta-content text-center">
 
                                 <div class="section-title">
-                                    <h2 class="title">A subscription that's more than just classes</h2>
+                                    <h2 class="title">Chất lượng đào tạo tốt, giảng viên giảng dậy rễ hiểu. Cơ sở vật chất hiện đại. Ngại gì mà không thử</h2>
                                 </div>
-                                <a class="btn" href="#">Get Subscription</a>
+                                <a class="btn" href="#">Đăng Ký Ngay</a>
 
                             </div>
                             <!-- Call To Action Content End -->

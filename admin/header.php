@@ -24,6 +24,9 @@
                 <ul>
                     <br>
                     <li>
+                        <img src="../assets/images/anh7_2.png" alt="" width="110%">
+                    </li>
+                    <li>
                         <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ</a>
                     </li>
                     <li>

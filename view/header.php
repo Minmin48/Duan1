@@ -61,7 +61,7 @@ $list = get_khoahoc()
                 <div class="container">
                     <div class="header-top-wrap">
                         <div class="header-top-content text-center">
-                            <p>Learn the latest trends indrive business innovation with the <span>Oxford Fintech Programe</span></p>
+                            <p>Nâng cao Tiếng Anh của Bạn là con đường đến sự giao tiếp tự tin <span>- Tự Tin với nỗ lực sẽ đánh bại sự lười nhát trong cuộc đua thành công.</span></p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ $list = get_khoahoc()
 
                             <!--  Header Logo Start  -->
                             <div class="header-logo">
-                                <a href="index.php"><img src="img/anh4.png" alt="logo" width="100%" height="80px"></a>
+                                <a href="index.php"><img src="assets/images/anh7.png" alt="logo" width="100%" height="80px"></a>
                             </div>
                             <!--  Header Logo End  -->
 
@@ -94,21 +94,16 @@ $list = get_khoahoc()
 
                                 </ul>
                                 </li>
-                                <!-- <li><a href="course-grid.html">Courses</a>
-                                        <ul class="sub-menu">
+                                <li><a href="course-grid.html">Giảng Viên</a>
+                                        <!-- <ul class="sub-menu">
                                             <li><a href="course-grid.html">Course Grid</a></li>
                                             <li><a href="course-list.html">Course List</a></li>
                                             <li><a href="course-details.html">Course Details</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
-                                    <li><a href="blog.html">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-list.html">Blog List</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
+                                    <li><a href="blog.html">Liên Hệ</a>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li> -->
+                                    <li><a href="contact.html">Về Chúng Tôi</a></li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->
@@ -129,70 +124,7 @@ $list = get_khoahoc()
                                 <a class="link" href="login-register.html"><i class="far fa-user"></i> Đăng nhập</a>
                                 <a class="link" href="login-register.html">Đăng ký</a>
                             </div>
-
-                            <div class="header-cart dropdown">
-                                <button class="cart-btn" data-bs-toggle="dropdown">
-                                    <i class="flaticon-shopping-cart"></i>
-                                    <span class="count">3</span>
-                                </button>
-                                <div class="dropdown-menu dropdown-cart">
-                                    <!-- Cart Items Start -->
-                                    <div class="cart-items">
-                                        <!-- Single Cart Item Start -->
-                                        <div class="single-cart-item">
-                                            <div class="item-image">
-                                                <img src="assets/images/shop-cart-1.jpg" alt="Cart">
-                                            </div>
-                                            <div class="item-content">
-                                                <h4 class="title"><a href="#">Smart Gear Watch</a></h4>
-                                                <span class="quantity"> 2 x $59.99 </span>
-                                            </div>
-                                            <button class="btn-close"></button>
-                                        </div>
-                                        <!-- Single Cart Item End -->
-                                        <!-- Single Cart Item Start -->
-                                        <div class="single-cart-item">
-                                            <div class="item-image">
-                                                <img src="assets/images/shop-cart-2.jpg" alt="Cart">
-                                            </div>
-                                            <div class="item-content">
-                                                <h4 class="title"><a href="#">Smart Gear Watch</a></h4>
-                                                <span class="quantity"> 2 x $59.99 </span>
-                                            </div>
-                                            <button class="btn-close"></button>
-                                        </div>
-                                        <!-- Single Cart Item End -->
-                                        <!-- Single Cart Item Start -->
-                                        <div class="single-cart-item">
-                                            <div class="item-image">
-                                                <img src="assets/images/shop-cart-3.jpg" alt="Cart">
-                                            </div>
-                                            <div class="item-content">
-                                                <h4 class="title"><a href="#">Smart Gear Watch</a></h4>
-                                                <span class="quantity"> 2 x $59.99 </span>
-                                            </div>
-                                            <button class="btn-close"></button>
-                                        </div>
-                                        <!-- Single Cart Item End -->
-                                    </div>
-                                    <!-- Cart Items End -->
-
-                                    <!-- Cart Total Start -->
-                                    <div class="cart-total">
-                                        <span class="label">Subtotal:</span>
-                                        <span class="value">$229.95</span>
-                                    </div>
-                                    <!-- Cart Total End -->
-
-                                    <!-- Cart Button Start -->
-                                    <div class="cart-btns">
-                                        <a href="#" class="btn">View Cart</a>
-                                        <a href="#" class="btn btn-white">Checkout</a>
-                                    </div>
-                                    <!-- Cart Button End -->
-                                </div>
-                            </div>
-
+                          
                             <div class="header-toggle d-lg-none">
                                 <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                                     <span></span>

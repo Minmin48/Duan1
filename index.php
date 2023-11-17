@@ -12,11 +12,8 @@ if (isset($_GET['act'])) {
         case 'ct_khoahoc':
             include_once 'view/ct_khoahoc.php';
             break;
-        case 'video':
-            include_once 'view/video.php';
-            break;
-        case 'video1':
-            include_once 'view/video1.php';
+        case 'dangky':
+            include_once 'view/dangky.php';
             break;
         default:
             # code...

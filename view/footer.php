@@ -10,16 +10,16 @@
                            <!-- Footer Widget Start -->
                            <div class="footer-widget widget-about">
                                <div class="footer-logo">
-                                   <a href="index.html"><img src="assets/images/logo-white.png" alt=""></a>
+                                   <a href="index.html"><img src="assets/images/anh7_1.png" alt="" width="65%"></a>
                                </div>
-                               <p class="text">World largest online learning platform. Download our apps to start learning.</p>
+                               <p class="text">Nền tảng học tập trực tuyến lớn nhất thế giới. Tải xuống ứng dụng của chúng tôi để bắt đầu học.</p>
                                <div class="widget-info">
                                    <div class="info-icon">
                                        <i class="flaticon-phone-call"></i>
                                    </div>
                                    <div class="info-text">
-                                       <p class="call-text">Call Us Free</p>
-                                       <a href="tel:+91458654528">+91 458 654 528</a>
+                                       <p class="call-text">Liên hệ ngay</p>
+                                       <a href="tel:+91458654528">+84 359 654 576</a>
                                    </div>
                                </div>
                            </div>
@@ -29,13 +29,13 @@
                        <div class="col-lg-3 col-sm-6">
                            <!-- Footer Widget Start -->
                            <div class="footer-widget">
-                               <h4 class="footer-widget-title">Trending Courses</h4>
+                               <h4 class="footer-widget-title">Khóa học xu hướng</h4>
                                <div class="widget-link">
                                    <ul class="link">
-                                       <li><a href="index.html">Home </a></li>
-                                       <li><a href="#">Pricing</a></li>
-                                       <li><a href="about.html">Compare plans</a></li>
-                                       <li><a href="contact.html">Contact us</a></li>
+                                       <li><a href="#">Lịch sử chúng tôi </a></li>
+                                       <li><a href="#">Những khóa học ấn tượng</a></li>
+                                       <li><a href="about.html">Đa dạng và hòa nhập</a></li>
+                                       <li><a href="contact.html">Tuyến bố và chính sách an toàn</a></li>
                                    </ul>
                                </div>
                            </div>
@@ -45,13 +45,13 @@
                        <div class="col-lg-3 col-sm-6">
                            <!-- Footer Widget Start -->
                            <div class="footer-widget">
-                               <h4 class="footer-widget-title">Study material</h4>
+                               <h4 class="footer-widget-title">Dậy Tiếng Anh</h4>
                                <div class="widget-link">
                                    <ul class="link">
-                                       <li><a href="blog.html">Blog</a></li>
-                                       <li><a href="#">Weekly webinar</a></li>
-                                       <li><a href="#">Academy</a></li>
-                                       <li><a href="#">Free eBooks & checklists</a></li>
+                                       <li><a href="#">Các tài liệu</a></li>
+                                       <li><a href="#">các hoạt động với giáo viên</a></li>
+                                       <li><a href="#">Tuyển dụng giáo viên</a></li>
+                                       <li><a href="#">Liên hệ</a></li>
                                    </ul>
                                </div>
                            </div>
@@ -60,7 +60,7 @@
                        <div class="col-lg-3 col-sm-6">
                            <!-- Footer Widget Start -->
                            <div class="footer-widget">
-                               <h4 class="footer-widget-title">Download Now</h4>
+                               <h4 class="footer-widget-title">Tải Ngay</h4>
                                <div class="widget-download">
                                    <a href="#"><img src="assets/images/app-1.jpg" alt=""></a>
                                    <a href="#"><img src="assets/images/app-2.png" alt=""></a>
@@ -79,7 +79,7 @@
                            <div class="col-lg-6 col-md-6">
                                <!-- Footer Copyright Text Start -->
                                <div class="copyright-text">
-                                   <p>© Copyright 2023 upstudy All rights reserved. </p>
+                                   <p>© Copyright 2023 tienganhadm. </p>
                                </div>
                                <!-- Footer Copyright Text End -->
                            </div>

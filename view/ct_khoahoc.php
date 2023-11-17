@@ -130,7 +130,7 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                                                 <td><?php echo $value['soluong_hs'] ?></td>
                                                 <td>
 
-                                                    <a href="index.php?act=deletelop&id=<?php echo $value['id_lop'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i></i> Đăng Kí</a>
+                                                    <a href="index.php?act=dangky&id=<?php echo $value['id_lop'] ?>" class="btn btn-danger"><i></i> Đăng Kí</a>
                                                 </td>
                                             </tr>
                                         <?php endforeach ?>
