@@ -22,10 +22,10 @@
         <div class="app-main">
             <nav class="sidebar bg-primary">
                 <ul>
-                    <br>
                     <li>
-                        <img src="../assets/images/anh7_2.png" alt="" width="110%">
+                        <img src="../assets/images/anh7_2.png" alt="" width="140px">
                     </li>
+                    <li><a href="#">QUẢN LÝ</a></li>
                     <li>
                         <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ</a>
                     </li>
@@ -44,13 +44,11 @@
                     <li>
                         <a href="#"><i class="fa-solid fa-circle-user"></i> Quản lý người dùng</a>
                     </li>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <hr>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-comment"></i> Quản lý bình luận</a>
+                    </li>
+
+                    <li><a href="#">QUẢN TRỊ</a></li>
                     <li>
                         <a href="../index.php"><i class="fa-solid fa-paper-plane"></i> Vào giao diện người dùng</a>
                     </li>

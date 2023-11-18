@@ -9,7 +9,7 @@ $list = get_khoahoc()
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Upstudy - Education & LMS HTML5 Template</title>
+    <title>ADM English Center</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -95,15 +95,15 @@ $list = get_khoahoc()
                                 </ul>
                                 </li>
                                 <li><a href="course-grid.html">Giảng Viên</a>
-                                        <!-- <ul class="sub-menu">
+                                    <!-- <ul class="sub-menu">
                                             <li><a href="course-grid.html">Course Grid</a></li>
                                             <li><a href="course-list.html">Course List</a></li>
                                             <li><a href="course-details.html">Course Details</a></li>
                                         </ul> -->
-                                    </li>
-                                    <li><a href="blog.html">Liên Hệ</a>
-                                    </li>
-                                    <li><a href="contact.html">Về Chúng Tôi</a></li>
+                                </li>
+                                <li><a href="blog.html">Liên Hệ</a>
+                                </li>
+                                <li><a href="contact.html">Về Chúng Tôi</a></li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->
@@ -124,7 +124,7 @@ $list = get_khoahoc()
                                 <a class="link" href="login-register.html"><i class="far fa-user"></i> Đăng nhập</a>
                                 <a class="link" href="login-register.html">Đăng ký</a>
                             </div>
-                          
+
                             <div class="header-toggle d-lg-none">
                                 <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                                     <span></span>
