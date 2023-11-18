@@ -117,7 +117,7 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                                     <tbody>
                                         <?php
                                         $index = 0;
-                                        $listkh = join_giangvien();
+                                        $listkh = join_giangvien($_GET['id']);
 
                                         foreach ($listkh as $value) : $index++ ?>
                                             <tr class="table-primary">
@@ -130,7 +130,7 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                                                 <td><?php echo $value['soluong_hs'] ?></td>
                                                 <td>
 
-                                                    <a href="index.php?act=dangky&id=<?php echo $value['id_lop'] ?>" class="btn btn-danger"><i></i> Đăng Kí</a>
+                                                    <a href="index.php?act=dangky&id=<?php echo $value['id_lop'] ?>&id_kh=<?= $value['id_kh'] ?>" class="btn btn-danger"><i></i> Đăng Kí</a>
                                                 </td>
                                             </tr>
                                         <?php endforeach ?>

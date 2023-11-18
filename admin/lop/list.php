@@ -20,9 +20,9 @@
         <tbody>
             <?php
             $index = 0;
-            $listkh = join_giangvien();
-           
-            foreach ($listkh as $value) : $index++ ?>
+            $list = join_giangvien();
+
+            foreach ($list as $value) : $index++ ?>
                 <tr class="table-primary">
                     <td><?php echo $index; ?></td>
                     <td><?php echo $value['ten_lop'] ?></td>

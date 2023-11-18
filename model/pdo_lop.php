@@ -18,10 +18,10 @@ function join_khoahoc()
     $stmt->execute();
     return $stmt->fetchAll();
 }
-function join_giangvien()
+function join_giangvien($id_kh)
 {
     $con = connection();
-    $sql = "select * from lop join giang_vien on lop.id_gv = giang_vien.id_gv join khoa_hoc on lop.id_kh = khoa_hoc.id_kh";
+    $sql = "SELECT * FROM lop JOIN khoa_hoc ON lop.id_kh = khoa_hoc.id_kh JOIN giang_vien ON lop.id_gv = giang_vien.id_gv WHERE lop.id_kh ='$id_kh'";
     $stmt = $con->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll();
@@ -55,4 +55,16 @@ function list_kh()
     $stmt = $con->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll();
+}
+function update_soluong_hs($id_lop)
+{
+    $con = connection();
+    $tmp = "SELECT soluong_hs FROM lop WHERE id_lop = '$id_lop'";
+    $stmt = $con->prepare($tmp);
+    $stmt->execute();
+    $result =  $stmt->fetch();
+    $newSL = $result['soluong_hs'] - 1;
+    $sql = "UPDATE lop SET soluong_hs='$newSL' WHERE id_lop='$id_lop'";
+    $stm = $con->prepare($sql);
+    $stm->execute();
 }

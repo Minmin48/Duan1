@@ -72,7 +72,7 @@
              <div class="col-lg-8">
                  <!-- Contact Form Wrap Start -->
                  <div class="contact-form-wrap">
-                     <form action="#">
+                     <form action="index.php?act=dangky" method="post">
                          <div class="row">
                              <div class="col-md-6">
                                  <!-- Single Form Start -->
@@ -112,7 +112,9 @@
                              <div class="col-md-12">
                                  <!--  Single Form Start -->
                                  <div class="form-btn">
-                                     <button class="btn" type="submit">Đăng Ký Ngay</button>
+                                     <input type="text" value="<?= $_GET['id_kh'] ?>" hidden name="id_kh">
+                                     <input type="text" value="<?= $_GET['id'] ?>" hidden name="id_lop">
+                                     <button class="btn" type="submit" value="Đăng ký" name="dangKy">Đăng Ký Ngay</button>
                                  </div>
                                  <!--  Single Form End -->
                              </div>
