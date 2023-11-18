@@ -20,7 +20,7 @@
         <tbody>
             <?php
             $index = 0;
-            $list = join_giangvien();
+            $list = list_kh();
 
             foreach ($list as $value) : $index++ ?>
                 <tr class="table-primary">
