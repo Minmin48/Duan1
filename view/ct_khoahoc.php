@@ -21,6 +21,7 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
 
             <div class="course-details-meta">
                 <div class="meta-action">
+
                     <div class="meta-author">
                         <img src="img/<?php echo $listKhoaHoc['hinh'] ?>" alt="Author">
                     </div>
@@ -129,7 +130,6 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                                                 <td><?php echo $value['ten_gv'] ?></td>
                                                 <td><?php echo $value['soluong_hs'] ?></td>
                                                 <td>
-
                                                     <a href="index.php?act=dangky&id=<?php echo $value['id_lop'] ?>&id_kh=<?= $value['id_kh'] ?>" class="btn btn-danger"><i></i> Đăng Kí</a>
                                                 </td>
                                             </tr>
@@ -214,7 +214,28 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
             <div class="col-lg-4">
 
                 <!-- Sidebar Details Video Description Start -->
+                
                 <div class="sidebar-details-video-description">
+                    <div class="price-wrap">
+                        <img src="assets/images/hero-img.png" alt="">
+                        <h2>Sale:<samp style="color: red;"> 8%</samp></h2>
+                        <!-- <div class="price">
+
+                            <h3 style="color:red" class="regular-price"><?php echo number_format($listKhoaHoc['hoc_phi']) ?>đ </h3><samp><strike>1,200.000 đ</strike></samp>
+
+                        </div> -->
+                        <div class="container_swap">
+
+                            <div class="div_left">
+                                <h3 style="color: red;"><?php echo number_format($listKhoaHoc['hoc_phi']) ?>đ</h3>
+                            </div>
+                            <div class="div_right">
+                                <h4><strike>1,200.000 đ</strike>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chỉ Còn </h4>
+                            </div>
+                            <br>
+                        </div>
+                        <!--  &nbsp; c - lệch khoảng cách-->
+                    </div>
                     <div class="sidebar-image">
                         <img src="img/<?php echo $listKhoaHoc['hinh'] ?>" alt="video">
                     </div>

@@ -180,7 +180,7 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                                     foreach ($dssp as $value) : ?>
                                         <div class="col-3">
                                             <div class="courses-image">
-                                                <a href="index.php?act=ct_khoahoc&id=<?php echo $value['id_kh'] ?>"><img width="300px" src="img/<?php echo $value['hinh'] ?>" alt="Courses"></a>
+                                                <a href="index.php?act=ct_khoahoc&id=<?php echo $value['id_kh'] ?>"><img width="1000px" height="170px" src="img/<?php echo $value['hinh'] ?>" alt="Courses"></a>
                                             </div>
                                             <div class="courses-content">
                                                 <div class="top-meta">

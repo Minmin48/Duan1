@@ -42,7 +42,7 @@
                         <a href="index.php?act=listgv"><i class="fa-solid fa-user"></i> Quản lý giảng viên</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-solid fa-circle-user"></i> Quản lý người dùng</a>
+                        <a href="index.php?act=dangky"><i class="fa-solid fa-circle-user"></i> Quản lý người dùng</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa-solid fa-comment"></i> Quản lý bình luận</a>

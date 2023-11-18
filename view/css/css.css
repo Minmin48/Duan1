@@ -314,3 +314,30 @@ thead th.active,tbody td.active {
     width: 2rem;
     height: auto;
 }
+/* bên trái và bên phải */
+.container_swap{
+
+width: 400px;
+
+}
+
+.div_left{
+
+width: 200px;
+
+float: right;
+
+text-align: center;
+
+}
+
+.div_right{
+
+width: 200px;
+margin-top: 7px;
+float: left;
+
+text-align: center;
+
+}
+

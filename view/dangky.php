@@ -77,35 +77,43 @@
                              <div class="col-md-6">
                                  <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <input class="form-control" type="text" placeholder="Nhập Họ & Tên...">
+                                     <input class="form-control" type="text" placeholder="Nhập Họ & Tên..." name="ten">
                                  </div>
                                  <!-- Single Form End -->
                              </div>
                              <div class="col-md-6">
                                  <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <input class="form-control" type="email" placeholder="Nhập Email...">
+                                     <input class="form-control" type="email" placeholder="Nhập Email..." name="email">
                                  </div>
                                  <!-- Single Form End -->
                              </div>
                              <div class="col-md-6">
                                  <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <input class="form-control" type="text" placeholder="Nhập SĐT...">
+                                     <input class="form-control" type="text" placeholder="Nhập SĐT..." name="sdt">
                                  </div>
                                  <!-- Single Form End -->
                              </div>
                              <div class="col-md-6">
                                  <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <input class="form-control" type="text" placeholder="Tài Khoản????">
+                                     <!-- <input class="form-control" type="text" placeholder="Tài Khoản????"> -->
+                                     <select name="chonkhoahoc" >
+                                         <option value="" hidden>Mời chọn khóa học</option>
+                                         <?php $get_all = load_khoahoc();
+                                            foreach ($get_all as $minh) :
+                                            ?>
+                                             <option value="<?php echo $minh['id_kh'] ?>"><?php echo $minh['ten_kh']?></option>
+                                         <?php endforeach; ?>
+                                     </select>
                                  </div>
                                  <!-- Single Form End -->
                              </div>
                              <div class="col-md-12">
                                  <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <textarea class="form-control" placeholder="Câu hỏi..."></textarea>
+                                     <textarea name="cauhoi" class="form-control" placeholder="Câu hỏi..."></textarea>
                                  </div>
                                  <!-- Single Form End -->
                              </div>

@@ -5,6 +5,7 @@ include_once "../model/pdo_khoahoc.php";
 include_once "../model/pdo_giangvien.php";
 include_once "../model/pdo_lop.php";
 include_once "../model/pdo_taikhoan.php";
+include_once "../model/pdo_dangky.php";
 include_once "header.php";
 if (isset($_GET['act']) && $_GET['act']) {
     $act = $_GET['act'];
@@ -187,6 +188,15 @@ if (isset($_GET['act']) && $_GET['act']) {
                 update_lop($id, $tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong);
                 include_once "lop/list.php";
             }
+            break;
+            // đăng ký
+        case 'dangky':
+            include_once '../admin/dangky/list.php';
+            break;
+        case 'deletedk':
+            $id = $_GET['id'];
+            delete_dangky($id);
+            include_once '../admin/dangky/list.php';
             break;
         default:
             include_once "home.php";

@@ -75,3 +75,11 @@ function show_khoahoc($idkh)
     $stm->execute();
     return $stm->fetchAll();
 }
+function load_khoahoc()
+{
+    $conn = connection();
+    $sql = "SELECT * FROM khoa_hoc";
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll();
+}
