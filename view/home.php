@@ -29,7 +29,7 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                             <p class="text" data-aos="fade-up" data-aos-delay="800"><img src="assets/images/energy.png" alt=""> Học từ hơn 20,000+ khóa học mạnh mẽ</p>
                             <h2 class="title" data-aos="fade-up" data-aos-delay="700">Tự Tin <span>giao tiếp</span> Tiếng Anh</h2>
                             <div class="hero-btn" data-aos="fade-up" data-aos-delay="900">
-                                <a class="btn" href="login-register.html">Đăng Ký Ngay</a>
+                                <a class="btn" href="index.php?act=dangkytk">Đăng Ký Ngay</a>
                             </div>
                             <p class="link-text" data-aos="fade-up" data-aos-delay="1000"><span>Được giảm 8%</span>  Khi đăng ký qua Website</p>
                         </div>

@@ -121,8 +121,17 @@ $list = get_khoahoc()
                             </div>
 
                             <div class="header-login d-none d-lg-block">
-                                <a class="link" href="login-register.html"><i class="far fa-user"></i> Đăng nhập</a>
-                                <a class="link" href="login-register.html">Đăng ký</a>
+                                <?php
+                                if (isset($_SESSION['login'])):?>
+                                    <?php if($_SESSION['login']['id_cv']): ?>
+                                    <a class="link" href="admin/index.php"><i class="far fa-user"></i> Vào trang quản trị</a>
+                                    <?php endif?>
+                                    <a class="link" href="index.php?act=dangxuat"><i class="far"></i> Đăng Xuất</a>
+
+                                <?php else:?>
+                                <a class="link" href="index.php?act=dangnhaptk"><i class="far fa-user"></i> Đăng nhập</a>
+                                <a class="link" href="index.php?act=dangkytk">Đăng ký</a>
+                                <?php endif?>
                             </div>
 
                             <div class="header-toggle d-lg-none">

@@ -217,7 +217,7 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                 
                 <div class="sidebar-details-video-description">
                     <div class="price-wrap">
-                        <img src="assets/images/hero-img.png" alt="">
+                        <!-- <img src="assets/images/hero-img.png" alt=""> -->
                         <h2>Sale:<samp style="color: red;"> 8%</samp></h2>
                         <!-- <div class="price">
 
