@@ -2,26 +2,18 @@
 
 include_once 'pdo.php';
 
-function gettAll_dangky($tendk, $emaildk, $sdtdk, $chonkhoahoc, $cauhoi)
+function oder_dkkhoahoc($tenlop, $tengv, $thoigian, $cahoc, $soluong, $hocphi, $user, $email, $phone, $khoahoc,$id_trangthai)
 {
     $conn = connection();
-    $sql = "INSERT INTO dangky(ten_dk, email_dk, sdt_dk, id_kh, cauhoi_dk) VALUES ('$tendk','$emaildk','$sdtdk','$chonkhoahoc','$cauhoi')";
+    $sql = "INSERT INTO dangky(ten_lop, ten_gv,thoi_gian_hoc, ca_hoc,so_luong, hoc_phi, ten_nguoi_dung,email,id_kh,phone,id_trangthai) VALUES ('$tenlop',' $tengv','$thoigian',' $cahoc','$soluong','$hocphi','$user','$email','$khoahoc','$phone','$id_trangthai')";
     $stm = $conn->prepare($sql);
     $stm->execute();
 }
-
-function list_dangky()
+function list_dkkhoahoc()
 {
-    $con = connection();
+    $conn = connection();
     $sql = "select * from dangky join khoa_hoc on dangky.id_kh = khoa_hoc.id_kh";
-    // $sql = "select * from dangky";
-    $stmt = $con->prepare($sql);
-    $stmt->execute();
-    return $stmt->fetchAll();
-}
-function delete_dangky($id){
-    $con = connection();
-    $sql = "DELETE FROM dangky WHERE id_dk='$id'";
-    $stmt = $con->prepare($sql);
-    $stmt->execute();
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll();
 }

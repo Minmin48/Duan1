@@ -81,24 +81,12 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                     </div>
                     <!-- Course Learn List End -->
 
-                    <!-- Course Lessons Start -->
+                    <!-- Course Lessons Start --> <br><br><br>
                     <div class="course-lessons">
 
                         <main class="table">
                             <section class="table__header">
                                 <h1>Lịch học các lớp</h1>
-
-                                <div class="export__file">
-                                    <label for="export-file" class="export__file-btn" title="Export File"></label>
-                                    <input type="checkbox" id="export-file">
-                                    <div class="export__file-options">
-                                        <label>Export As &nbsp; &#10140;</label>
-                                        <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
-                                        <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
-                                        <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
-                                        <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
-                                    </div>
-                                </div>
                             </section>
                             <section class="table__body">
                                 <table>
@@ -130,7 +118,7 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                                                 <td><?php echo $value['ten_gv'] ?></td>
                                                 <td><?php echo $value['soluong_hs'] ?></td>
                                                 <td>
-                                                    <a href="index.php?act=dangky&id=<?php echo $value['id_lop'] ?>&id_kh=<?= $value['id_kh'] ?>" class="btn btn-danger"><i></i> Đăng Kí</a>
+                                                    <a href="index.php?act=dangky&id=<?php echo $value['id_lop'] ?>&id_kh=<?= $value['id_kh'] ?>" class="btn btn-danger"  <?php echo ($value['soluong_hs']==0)?'onclick="return checkSLHS()"':''?> ><i></i> Đăng Ký</a>
                                                 </td>
                                             </tr>
                                         <?php endforeach ?>
@@ -139,105 +127,31 @@ $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
                             </section>
                         </main>
                     </div>
-
-                    <!-- Course Review Start -->
-                    <div class="course-review">
-                        <h3 class="title">Review</h3>
-
-                        <!-- Review Rating Start -->
-                        <div class="review-rating">
-
-                            <div class="rating-box">
-                                <span class="count">5.0</span>
-                                <div class="rating-star">
-                                    <div class="rating-active" style="width: 100%;"></div>
-                                </div>
-                                <p>Total 2 Ratings</p>
-                            </div>
-                            <div class="rating-percentage">
-
-                                <!-- Course Review Start -->
-                                <div class="single-rating-percentage">
-                                    <span class="label">5 Stars</span>
-                                    <div class="rating-line">
-                                        <div class="line-bar" style="width: 90%;"></div>
-                                    </div>
-                                    <span class="label">90%</span>
-                                </div>
-                                <!-- Course Review End -->
-
-                                <!-- Course Review Start -->
-                                <div class="single-rating-percentage">
-                                    <span class="label">4 Stars</span>
-                                    <div class="rating-line">
-                                        <div class="line-bar" style="width: 40%;"></div>
-                                    </div>
-                                    <span class="label">40%</span>
-                                </div>
-                                <!-- Course Review End -->
-
-                                <!-- Course Review Start -->
-                                <div class="single-rating-percentage">
-                                    <span class="label">3 Stars</span>
-                                    <div class="rating-line">
-                                        <div class="line-bar" style="width: 20%;"></div>
-                                    </div>
-                                    <span class="label">20%</span>
-                                </div>
-                                <!-- Course Review End -->
-
-                                <!-- Course Review Start -->
-                                <div class="single-rating-percentage">
-                                    <span class="label">2 Stars</span>
-                                    <div class="rating-line">
-                                        <div class="line-bar" style="width: 0%;"></div>
-                                    </div>
-                                    <span class="label">15%</span>
-                                </div>
-                                <!-- Course Review End -->
-
-                                <!-- Course Review Start -->
-                                <div class="single-rating-percentage">
-                                    <span class="label">1 Stars</span>
-                                    <div class="rating-line">
-                                        <div class="line-bar" style="width: 0%;"></div>
-                                    </div>
-                                    <span class="label">10%</span>
-                                </div>
-                                <!-- Course Review End -->
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-4">
 
                 <!-- Sidebar Details Video Description Start -->
-                
+
                 <div class="sidebar-details-video-description">
                     <div class="price-wrap">
                         <!-- <img src="assets/images/hero-img.png" alt=""> -->
-                        <h2>Sale:<samp style="color: red;"> 8%</samp></h2>
+                        <h3>&nbsp;&nbsp;Sale:<samp style="color: red;"> 8%</samp></h3>
                         <!-- <div class="price">
 
                             <h3 style="color:red" class="regular-price"><?php echo number_format($listKhoaHoc['hoc_phi']) ?>đ </h3><samp><strike>1,200.000 đ</strike></samp>
 
                         </div> -->
-                        <div class="container_swap">
-
-                            <div class="div_left">
-                                <h3 style="color: red;"><?php echo number_format($listKhoaHoc['hoc_phi']) ?>đ</h3>
-                            </div>
-                            <div class="div_right">
-                                <h4><strike>1,200.000 đ</strike>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chỉ Còn </h4>
-                            </div>
-                            <br>
+                        <div>
+                            <strong style="color: red; font-size: 26px;">&nbsp;&nbsp;<?php echo number_format($listKhoaHoc['hoc_phi']) ?>đ &nbsp;</strong>
+                            <samp>Giá gốc</samp>
+                            <samp><strike>1,200.000 đ</strike></samp>
                         </div>
+                        <b class="fa fa-tachometer" style="color: #1CB098;">&nbsp;&nbsp;&nbsp;Thời gian ưu đãi còn 1 ngày</b>
                         <!--  &nbsp; c - lệch khoảng cách-->
                     </div>
                     <div class="sidebar-image">
-                        <img src="img/<?php echo $listKhoaHoc['hinh'] ?>" alt="video">
+                        <img src="img/<?php echo $listKhoaHoc['hinh'] ?>" alt="video" height="350px">
                     </div>
 
                     <!-- Sidebar Details Video Description End -->

@@ -1,3 +1,8 @@
+ <!-- <?php
+        include_once '../model/pdo.php';
+        include_once '../model/pdo_lop.php';
+
+        ?> -->
  <!-- Page Banner Start -->
  <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
      <div class="shape-1">
@@ -26,113 +31,110 @@
      </div>
  </div>
  <!-- Page Banner End -->
+ <?php $hihi = getid_lop_gv_kh($_GET['id']);
 
+    ?>
  <!-- Contact Start -->
  <div class="section contact-section section-padding">
      <div class="container">
          <div class="row">
-             <div class="col-lg-4">
-                 <div class="contact-info-wrap">
-                     <h3 class="info-title">Đăng Ký Khóa Học</h3>
-                     <!--Single Contact Info Start -->
-                     <div class="single-contact-info">
-                         <div class="info-icon">
-                             <i class="flaticon-phone-call"></i>
-                         </div>
-                         <div class="info-content">
-                             <h5 class="title">SĐT Liên Hệ</h5>
-                             <p>+84 359 654 576</p>
-                         </div>
-                     </div>
-                     <!--Single Contact Info End -->
-                     <!--Single Contact Info Start -->
-                     <div class="single-contact-info">
-                         <div class="info-icon">
-                             <i class="flaticon-email"></i>
-                         </div>
-                         <div class="info-content">
-                             <h5 class="title">Email</h5>
-                             <p>info@example.com</p>
-                         </div>
-                     </div>
-                     <!--Single Contact Info End -->
-                     <!--Single Contact Info Start -->
-                     <div class="single-contact-info">
-                         <div class="info-icon">
-                             <i class="flaticon-pin"></i>
-                         </div>
-                         <div class="info-content">
-                             <h5 class="title">Địa Chỉ</h5>
-                             <p>14 Trịnh Văn Bô, Nam Từ liêm, Hà Nội</p>
-                         </div>
-                     </div>
-                     <!--Single Contact Info End -->
-                 </div>
-             </div>
              <div class="col-lg-8">
-                 <!-- Contact Form Wrap Start -->
-                 <div class="contact-form-wrap">
-                     <form action="index.php?act=dangky" method="post">
+                 <div class="contact-info-wrap">
+                     <form action="vnpay_php/vnpay_create_payment.php" method="post">
                          <div class="row">
+                             <h2 style="color: #1CB098">Chi Tiết Lớp Học</h2>
                              <div class="col-md-6">
-                                 <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <input class="form-control" type="text" placeholder="Nhập Họ & Tên..." name="ten">
+                                     <h5>Tên Lớp:</h5>
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ten_lop'] ?>" style="font-size : 14px;" name="tenlop">
                                  </div>
-                                 <!-- Single Form End -->
+                                 <br>
                              </div>
                              <div class="col-md-6">
-                                 <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <input class="form-control" type="email" placeholder="Nhập Email..." name="email">
+                                     <h5>Tên Giảng Viên:</h5>
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ten_gv'] ?>" style="font-size : 14px" name="tengv">
                                  </div>
-                                 <!-- Single Form End -->
+                                 <br>
                              </div>
                              <div class="col-md-6">
-                                 <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <input class="form-control" type="text" placeholder="Nhập SĐT..." name="sdt">
+                                     <h5>Thời Gian Học:</h5>
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['thoi_gian_hoc'] ?>" style="font-size : 14px" name="thoigian">
                                  </div>
-                                 <!-- Single Form End -->
+                                 <br>
                              </div>
                              <div class="col-md-6">
-                                 <!-- Single Form Start -->
                                  <div class="single-form">
-                                     <!-- <input class="form-control" type="text" placeholder="Tài Khoản????"> -->
-                                     <select name="chonkhoahoc" >
-                                         <option value="" hidden>Mời chọn khóa học</option>
-                                         <?php $get_all = load_khoahoc();
-                                            foreach ($get_all as $minh) :
-                                            ?>
-                                             <option value="<?php echo $minh['id_kh'] ?>"><?php echo $minh['ten_kh']?></option>
-                                         <?php endforeach; ?>
+                                     <h5>Ca học:</h5>
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ca_hoc'] ?>" style="font-size : 14px" name="cahoc">
+                                 </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="single-form">
+                                     <h5>Số lượng:</h5>
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['soluong_hs'] ?>" style="font-size : 14px" name="soluong">
+                                 </div>
+                                 <br>
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="single-form">
+                                     <h5>Học phí: </h5>
+                                     <input type="disabled" style="color: red; font-size : 15px" value="<?php echo number_format($hihi['hoc_phi']) ?> VND" name="hocphi">
+                                 </div>
+                             </div>
+
+                             <h2 style=" color: #1CB098">Thông Tin Đăng Ký</h2>
+                             <div class="col-md-6">
+                                 <div class="single-form">
+                                     <h5>Họ & Tên</h5>
+                                     <input class class="form-control" name="user" type="text" value="<?php echo $_SESSION['login']['ho_ten'] ?>">
+                                 </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="single-form">
+                                     <h5>Email: </h5>
+                                     <input type="text" name="email" value="<?php echo $_SESSION['login']['email'] ?>">
+                                 </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="single-form">
+                                     <h5>SĐT: </h5>
+                                     <input type="text" name="phone" value="<?php echo $_SESSION['login']['phone'] ?>">
+                                 </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="single-form">
+                                     <h5>Khóa Học:</h5>
+                                     <select name="khoahoc">
+                                         <option value="<?php echo $hihi['id_kh'] ?>"><?php echo $hihi['ten_kh'] ?></option>
                                      </select>
                                  </div>
-                                 <!-- Single Form End -->
+                                 <br><br>
                              </div>
                              <div class="col-md-12">
-                                 <!-- Single Form Start -->
-                                 <div class="single-form">
-                                     <textarea name="cauhoi" class="form-control" placeholder="Câu hỏi..."></textarea>
-                                 </div>
-                                 <!-- Single Form End -->
-                             </div>
-                             <div class="col-md-12">
-                                 <!--  Single Form Start -->
                                  <div class="form-btn">
                                      <input type="text" value="<?= $_GET['id_kh'] ?>" hidden name="id_kh">
                                      <input type="text" value="<?= $_GET['id'] ?>" hidden name="id_lop">
-                                     <button class="btn" type="submit" value="Đăng ký" name="dangKy">Đăng Ký Ngay</button>
+                                     <br>
+                                     <button class="btn" type="submit" value="Đăng ký" name="dangKy">Thanh Toán</button>
                                  </div>
-                                 <!--  Single Form End -->
                              </div>
                          </div>
                      </form>
                  </div>
-                 <!-- Contact Form Wrap End -->
              </div>
+             <div class="col-lg-4">
+                 <!-- Contact Form Wrap Start -->
+                 <div class="contact-form-wrap">
+                     <img src="assets/images/hero-img.png" alt="">
+                 </div>
+
+             </div>
+             <!-- Contact Form Wrap End -->
          </div>
      </div>
+ </div>
  </div>
  <!-- Contact End -->
 

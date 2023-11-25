@@ -1,11 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <?php
-$list = get_khoahoc()
+$list = get_khoahoc();
 ?>
-<!-- Mirrored from thepixelcurve.com/html/upstudy/upstudy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Nov 2023 14:26:50 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -15,7 +12,6 @@ $list = get_khoahoc()
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/anh7.png">
-
     <!-- CSS
 	============================================ -->
 
@@ -94,12 +90,7 @@ $list = get_khoahoc()
 
                                 </ul>
                                 </li>
-                                <li><a href="course-grid.html">Giảng Viên</a>
-                                    <!-- <ul class="sub-menu">
-                                            <li><a href="course-grid.html">Course Grid</a></li>
-                                            <li><a href="course-list.html">Course List</a></li>
-                                            <li><a href="course-details.html">Course Details</a></li>
-                                        </ul> -->
+                                <li><a href="index.php?act=giangvien">Giảng Viên</a>
                                 </li>
                                 <li><a href="blog.html">Liên Hệ</a>
                                 </li>
@@ -109,8 +100,6 @@ $list = get_khoahoc()
                             <!--  Header Menu End  -->
 
                         </div>
-
-
                         <!-- Header Meta Start -->
                         <div class="header-meta">
                             <div class="header-search d-none d-xl-block">
@@ -126,7 +115,7 @@ $list = get_khoahoc()
                                     <?php if($_SESSION['login']['id_cv']): ?>
                                     <a class="link" href="admin/index.php"><i class="far fa-user"></i> Vào trang quản trị</a>
                                     <?php endif?>
-                                    <a class="link" href="index.php?act=dangxuat"><i class="far"></i> Đăng Xuất</a>
+                                    <a class="link" href="index.php?act=dangxuat"><i class="far-solid fa-arrow-right-to-bracket"></i> Đăng Xuất</a>
 
                                 <?php else:?>
                                 <a class="link" href="index.php?act=dangnhaptk"><i class="far fa-user"></i> Đăng nhập</a>
@@ -147,12 +136,9 @@ $list = get_khoahoc()
 
                     </div>
                 </div>
-
-
             </div>
         </div>
         <!-- Header End -->
-
 
         <!-- Offcanvas Start -->
         <div class="offcanvas offcanvas-start" id="offcanvasMenu">

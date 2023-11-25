@@ -38,3 +38,11 @@ function update_giangvien($id, $tengv, $text, $hinh)
     $stmt = $con->prepare($sql);
     $stmt->execute();
 }
+function getall_id_giangvien($id)
+{
+    $con = connection();
+    $sql = "select * from giang_vien where id_gv = '$id'";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}

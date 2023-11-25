@@ -74,10 +74,10 @@
                         <div class="col-lg-12">
                             <!-- Page Banner Content Start -->
                             <div class="page-banner text-center">
-                                <h2 class="title">Đăng Nhập Và Đăng Ký</h2>
+                                <h2 class="title">Đăng Nhập</h2>
                                 <ul class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Đăng Ký & Đăng Nhập</li>
+                                    <li class="breadcrumb-item active" aria-current="page"> Đăng Nhập</li>
                                 </ul>
                             </div>
                             <!-- Page Banner Content End -->
@@ -109,13 +109,13 @@
                                     <form action="index.php?act=dangnhaptk" method="post">
                                         <span class="text-danger"><?php echo (isset($error_login))?$error_login :''?></span>
                                         <div class="single-form">
-                                            <input type="text" class="form-control" placeholder="Username or email" name="name">
+                                            <input type="text" class="form-control" placeholder="Username or email" name="email">
                                         </div>
                                         <div class="single-form">
                                             <input type="password" class="form-control" placeholder="Password" name="pass">
                                         </div>
                                         <div class="form-btn">
-                                            <input type="submit" name="dangnhap" value="Đăng Nhập Nhe" class="btn btn-success">
+                                            <input type="submit" name="dangnhap" value="Đăng Nhập Ngay" class="btn btn-success">
                                         </div>
                                         <div class="single-form">
                                             <p><a href="#">Bạn quên mật khẩu?</a></p>

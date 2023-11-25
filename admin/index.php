@@ -189,14 +189,18 @@ if (isset($_GET['act']) && $_GET['act']) {
                 include_once "lop/list.php";
             }
             break;
-            // đăng ký
+            // đăng ký acc
         case 'dangky':
             include_once '../admin/dangky/list.php';
             break;
         case 'deletedk':
             $id = $_GET['id'];
-            delete_dangky($id);
+            delete_tk($id);
             include_once '../admin/dangky/list.php';
+            break;
+            // trạng thái đkkh
+        case 'listdkkhoahoc':
+            include_once '../admin/oder_khoahoc/list.php';
             break;
         default:
             include_once "home.php";

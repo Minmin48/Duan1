@@ -64,7 +64,17 @@ function update_soluong_hs($id_lop)
     $stmt->execute();
     $result =  $stmt->fetch();
     $newSL = $result['soluong_hs'] - 1;
-    $sql = "UPDATE lop SET soluong_hs='$newSL' WHERE id_lop='$id_lop'";
+    $sql = "UPDATE lop SET soluong_hs='$newSL' WHERE id_lop='$id_lop'  AND soluong_hs > 0";
     $stm = $con->prepare($sql);
     $stm->execute();
 }
+function getid_lop_gv_kh($id)
+{
+    $con = connection();
+    $sql = "select * from lop join giang_vien on lop.id_gv = giang_vien.id_gv join khoa_hoc on lop.id_kh = khoa_hoc.id_kh where id_lop = '$id'";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetch();
+    // join nguoi_dung on lop.id_nd = nguoi_dung.id_nguoidung 
+}
+

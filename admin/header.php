@@ -45,7 +45,7 @@
                         <a href="index.php?act=dangky"><i class="fa-solid fa-circle-user"></i> Quản lý người dùng</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-solid fa-comment"></i> Quản lý bình luận</a>
+                        <a href="index.php?act=listdkkhoahoc"><i class="fa-solid fa-comment"></i> Trạng thái khóa học</a>
                     </li>
 
                     <li><a href="#">QUẢN TRỊ</a></li>

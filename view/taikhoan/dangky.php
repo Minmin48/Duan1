@@ -77,7 +77,7 @@
                                 <h2 class="title">Đăng Nhập Và Đăng Ký</h2>
                                 <ul class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Đăng Ký & Đăng Nhập</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Đăng Ký</li>
                                 </ul>
                             </div>
                             <!-- Page Banner Content End -->
@@ -123,6 +123,9 @@
                                        
                                         <div class="form-btn">  
                                             <input type="submit" name="submit" value="Đăng Ký" class="btn btn-success">
+                                        </div>
+                                        <div class="form-btn">  
+                                            <a href="index.php?act=dangnhaptk">Bạn đã có tài khoản!</a>
                                         </div>
                                     </form>
                                 </div>

@@ -479,3 +479,7 @@
         smartPlacement: true,
     });
 
+function checkSLHS() {
+    alert('Số lượng đã đủ bạn không thể đăng ký lớp này ');
+    return false;
+}

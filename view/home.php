@@ -5,6 +5,13 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
 } else {
     $dssp = get_khoahoc();
 }
+
+if (isset($_GET['id_gv']) && $_GET['id_gv']) {
+    $id = $_GET['id_gv'];
+    $dsgv = getid_giangvien($id);
+} else {
+    $dsgv = getall_giangvien();
+}
 ?>
 
 <!-- Hero Start -->
@@ -75,7 +82,7 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                         <div class="row">
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item">
+                                <a href="index.php?act=khoahoc&idkh=10" class="category-item">
                                     <div class="category-icon">
                                         <img src="assets/images/cat-icon1.png" alt="">
                                     </div>
@@ -87,7 +94,7 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item color-2">
+                                <a href="" class="category-item color-2">
                                     <div class="category-icon">
                                         <img src="assets/images/cat-icon2.png" alt="">
                                     </div>
@@ -99,7 +106,7 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item color-3">
+                                <a href="#" class="category-item color-3">
                                     <div class="category-icon">
                                         <img src="assets/images/cat-icon3.png" alt="">
                                     </div>
@@ -111,7 +118,7 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                             </div>
                             <div class="col-xl-3 col-lg-4 col-sm-6">
                                 <!-- Category Item Start -->
-                                <a href="course-grid.html" class="category-item color-4">
+                                <a href="#" class="category-item color-4">
                                     <div class="category-icon">
                                         <img src="assets/images/cat-icon4.png" alt="">
                                     </div>
@@ -143,7 +150,7 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                                     <h4 class="sub-title">Cùng học với</h4>
                                     <h3 class="title">TOEIC</h3>
                                     <p>Khóa học được nhiều bạn trẻ chọn đến nhất</p>
-                                    <a href="login-register.html" class="btn">Đăng Ký Ngay</a>
+                                    <a href="index.php?act=khoahoc&idkh=10" class="btn">Đăng Ký Ngay</a>
                                 </div>
                             </div>
                             <!-- Single Offer End -->
@@ -199,13 +206,13 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                                     foreach ($dssp as $value) : ?>
                                         <div class="col-3">
                                             <div class="courses-image">
-                                                <a href="index.php?act=ct_khoahoc&id=<?php echo $value['id_kh'] ?>"><img width="300px" src="img/<?php echo $value['hinh'] ?>" alt="Courses"></a>
+                                                <a href="index.php?act=ct_khoahoc&id=<?php echo $value['id_kh'] ?>"><img style="border-radius:8px" height="210px" src="img/<?php echo $value['hinh'] ?>" alt="Courses"></a>
                                             </div>
                                             <div class="courses-content">
                                                 <div class="top-meta">
 
                                                     <span class="price">
-                                                        <span style="color: red;" class="sale-price"><?php echo number_format($value['hoc_phi'])  ?> VNĐ</span>
+                                                        <span style="color: red; font-size:18px; font-weight: bold;" class="sale-price"><?php echo number_format($value['hoc_phi'])  ?> VNĐ</span>
                                                     </span>
                                                 </div>
                                                 <h3 class="title"><a href="index.php?act=ct_khoahoc&id=<?php echo $value['id_kh'] ?>"><?php echo $value['ten_kh'] ?></a></h3>
@@ -452,57 +459,25 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                     </div>
                     <div class="blog-content-wrap">
                         <div class="row">
+                        <?php foreach ($dsgv as $value) : ?>
                             <div class="col-lg-4 col-sm-6">
                                 <!-- Latest Blog Item Start -->
                                 <div class="single-blog text-center">
                                     <div class="blog-img">
-                                        <a href="blog-details.html"><img src="assets/images/blog/blog-1.jpg" alt=""></a>
+                                        <a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><img src="img/<?php echo  $value['hinh_gv'] ?>" alt="Author" width="800px" height="500px"></a>
                                     </div>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <span><i class="far fa-user"></i> <a href="#">Mr. Minh</a></span>
+                                            <span><i class="far fa-user"></i><a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><?php echo $value['ten_gv'] ?></a> </span>
                                             <span><i class="far fa-calendar-alt"></i> 08 năm 2012</span>
                                         </div>
-                                        <h3 class="title"><a href="blog-details.html">Giảng viên dậy Toeic người mới, Lấy gốc người mới</a></h3>
-                                        <a class="blog-btn" href="blog-details.html">Xem thêm</a>
+                                        <h3 class="title"><a href="#"><?php echo $value['thongtin_gv'] ?></a></h3>
+                                        <a class="blog-btn" href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>">Xem thêm</a>
                                     </div>
                                 </div>
                                 <!-- Latest Blog Item End -->
                             </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <!-- Latest Blog Item Start -->
-                                <div class="single-blog text-center">
-                                    <div class="blog-img">
-                                        <a href="blog-details.html"><img src="assets/images/blog/blog-2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <div class="blog-meta">
-                                            <span><i class="far fa-user"></i> <a href="#">Mr. Tuấn Anh</a></span>
-                                            <span><i class="far fa-calendar-alt"></i> 11 năm 2015</span>
-                                        </div>
-                                        <h3 class="title"><a href="blog-details.html">Giảng viên dậy Toeic Nâng Cao, Ielts người mới</a></h3>
-                                        <a class="blog-btn" href="blog-details.html"> Xem thêm</a>
-                                    </div>
-                                </div>
-                                <!-- Latest Blog Item End -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <!-- Latest Blog Item Start -->
-                                <div class="single-blog text-center">
-                                    <div class="blog-img">
-                                        <a href="blog-details.html"><img src="assets/images/blog/blog-3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <div class="blog-meta">
-                                            <span><i class="far fa-user"></i> <a href="#">Mr.Đạt</a></span>
-                                            <span><i class="far fa-calendar-alt"></i> 04 năm 2016</span>
-                                        </div>
-                                        <h3 class="title"><a href="blog-details.html">Giảng viên dậy Telts Nâng Cao, Lấy gốc người mới</a></h3>
-                                        <a class="blog-btn" href="blog-details.html"> Xem thêm</a>
-                                    </div>
-                                </div>
-                                <!-- Latest Blog Item End -->
-                            </div>
+                            <?php endforeach; ?>                           
                         </div>
                     </div>
                 </div>
