@@ -1,8 +1,9 @@
 <div class="main-content">
     <h3 class="title-page">Danh Sách Đăng Ký Khóa Học</h3>
-    <!-- <div class="d-flex justify-content-end">
-        <a href="index.php?act=addgv" class="btn btn-primary mb-2">Thêm Giảng Viên</a>
-    </div> -->
+    <div class="d-flex justify-content-end">
+        <input type="text" placeholder="Tìm kiếm..." name="timkiem" height="">
+        <button class="btn btn-primary mb-2">Tìm Kiếm</button>
+    </div>
     <table border="1px" class="table table-hover">
         <thead>
             <tr class="table-success">

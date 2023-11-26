@@ -115,7 +115,7 @@
                                      <span><i class="far fa-user"></i><a href="index.php?act=giangvien&id=<?php echo $value['id_gv'] ?>"><?php echo $value['ten_gv'] ?></a></span>
 
                                  </div>
-                                 <h3 class="title"><a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><?php echo $value['thongtin_gv'] ?></a></h3>
+                                 <h3 class="title"><a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><?php echo $value['ten_gv'] ?></a></h3>
                                  <a class="blog-btn" href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"> Chi Tiết</a>
                              </div>
                          </div>

@@ -90,9 +90,9 @@
                                 </li>
                                 <li><a href="index.php?act=giangvien">Giảng Viên</a>
                                 </li>
-                                <li><a href="#">Liên Hệ</a>
+                                <li><a href="index.php?act=lienhe">Liên Hệ</a>
                                 </li>
-                                <li><a href="#">Về Chúng Tôi</a></li>
+                                <li><a href="index.php?act=vechungtoi">Về Chúng Tôi</a></li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->

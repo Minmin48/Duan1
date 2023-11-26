@@ -78,6 +78,12 @@ if (isset($_GET['act'])) {
         case 'ct_giangvien':
             include_once 'view/ct_giangvien.php';
             break;
+        case 'lienhe':
+            include_once 'view/lienhe.php';
+            break;
+            case 'vechungtoi':
+                include_once 'view/vechungtoi.php';
+                break;
         default:
             # code...
             break;

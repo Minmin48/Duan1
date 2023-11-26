@@ -41,15 +41,17 @@ $listgv =   getid_giangvien($_GET['id']);
                     <!-- Blog Details Post Start -->
                     <div class="blog-details-post">
                         <!-- Single Blog Start -->
-                        <div class="single-blog-post single-blog">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 30px;" class="single-blog-post single-blog">
+
                             <div class="blog-image">
-                                <img src="img/<?php echo $listgv['hinh_gv'] ?>" alt="Author" width="270px" height="270px">
+                                <img src="img/<?php echo $listgv['hinh_gv'] ?>" alt="Author" width="420px" height="400px">
                             </div>
                             <div class="blog-content">
+                                <h3 class="title" style=" color:#1CB098">Thông Tin Giảng Viên</h3><br>
                                 <div class="blog-meta">
-                                    <span><i class="far fa-user"></i> <a href=""><?php echo $listgv['ten_gv'] ?></a></span>
+                                    <span style="font-size:20px; font-weight: bold; color: black"><i class="far fa-user"></i> <a href=""><?php echo $listgv['ten_gv'] ?></a></span>
                                 </div>
-                                <h3 class="title">Thông Tin Giảng Viên</h3>
+
                                 <p class="text"><?php echo $listgv['thongtin_gv'] ?></p>
                             </div>
                         </div>
@@ -66,28 +68,19 @@ $listgv =   getid_giangvien($_GET['id']);
                                             </g>
                                         </svg>
                                     </div>
-                                    <p>The basic premise of search engine reputation management is to use the following three strategies to accomplish the goal of creating a completely positive first page of search engine results for a specific term…</p>
-                                    <h3 class="name">Maria Hedge</h3>
+                                    <p>Không phải cứ học với giáo viên nước ngoài là sẽ đạt hiệu quả như người học mong muốn. Chỉ có những giáo viên kinh nghiệm, có bằng cấp và được đào tạo bài bản mới có thể giúp bạn học tốt và khoa học.</p>
+                                    <h3 class="name"><?php echo $listgv['ten_gv'] ?></h3>
                                 </blockquote>
                             </div>
                             <!-- Blog Blockquote End -->
                             <!-- Blog Details Text Start -->
                             <div class="blog-details-text">
-                                <h4 class="title">Whats New</h4>
-                                <p>If you’ve been researching exactly what skill you want to learn, or if you just need one more skill to round out your resume Whether fully virtual, fully in-person or something in between, explore. Nancy boy Charles down the pub get stuffed . </p>
+                                <h4 class="title">Tuyển Dụng</h4>
+                                <p>Quy trình tuyển giáo viên của chúng tôi rất kỹ lưỡng, giáo viên sẽ phải qua 4 vòng loại khắt khe trước khi chính thức trở thành giáo viên dạy tại ADM. Nhằm đảm bảo chất lượng cao nhất cho mỗi buổi học và đem lại lợi ích lớn nhất cho học viên, chúng tôi chỉ tuyển chọn những giáo viên có kinh nghiệm ít nhất 3 năm trong việc giảng dạy tiếng anh. ADM là nơi bạn có thể gửi gắm niềm tin học tập Tiếng Anh nhanh chóng, hiệu quả, lý thú và kinh tế! </p>
                             </div>
-                            <!-- Blog Details Text End -->
-                            <!-- Blog Details Tag Share Start -->
                             <div class="blog-details-tag-share">
-                                <div class="blog-details-tag">
-                                    <div class="sidebar-widget">
-                                        <span class="label">Tags :</span>
-                                        <ul class="sidebar-tag">
-                                            <li><a href="#">LMS</a></li>
-                                            <li><a href="#">Business</a></li>
-                                            <li><a href="#">Courses</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="d-flex justify-content-end">
+                                    <a href="index.php?act=giangvien" class="btn btn-primary mb-2">Giảng Viên Khác</a>
                                 </div>
                                 <div class="blog-details-share">
                                     <ul class="social-share">
@@ -97,116 +90,24 @@ $listgv =   getid_giangvien($_GET['id']);
                                     </ul>
                                 </div>
                             </div>
-                            <!-- Blog Details Tag Share End -->
-                            <!-- Blog Details Post Navigation Start -->
-
-                            <!-- Blog Details Post Navigation End -->
-                            <!-- Commtent Wrap Start -->
 
                         </div>
                     </div>
-                    <!-- Blog Details Post End -->
                 </div>
                 <div class="col-lg-4">
                     <!-- Blog Sidebar Start -->
                     <div class="blog-sidebar">
-                        <!-- Sidebar Widget Start -->
-                        <div class="sidebar-widget sidebar-widget-1">
-                            <!-- Widget Search Form Start -->
-                            <form class="search-form" action="#">
-                                <input type="text" placeholder="Write your keyword...">
-                                <button type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                            <!-- Widget Search Form End -->
+                        <div class="">
+                            <img src="assets/images/anh7.png" alt="" width="50%">
                         </div>
-                        <!-- Sidebar Widget End -->
-
-                        <!-- Sidebar Widget Start -->
-                        <div class="sidebar-widget">
-                            <!-- Widget Title Start -->
-                            <div class="widget-title">
-                                <h3 class="title">Popular Posts</h3>
-                            </div>
-                            <!-- Widget Title End -->
-                            <!-- Widget Recent Post Start -->
-                            <div class="recent-posts">
-                                <ul>
-                                    <li>
-                                        <a class="post-link" href="blog-details.html">
-                                            <div class="post-thumb">
-                                                <img src="assets/images/blog/r-post-1.jpg" alt="">
-                                            </div>
-                                            <div class="post-text">
-                                                <h4 class="title">Cupidatat non proident sunt culpa</h4>
-                                                <span class="post-meta"><i class="far fa-calendar-alt"></i> May 15, 2023</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="post-link" href="blog-details.html">
-                                            <div class="post-thumb">
-                                                <img src="assets/images/blog/r-post-2.jpg" alt="">
-                                            </div>
-                                            <div class="post-text">
-                                                <h4 class="title">Cupidatat non proident sunt culpa</h4>
-                                                <span class="post-meta"><i class="far fa-calendar-alt"></i> May 15, 2023</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="post-link" href="blog-details.html">
-                                            <div class="post-thumb">
-                                                <img src="assets/images/blog/r-post-3.jpg" alt="">
-                                            </div>
-                                            <div class="post-text">
-                                                <h4 class="title">Cupidatat non proident sunt culpa</h4>
-                                                <span class="post-meta"><i class="far fa-calendar-alt"></i> May 15, 2023</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Widget Recent Post End -->
+                        <h3>Đạt chuẩn</h3>
+                        <p>Giáo viên kinh nghiệm từ 3-15 năm, đạt chuẩn bằng cấp quốc tế về giảng dạy Anh Văn (CELTA, TESOL). Nói không với tây ba-lô!</p>
+                        <div>
+                            <h3>Nhiệt Tình</h3>
+                            <p>Để có được sự hứng thú trong buổi học, sự nhiệt tình giáo viên phải được đặt lên hàng đầu, và chúng tôi thấu hiểu điều đó.</p><br>
                         </div>
-                        <!-- Sidebar Widget End -->
-
-                        <!-- Sidebar Widget Start -->
-                        <div class="sidebar-widget">
-                            <!-- Widget Title Start -->
-                            <div class="widget-title">
-                                <h3 class="title">Categories</h3>
-                            </div>
-                            <!-- Widget Title End -->
-                            <!-- Widget Category Start -->
-                            <ul class="category">
-                                <li class="cate-item"><a href="#"><i class="flaticon-next"></i> Technology <span class="post-count">3</span></a></li>
-                                <li class="cate-item"><a href="#"><i class="flaticon-next"></i> Innovation <span class="post-count">5</span></a></li>
-                                <li class="cate-item"><a href="#"><i class="flaticon-next"></i> Learning <span class="post-count">3</span></a></li>
-                                <li class="cate-item"><a href="#"><i class="flaticon-next"></i> Information <span class="post-count">3</span></a></li>
-                            </ul>
-                            <!-- Widget Category End -->
-                        </div>
-                        <!-- Sidebar Widget End -->
-
-                        <!-- Sidebar Widget Start -->
-                        <div class="sidebar-widget">
-                            <!-- Widget Title Start -->
-                            <div class="widget-title">
-                                <h3 class="title">Tags</h3>
-                            </div>
-                            <!-- Widget Title End -->
-                            <!-- Widget Category Start -->
-                            <ul class="sidebar-tag">
-                                <li><a href="#">Learning</a></li>
-                                <li><a href="#">Course</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Udemy</a></li>
-                                <li><a href="#">Online</a></li>
-                                <li><a href="#">Technology</a></li>
-                            </ul>
-                            <!-- Widget Category End -->
-                        </div>
-                        <!-- Sidebar Widget End -->
+                        <h3>Hỗ trợ sau giờ học</h3>
+                        <p>Dù cho bạn chỉ trả phí cho buổi học, nhưng giáo viên vẫn giải đáp các thắc mắc ngay cả ngoài giờ học qua Skype message hoặc email.</p><br>
                     </div>
                     <!-- Blog Sidebar End -->
                 </div>
