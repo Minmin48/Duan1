@@ -1,6 +1,13 @@
 <?php
 include_once "pdo.php";
-
+function getall_danhmuc()
+{
+    $conn = connection();
+    $sql = "SELECT * FROM danh_muc_khoa_hoc";
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll();
+}
 function add_danhmuc($name)
 {
     $con = connection();

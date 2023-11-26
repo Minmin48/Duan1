@@ -1,5 +1,5 @@
 <div class="main-content">
-    <h3 class="title-page">Danh Sách Đăng Ký</h3>
+    <h3 class="title-page">Danh Sách Đăng Ký Khóa Học</h3>
     <!-- <div class="d-flex justify-content-end">
         <a href="index.php?act=addgv" class="btn btn-primary mb-2">Thêm Giảng Viên</a>
     </div> -->

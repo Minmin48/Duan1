@@ -19,7 +19,3 @@
         ?>
     </form>
 </div>
-
-<script>
-    new DataTable('#example');
-</script>

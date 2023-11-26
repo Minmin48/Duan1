@@ -6,6 +6,9 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
     $dssp = get_khoahoc();
 }
 ?>
+<?php
+$list = getid_danhmuc($_GET['idkh'])
+?>
 <!-- Page Banner Start -->
 <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
     <div class="shape-1">
@@ -21,10 +24,20 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
                 <div class="col-lg-12">
                     <!-- Page Banner Content Start -->
                     <div class="page-banner text-center">
-                        <h2 class="title">KHÓA HỌC TOEIC</h2>
+                        <h2 class="title">KHÓA HỌC <?php
+                                                    if (isset($_GET['idkh']) && $_GET['idkh']) {
+                                                        echo $list['ten_dm'];
+                                                    }
+                                                    ?></h2>
                         <ul class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="#">Khóa Học</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Toeic</li>
+                            <li class="breadcrumb-item"><a href="index.php?act=khoahoc">Khóa Học</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><?php
+                                                                                    if (isset($_GET['idkh']) && $_GET['idkh']) {
+                                                                                        echo $list['ten_dm'];
+                                                                                    } else {
+                                                                                        echo 'Nổi bật';
+                                                                                    }
+                                                                                    ?></li>
                         </ul>
                     </div>
                     <!-- Page Banner Content End -->
@@ -148,4 +161,3 @@ if (isset($_GET['idkh']) && $_GET['idkh']) {
         </div>
     </div>
 </div>
-

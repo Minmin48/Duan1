@@ -88,7 +88,7 @@
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Họ & Tên</h5>
-                                     <input class class="form-control" name="user" type="text" value="<?php echo $_SESSION['login']['ho_ten'] ?>">
+                                     <input class class="form-control" name="user" type="text" value="<?php echo $_SESSION['login']['user'] ?>">
                                  </div>
                              </div>
                              <div class="col-md-6">

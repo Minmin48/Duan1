@@ -36,10 +36,6 @@
             <input type="text" name="hocphi" class="form-control" placeholder="Nhập vào học phí" required>
         </div>
         <div class="form-group">
-            <label class="form-label" for="">Trạng Thái</label>
-            <input type="text" name="trangthai" class="form-control" required>
-        </div>
-        <div class="form-group">
             <input class="btn btn-primary" type="submit" name="submit" value="THÊM KHÓA HỌC">
             <a class="btn btn-success" href="index.php?act=listkhoahoc">DANH SÁCH</a>
         </div>

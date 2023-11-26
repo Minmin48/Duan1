@@ -35,10 +35,7 @@
             <label class="form-label" for="">Học Phí</label>
             <input value="<?php echo $sua['hoc_phi'] ?>" type="text" name="hocphi" class="form-control" placeholder="Nhập vào học phí">
         </div>
-        <div class="form-group">
-            <label class="form-label" for="">Trạng Thái</label>
-            <input value="<?php echo $sua['trang_thai'] ?>" type="text" name="trangthai" class="form-control">
-        </div>
+
         <div class="form-group">
             <input class="btn btn-primary" type="submit" name="update" value="CẬP NHẬT">
             <input type="text" hidden name="id" value="<?php echo $sua['id_kh'] ?>">

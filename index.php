@@ -7,7 +7,7 @@ include_once 'model/pdo_lop.php';
 include_once 'model/pdo_khoahoc.php';
 include_once 'model/pdo_dangky.php';
 include_once 'model/pdo_taikhoan.php';
-
+$listgv = getall_giangvien();
 $listDanhMuc = list_danhmuc();
 include_once 'view/header.php';
 if (isset($_GET['act'])) {
@@ -32,7 +32,7 @@ if (isset($_GET['act'])) {
                     $email = $_POST['email'];
                     $phone = $_POST['phone'];
                     $khoahoc = $_POST['khoahoc'];
-                    oder_dkkhoahoc($tenlop, $tengv, $thoigian, $cahoc, $soluong, $hocphi, $user, $email, $phone, $khoahoc,1);
+                    oder_dkkhoahoc($tenlop, $tengv, $thoigian, $cahoc, $soluong, $hocphi, $user, $email, $phone, $khoahoc, 1);
                     header('location:vnpay_php/vnpay_create_payment.php');
                 } else include_once 'view/dangky.php';
             } else {

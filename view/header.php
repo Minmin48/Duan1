@@ -1,8 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
-<?php
-$list = get_khoahoc();
-?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -57,7 +55,7 @@ $list = get_khoahoc();
                 <div class="container">
                     <div class="header-top-wrap">
                         <div class="header-top-content text-center">
-                            <p>Nâng cao Tiếng Anh của Bạn là con đường đến sự giao tiếp tự tin <span>- Tự Tin với nỗ lực sẽ đánh bại sự lười nhát trong cuộc đua thành công.</span></p>
+                            <p>Nâng cao Tiếng Anh của Bạn là con đường đến sự giao tiếp tự tin -<span> Tự Tin với nỗ lực sẽ đánh bại sự lười nhát trong cuộc đua thành công !</span></p>
                         </div>
                     </div>
                 </div>
@@ -92,9 +90,9 @@ $list = get_khoahoc();
                                 </li>
                                 <li><a href="index.php?act=giangvien">Giảng Viên</a>
                                 </li>
-                                <li><a href="blog.html">Liên Hệ</a>
+                                <li><a href="#">Liên Hệ</a>
                                 </li>
-                                <li><a href="contact.html">Về Chúng Tôi</a></li>
+                                <li><a href="#">Về Chúng Tôi</a></li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->
@@ -111,16 +109,16 @@ $list = get_khoahoc();
 
                             <div class="header-login d-none d-lg-block">
                                 <?php
-                                if (isset($_SESSION['login'])):?>
-                                    <?php if($_SESSION['login']['id_cv']): ?>
-                                    <a class="link" href="admin/index.php"><i class="far fa-user"></i> Vào trang quản trị</a>
-                                    <?php endif?>
+                                if (isset($_SESSION['login'])) : ?>
+                                    <?php if ($_SESSION['login']['id_cv']) : ?>
+                                        <a class="link" href="admin/index.php"><i class="far fa-user"></i> Vào trang quản trị</a>
+                                    <?php endif ?>
                                     <a class="link" href="index.php?act=dangxuat"><i class="far-solid fa-arrow-right-to-bracket"></i> Đăng Xuất</a>
 
-                                <?php else:?>
-                                <a class="link" href="index.php?act=dangnhaptk"><i class="far fa-user"></i> Đăng nhập</a>
-                                <a class="link" href="index.php?act=dangkytk">Đăng ký</a>
-                                <?php endif?>
+                                <?php else : ?>
+                                    <a class="link" href="index.php?act=dangnhaptk"><i class="far fa-user"></i> Đăng nhập</a>
+                                    <a class="link" href="index.php?act=dangkytk">Đăng ký</a>
+                                <?php endif ?>
                             </div>
 
                             <div class="header-toggle d-lg-none">

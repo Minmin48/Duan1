@@ -2,7 +2,7 @@
 
 include_once 'pdo.php';
 
-function oder_dkkhoahoc($tenlop, $tengv, $thoigian, $cahoc, $soluong, $hocphi, $user, $email, $phone, $khoahoc,$id_trangthai)
+function oder_dkkhoahoc($tenlop, $tengv, $thoigian, $cahoc, $soluong, $hocphi, $user, $email, $phone, $khoahoc, $id_trangthai)
 {
     $conn = connection();
     $sql = "INSERT INTO dangky(ten_lop, ten_gv,thoi_gian_hoc, ca_hoc,so_luong, hoc_phi, ten_nguoi_dung,email,id_kh,phone,id_trangthai) VALUES ('$tenlop',' $tengv','$thoigian',' $cahoc','$soluong','$hocphi','$user','$email','$khoahoc','$phone','$id_trangthai')";

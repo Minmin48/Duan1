@@ -53,13 +53,11 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $thoigian = $_POST['thoigian'];
                 $text = $_POST['text'];
                 $hocphi = $_POST['hocphi'];
-                $trangthai = $_POST['trangthai'];
-
                 $hinh = $_FILES['hinh']['name'];
                 $luu_anh = "../img/";
                 $tai_file = $luu_anh . basename($_FILES['hinh']['name']);
                 move_uploaded_file($_FILES['hinh']['tmp_name'], $tai_file);
-                gettAll_khahoc($tenkh, $tendm, $thoigian, $text, $hinh, $hocphi, $trangthai);
+                add_khoahoc($tenkh, $tendm, $thoigian, $text, $hinh, $hocphi);
                 $thongbao = "Thêm thành công";
             }
             include_once "khoahoc/add.php";
@@ -84,7 +82,6 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $thoigian = $_POST['thoigian'];
                 $text = $_POST['text'];
                 $hocphi = $_POST['hocphi'];
-                $trangthai = $_POST['trangthai'];
                 $hinh = $_FILES['hinh']['name'];
                 $id = $_POST['id'];
                 $sua = getid_khoahoc($id);
@@ -95,7 +92,7 @@ if (isset($_GET['act']) && $_GET['act']) {
                 } else {
                     $hinh = $sua['hinh'];
                 }
-                update_khoahoc($id, $tenkh, $tendm, $thoigian, $text, $hinh, $hocphi, $trangthai);
+                update_khoahoc($id, $tenkh, $tendm, $thoigian, $text, $hinh, $hocphi);
                 include_once "khoahoc/list.php";
                 echo '<span>Cập nhật thành công</span>';
             }
@@ -189,18 +186,36 @@ if (isset($_GET['act']) && $_GET['act']) {
                 include_once "lop/list.php";
             }
             break;
-            // đăng ký acc
-        case 'dangky':
-            include_once '../admin/dangky/list.php';
+            // Đăng ký tài khoản
+        case 'list_user':
+            include_once 'dangky/list.php';
             break;
-        case 'deletedk':
+        case 'update_user':
+            if (isset($_GET['id']) && $_GET['id']) {
+                $id = $_GET['id'];
+                $sua = getid_tk($id);
+                include_once "dangky/update.php";
+            }
+            if (isset($_POST['update']) && $_POST['update']) {
+                $user = $_POST['user'];
+                $email = $_POST['email'];
+                $pass = $_POST['pass'];
+                $phone = $_POST['phone'];
+                $chucvu = $_POST['chucvu'];
+                $id = $_POST['id'];
+                $sua = getid_lop($id);
+                update_tk($id, $user, $email, $pass, $phone, $chucvu);
+                include_once "dangky/list.php";
+            }
+            break;
+        case 'delete_user':
             $id = $_GET['id'];
             delete_tk($id);
-            include_once '../admin/dangky/list.php';
+            include_once 'dangky/list.php';
             break;
             // trạng thái đkkh
         case 'listdkkhoahoc':
-            include_once '../admin/oder_khoahoc/list.php';
+            include_once 'oder_khoahoc/list.php';
             break;
         default:
             include_once "home.php";

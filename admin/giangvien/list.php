@@ -22,7 +22,7 @@
                 <tr class="table-primary">
                     <td><?php echo $index; ?></td>
                     <td><?php echo $value['ten_gv'] ?></td>
-                    <td><img src="../img/<?php echo $value['hinh_gv'] ?>" width="75px" height="60px" alt=""> </td>
+                    <td><img src="../img/<?php echo $value['hinh_gv'] ?>" width="80px" height="100px" alt=""> </td>
                     <td> <?php echo $value['thongtin_gv'] ?></td>
                     <td>
                         <a href="index.php?act=updategv&id=<?php echo $value['id_gv'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>

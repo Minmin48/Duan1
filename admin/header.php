@@ -42,7 +42,7 @@
                         <a href="index.php?act=listgv"><i class="fa-solid fa-user"></i> Quản lý giảng viên</a>
                     </li>
                     <li>
-                        <a href="index.php?act=dangky"><i class="fa-solid fa-circle-user"></i> Quản lý người dùng</a>
+                        <a href="index.php?act=list_user"><i class="fa-solid fa-circle-user"></i> Quản lý người dùng</a>
                     </li>
                     <li>
                         <a href="index.php?act=listdkkhoahoc"><i class="fa-solid fa-comment"></i> Trạng thái khóa học</a>
