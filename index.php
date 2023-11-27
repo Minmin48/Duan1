@@ -60,7 +60,7 @@ if (isset($_GET['act'])) {
                     $_SESSION['login'] = $kq;
                     header('location: index.php');
                 } else {
-                    $error_login = 'Sai tài khoản mật khẩu';
+                    $error_login = 'Sai tài khoản hoặc mật khẩu';
                 }
             }
             include_once 'view/taikhoan/dangnhap.php';
@@ -81,11 +81,10 @@ if (isset($_GET['act'])) {
         case 'lienhe':
             include_once 'view/lienhe.php';
             break;
-            case 'vechungtoi':
-                include_once 'view/vechungtoi.php';
-                break;
+        case 'vechungtoi':
+            include_once 'view/vechungtoi.php';
+            break;
         default:
-            # code...
             break;
     }
 } else {

@@ -5,19 +5,19 @@
     <form class="addPro" action="index.php?act=update_user" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label class="form-label" for="name">User</label>
-            <input type="text" class="form-control" name="user" value="<?php echo $sua['user'] ?>" require>
+            <input type="text" class="form-control" name="user" value="<?php echo $sua['user'] ?>" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Email</label>
-            <input class="form-control" type="text" value="<?php echo $sua['email'] ?>" name="email" require>
+            <input class="form-control" type="text" value="<?php echo $sua['email'] ?>" name="email" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Password</label>
-            <input class="form-control" type="text" value="<?php echo $sua['pass'] ?>" name="pass" require>
+            <input class="form-control" type="text" value="<?php echo $sua['pass'] ?>" name="pass" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Phone</label>
-            <input class="form-control" type="text" value="<?php echo $sua['phone'] ?>" name="phone" require>
+            <input class="form-control" type="text" value="<?php echo $sua['phone'] ?>" name="phone" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Chức vụ</label>

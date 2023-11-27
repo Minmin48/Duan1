@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="">Thời Gian Học</label>
-            <input value="<?php echo $sua['thoi_gian'] ?>" class="form-control" type="datetime-local" name="thoigian">
+            <input value="<?php echo $sua['thoi_gian'] ?>" class="form-control" type="datetime-local" name="thoigian" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Thông Tin</label>
@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="">Học Phí</label>
-            <input value="<?php echo $sua['hoc_phi'] ?>" type="text" name="hocphi" class="form-control" placeholder="Nhập vào học phí">
+            <input value="<?php echo $sua['hoc_phi'] ?>" type="text" name="hocphi" class="form-control" placeholder="Nhập vào học phí" required>
         </div>
 
         <div class="form-group">

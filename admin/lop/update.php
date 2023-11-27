@@ -5,7 +5,7 @@
     <form class="addPro" action="index.php?act=updatelop" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label class="form-label" for="name">Tên Lớp</label>
-            <input value="<?php echo $sua['ten_lop'] ?>" type="text" class="form-control" name="lop" require>
+            <input value="<?php echo $sua['ten_lop'] ?>" type="text" class="form-control" name="lop" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Thời Gian Học</label>
@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="">Ca học</label>
-            <input value="<?php echo $sua['ca_hoc'] ?>" class="form-control" type="text" name="cahoc" require>
+            <input value="<?php echo $sua['ca_hoc'] ?>" class="form-control" type="text" name="cahoc" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Khóa Học</label>
@@ -39,7 +39,7 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="">Số Lượng Học Sinh</label>
-            <input class="form-control" type="text" name="soluong" value="<?php echo $sua['soluong_hs'] ?>" require>
+            <input class="form-control" type="text" name="soluong" value="<?php echo $sua['soluong_hs'] ?>" required>
         </div>
 
         <div class="form-group">

@@ -5,7 +5,7 @@
     <form class="addPro" action="index.php?act=addgv" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label class="form-label" for="name">Tên Giảng Viên</label>
-            <input type="text" class="form-control" name="name" require>
+            <input type="text" class="form-control" name="name" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Hình Ảnh</label>

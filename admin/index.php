@@ -186,7 +186,7 @@ if (isset($_GET['act']) && $_GET['act']) {
                 include_once "lop/list.php";
             }
             break;
-            // Đăng ký tài khoản
+            // Đăng ký tài khoản của người dùng
         case 'list_user':
             include_once 'dangky/list.php';
             break;
@@ -213,9 +213,38 @@ if (isset($_GET['act']) && $_GET['act']) {
             delete_tk($id);
             include_once 'dangky/list.php';
             break;
-            // trạng thái đkkh
+            // trạng thái đăng ký khóa học của người dùng
         case 'listdkkhoahoc':
             include_once 'oder_khoahoc/list.php';
+            break;
+        case 'delete_status':
+            $id = $_GET['id'];
+            delete_dk($id);
+            include_once 'oder_khoahoc/list.php';
+            break;
+        case 'update_status':
+            if (isset($_GET['id']) && $_GET['id']) {
+                $id = $_GET['id'];
+                $sua = getid_dk($id);
+                include_once "oder_khoahoc/update.php";
+            }
+            if (isset($_POST['update']) && $_POST['update']) {
+                $ten_lop = $_POST['ten_lop'];
+                $ten_gv = $_POST['ten_gv'];
+                $thoi_gian_hoc = $_POST['thoi_gian_hoc'];
+                $ca_hoc = $_POST['ca_hoc'];
+                $so_luong = $_POST['so_luong'];
+                $hoc_phi = $_POST['hoc_phi'];
+                $ten_nguoi_dung = $_POST['ten_nguoi_dung'];
+                $email = $_POST['email'];
+                $khoahoc = $_POST['khoahoc'];
+                $phone = $_POST['phone'];
+                $trangthai = $_POST['trangthai'];
+                $id = $_POST['id'];
+                $sua = getid_dk($id);
+                update_dk($id, $ten_lop, $ten_gv, $thoi_gian_hoc, $ca_hoc, $so_luong, $hoc_phi, $ten_nguoi_dung, $email, $khoahoc, $phone, $trangthai);
+                include_once "oder_khoahoc/list.php";
+            }
             break;
         default:
             include_once "home.php";

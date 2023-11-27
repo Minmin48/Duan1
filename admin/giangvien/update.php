@@ -5,7 +5,7 @@
     <form class="addPro" action="index.php?act=updategv" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label class="form-label" for="name">Tên Giảng Viên</label>
-            <input type="text" class="form-control" name="name" value="<?php echo $sua['ten_gv'] ?>" require>
+            <input type="text" class="form-control" name="name" value="<?php echo $sua['ten_gv'] ?>" required>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Hình Ảnh</label>

@@ -113,11 +113,11 @@
                                     <?php if ($_SESSION['login']['id_cv']) : ?>
                                         <a class="link" href="admin/index.php"><i class="far fa-user"></i> Vào trang quản trị</a>
                                     <?php endif ?>
-                                    <a class="link" href="index.php?act=dangxuat"><i class="far-solid fa-arrow-right-to-bracket"></i> Đăng Xuất</a>
+                                    <a class="link" href="index.php?act=dangxuat"> Đăng xuất</a>
 
                                 <?php else : ?>
                                     <a class="link" href="index.php?act=dangnhaptk"><i class="far fa-user"></i> Đăng nhập</a>
-                                    <a class="link" href="index.php?act=dangkytk">Đăng ký</a>
+                                    <a class="link" href="index.php?act=dangkytk"> Đăng ký</a>
                                 <?php endif ?>
                             </div>
 

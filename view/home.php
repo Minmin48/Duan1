@@ -433,7 +433,7 @@ if (isset($_GET['id_gv']) && $_GET['id_gv']) {
                             <!-- Latest Blog Item Start -->
                             <div class="single-blog text-center">
                                 <div class="blog-img">
-                                    <a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><img src="img/<?php echo  $value['hinh_gv'] ?>" alt="Author" width="400px" height="450px"></a>
+                                    <a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><img src="img/<?php echo  $value['hinh_gv'] ?>" alt="Author" width="310px" height="310px"></a>
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">

@@ -10,7 +10,7 @@
                            <!-- Footer Widget Start -->
                            <div class="footer-widget widget-about">
                                <div class="footer-logo">
-                                   <a href="index.html"><img src="assets/images/anh7_1.png" alt="" width="65%"></a>
+                                   <a href="index.php"><img src="assets/images/anh7_1.png" alt="" width="65%"></a>
                                </div>
                                <p class="text">Nền tảng học tập trực tuyến lớn nhất thế giới. Tải xuống ứng dụng của chúng tôi để bắt đầu học.</p>
                                <div class="widget-info">
@@ -34,8 +34,8 @@
                                    <ul class="link">
                                        <li><a href="#">Lịch sử chúng tôi </a></li>
                                        <li><a href="#">Những khóa học ấn tượng</a></li>
-                                       <li><a href="about.html">Đa dạng và hòa nhập</a></li>
-                                       <li><a href="contact.html">Tuyến bố và chính sách an toàn</a></li>
+                                       <li><a href="#">Đa dạng và hòa nhập</a></li>
+                                       <li><a href="#">Tuyến bố và chính sách an toàn</a></li>
                                    </ul>
                                </div>
                            </div>

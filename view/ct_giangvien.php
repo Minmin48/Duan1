@@ -80,7 +80,7 @@ $listgv =   getid_giangvien($_GET['id']);
                             </div>
                             <div class="blog-details-tag-share">
                                 <div class="d-flex justify-content-end">
-                                    <a href="index.php?act=giangvien" class="btn btn-primary mb-2">Giảng Viên Khác</a>
+                                    <a href="index.php?act=giangvien" class="btn btn-primary mb-2">Xem thêm</a>
                                 </div>
                                 <div class="blog-details-share">
                                     <ul class="social-share">

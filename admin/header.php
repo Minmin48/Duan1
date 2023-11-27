@@ -23,7 +23,7 @@
             <nav class="sidebar bg-primary">
                 <ul>
                     <li>
-                        <img src="../assets/images/anh7_2.png" alt="" width="140px">
+                        <img src="../assets/images/anh7_2.png" alt="" width="110px">
                     </li>
                     <li><a href="#">QUẢN LÝ</a></li>
                     <li>

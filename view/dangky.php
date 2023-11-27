@@ -21,7 +21,7 @@
                          <h2 class="title">Đăng Ký</h2>
                          <ul class="breadcrumb justify-content-center">
                              <li class="breadcrumb-item"><a href="#">Home</a></li>
-                             <li class="breadcrumb-item active" aria-current="page">đăng ký</li>
+                             <li class="breadcrumb-item active" aria-current="page">Đăng ký</li>
                          </ul>
                      </div>
                      <!-- Page Banner Content End -->
