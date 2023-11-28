@@ -32,7 +32,7 @@ if (isset($_GET['act'])) {
                     $email = $_POST['email'];
                     $phone = $_POST['phone'];
                     $khoahoc = $_POST['khoahoc'];
-                    oder_dkkhoahoc($tenlop, $tengv, $thoigian, $cahoc, $soluong, $hocphi, $user, $email, $phone, $khoahoc, 1);
+                    oder_dkkhoahoc($tenlop, $tengv, $thoigian, $cahoc, $soluong, $hocphi, $user, $email, $phone, $khoahoc);
                     header('location:vnpay_php/vnpay_create_payment.php');
                 } else include_once 'view/dangky.php';
             } else {
@@ -83,6 +83,15 @@ if (isset($_GET['act'])) {
             break;
         case 'vechungtoi':
             include_once 'view/vechungtoi.php';
+            break;
+        case 'order_khoahoc':
+            echo 'In4 khoá học lấy từ $session order';
+            var_dump($_SESSION['order']);
+            //Code giao diện thành công hiện thị thông tin khoá học start
+
+
+            //Code giao diện thành công hiện thị thông tin khoá học end
+            unset($_SESSION['order']);
             break;
         default:
             break;
