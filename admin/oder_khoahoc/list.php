@@ -1,9 +1,9 @@
 <div class="main-content">
     <h3 class="title-page">Danh Sách Đăng Ký Khóa Học</h3>
-    <form action="" method="post">
+    <form action="?act=listdkkhoahoc" method="post">
         <div class="d-flex justify-content-end">
             <input type="text" placeholder="Tìm kiếm..." name="timkiem">
-            <button class="btn btn-primary">Tìm Kiếm</button>
+            <button class="btn btn-primary" value="Search" name="search">Tìm Kiếm</button>
         </div> <br>
     </form>
     <table border="1px" class="table table-hover">
@@ -28,7 +28,6 @@
         <tbody>
             <?php
             $index = 0;
-            $dangky_all = list_dkkhoahoc();
             foreach ($dangky_all as $value) : $index++ ?>
 
                 <tr class="table-primary">
@@ -43,9 +42,9 @@
                     <td> <?php echo $value['email'] ?></td>
                     <td> <?php echo $value['ten_kh'] ?></td>
                     <td> <?php echo $value['phone'] ?></td>
-                    <td><?php echo $value['name_trang_thai']  ?></td>
+                    <td ><?php echo $value['name_trang_thai']  ?></td>
                     <td>
-                        <a href="index.php?act=delete_status&id=<?php echo $value['id_dk'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
+                        <!-- <a href="index.php?act=delete_status&id=<?php echo $value['id_dk'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a> -->
                         <a href="index.php?act=update_status&id=<?php echo $value['id_dk'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i>Sửa</a>
                     </td>
                 </tr>

@@ -13,6 +13,8 @@
     </script>
     <link rel="stylesheet" href="../admin/css/css.css">
     <script src="https://kit.fontawesome.com/8c204d0fdf.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -46,6 +48,9 @@
                     </li>
                     <li>
                         <a href="index.php?act=listdkkhoahoc"><i class="fa-solid fa-comment"></i> Trạng thái khóa học</a>
+                    </li>
+                    <li>
+                        <a href="index.php?act=thongke"><i class="fa-solid fa-comment"></i> Thống kê</a>
                     </li>
 
                     <li><a href="#">QUẢN TRỊ</a></li>

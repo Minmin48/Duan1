@@ -62,3 +62,32 @@ function show_khoahoc($idkh)
     $stm->execute();
     return $stm->fetchAll();
 }
+// thống kê khoá học theo số lượng đăng ký
+function thong_ke_khoahoc(){
+    $sql = "SELECT * FROM khoa_hoc JOIN dangky ON khoa_hoc.id_kh = dangky.id_kh ORDER BY dangky.so_luong DESC";
+    $conn = connection();
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll();
+}
+function thong_ke_sum_doanh_thu(){
+    $sql = "SELECT SUM(so_luong * hoc_phi) FROM dangky WHERE id_trangthai = 1";
+    $conn = connection();
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetch();
+}
+function sum_khoa_hoc(){
+    $sql = "SELECT COUNT(*) FROM khoa_hoc";
+    $conn = connection();
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetch();
+}
+function thong_ke_khoahoc_doanh_thu(){
+    $sql = "SELECT dangky.*,khoa_hoc.*, SUM(so_luong*dangky.hoc_phi) AS doanh_thu FROM khoa_hoc JOIN dangky ON khoa_hoc.id_kh = dangky.id_kh WHERE id_trangthai = 1 ORDER BY SUM(so_luong*dangky.hoc_phi) DESC";
+    $conn = connection();
+    $stm = $conn->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll();
+}

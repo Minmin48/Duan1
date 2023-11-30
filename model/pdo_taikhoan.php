@@ -53,3 +53,26 @@ function get_all_chucvu()
     $stmt->execute();
     return $stmt->fetchAll();
 }
+function checkemail($email)
+{
+    $con = connection();
+    $stm = $con->prepare("SELECT * FROM nguoi_dung WHERE email='$email'");
+    $stm->execute();
+    $kq = $stm->fetch();
+    return $kq;
+}
+function sum_user() {
+    $con = connection();
+    $sql = "SELECT COUNT(*) FROM nguoi_dung";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetch();
+}
+function user_new(){
+    $con = connection();
+    $sql = "SELECT * FROM `nguoi_dung` ORDER BY id_nguoidung DESC";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+
+}

@@ -117,7 +117,7 @@
                                     <input type="submit" name="dangnhap" value="Đăng Nhập Ngay" class="btn btn-success">
                                 </div>
                                 <div class="single-form">
-                                    <p><a href="#">Bạn quên mật khẩu?</a></p>
+                                    <p><a href="index.php?act=quenmatkhau">Bạn quên mật khẩu?</a></p>
                                 </div>
                             </form>
                         </div>

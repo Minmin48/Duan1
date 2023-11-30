@@ -215,6 +215,11 @@ if (isset($_GET['act']) && $_GET['act']) {
             break;
             // trạng thái đăng ký khóa học của người dùng
         case 'listdkkhoahoc':
+            if (isset($_POST['search'])) {
+                $dangky_all = search_dang_ky($_POST['timkiem']);
+            }else {
+                $dangky_all = list_dkkhoahoc();
+            }
             include_once 'oder_khoahoc/list.php';
             break;
         case 'delete_status':
@@ -245,6 +250,9 @@ if (isset($_GET['act']) && $_GET['act']) {
                 update_dk($id, $ten_lop, $ten_gv, $thoi_gian_hoc, $ca_hoc, $so_luong, $hoc_phi, $ten_nguoi_dung, $email, $khoahoc, $phone, $trangthai);
                 include_once "oder_khoahoc/list.php";
             }
+            break;
+        case 'demo':
+            include_once 'demo.php';
             break;
         default:
             include_once "home.php";

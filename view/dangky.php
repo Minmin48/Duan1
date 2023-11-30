@@ -46,41 +46,41 @@
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Tên Lớp:</h5>
-                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ten_lop'] ?>" style="font-size : 14px;" name="tenlop">
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ten_lop'] ?>" style="font-size : 14px;" name="tenlop"readonly>
                                  </div>
                                  <br>
                              </div>
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Tên Giảng Viên:</h5>
-                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ten_gv'] ?>" style="font-size : 14px" name="tengv">
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ten_gv'] ?>" style="font-size : 14px" name="tengv"readonly>
                                  </div>
                                  <br>
                              </div>
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Thời Gian Học:</h5>
-                                     <input class="form-control" type="disabled" value="<?php echo $hihi['thoi_gian_hoc'] ?>" style="font-size : 14px" name="thoigian">
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['thoi_gian_hoc'] ?>" style="font-size : 14px" name="thoigian"readonly>
                                  </div>
                                  <br>
                              </div>
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Ca học:</h5>
-                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ca_hoc'] ?>" style="font-size : 14px" name="cahoc">
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['ca_hoc'] ?>" style="font-size : 14px" name="cahoc"readonly>
                                  </div>
                              </div>
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Số lượng:</h5>
-                                     <input class="form-control" type="disabled" value="<?php echo $hihi['soluong_hs'] ?>" style="font-size : 14px" name="soluong">
+                                     <input class="form-control" type="disabled" value="<?php echo $hihi['soluong_hs'] ?>" style="font-size : 14px" name="soluong"readonly>
                                  </div>
                                  <br>
                              </div>
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Học phí: </h5>
-                                     <input type="disabled" style="color: red; font-size : 15px" value="<?php echo number_format($hihi['hoc_phi']) ?> VND" name="hocphi">
+                                     <input type="disabled" style="color: red; font-size : 15px" value="<?php echo number_format($hihi['hoc_phi']) ?> VND" name="hocphi" readonly>
                                  </div>
                              </div>
 
@@ -106,18 +106,20 @@
                              <div class="col-md-6">
                                  <div class="single-form">
                                      <h5>Khóa Học:</h5>
-                                     <select name="khoahoc">
+                                     <select class="form-select" name="khoahoc">
                                          <option value="<?php echo $hihi['id_kh'] ?>"><?php echo $hihi['ten_kh'] ?></option>
                                      </select>
                                  </div>
                                  <br><br>
                              </div>
+                             
                              <div class="col-md-12">
                                  <div class="form-btn">
                                      <input type="text" value="<?= $_GET['id_kh'] ?>" hidden name="id_kh">
                                      <input type="text" value="<?= $_GET['id'] ?>" hidden name="id_lop">
                                      <br>
                                      <button class="btn" type="submit" value="Đăng ký" name="dangKy">Thanh Toán</button>
+                                     <a href="index.php?act=order_khoahoc"class="btn" type="submit">Thanh Toán Sau</a>
                                  </div>
                              </div>
                          </div>

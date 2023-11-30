@@ -88,11 +88,14 @@
 
                                 </ul>
                                 </li>
+                                <li><a href="index.php?act=lopcuatoi">Lớp Của Tôi</a>
                                 <li><a href="index.php?act=giangvien">Giảng Viên</a>
                                 </li>
                                 <li><a href="index.php?act=lienhe">Liên Hệ</a>
                                 </li>
-                                <li><a href="index.php?act=vechungtoi">Về Chúng Tôi</a></li>
+                                <li><a href="index.php?act=vechungtoi">Thông Tin</a></li>
+
+                                </li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->
@@ -106,21 +109,22 @@
                                     <button><i class="flaticon-loupe"></i></button>
                                 </form>
                             </div>
-
+    
                             <div class="header-login d-none d-lg-block">
                                 <?php
                                 if (isset($_SESSION['login'])) : ?>
                                     <?php if ($_SESSION['login']['id_cv']) : ?>
                                         <a class="link" href="admin/index.php"><i class="far fa-user"></i> Vào trang quản trị</a>
                                     <?php endif ?>
-                                    <a class="link" href="index.php?act=dangxuat"> Đăng xuất</a>
+                                    <!-- <label for="">Xin chào Trần Đình Minh</label> -->
+                                    <!-- <a style="background-color: #1CB098; color: black; margin-left: 100px;  width:70px ;height:30px ;" href="index.php?act=dangxuat"> Đăng xuất</a> -->
+                                    <a style="margin-left: 90px;" href="index.php?act=dangxuat">Đăng Xuất</a>
 
                                 <?php else : ?>
                                     <a class="link" href="index.php?act=dangnhaptk"><i class="far fa-user"></i> Đăng nhập</a>
                                     <a class="link" href="index.php?act=dangkytk"> Đăng ký</a>
                                 <?php endif ?>
                             </div>
-
                             <div class="header-toggle d-lg-none">
                                 <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                                     <span></span>
@@ -151,48 +155,6 @@
                 <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i class="flaticon-close"></i></button>
 
             </div>
-            <div class="offcanvas-body">
-                <div class="offcanvas-menu">
-                    <ul class="main-menu">
-                        <li class="active-menu">
-                            <a href="index.html">Home</a>
-                            <ul class="sub-menu">
-                                <li class="active"><a href="index.html">Main Demo</a></li>
-                                <li><a href="index-2.html">Course Hub</a></li>
-                                <li><a href="index-3.html">Distant Learning</a></li>
-                                <li><a href="index-4.html">Kindergarten</a></li>
-                                <li><a href="index-5.html">Language</a></li>
-                                <li><a href="index-6.html">University</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Single</a></li>
-                                <li><a href="event.html">Event</a></li>
-                                <li><a href="faq.html">Faq's</a></li>
-                                <li><a href="error.html">404 Page</a></li>
-                                <li><a href="login-register.html">Login Register</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="course-grid.html">Courses</a>
-                            <ul class="sub-menu">
-                                <li><a href="course-grid.html">Course Grid</a></li>
-                                <li><a href="course-list.html">Course List</a></li>
-                                <li><a href="course-details.html">Course Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="blog-list.html">Blog List</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+           
         </div>
         <!-- Offcanvas End -->

@@ -1,3 +1,10 @@
+<?php 
+$sum_doanh_thu=thong_ke_sum_doanh_thu();
+$sum_user = sum_user();
+$sum_khoa_hoc =  sum_khoa_hoc();
+$list_doanh_thu_kh =  thong_ke_khoahoc_doanh_thu();
+$list_user_new =  user_new();
+?>
 <div class="main-content">
     <h3 class="title-page">
         ADMIN
@@ -8,10 +15,10 @@
                 <div class="card mb-3 widget-chart">
                     <div class="widget-subheading fsize-1 pt-2 opacity-10 text-warning font-weight-bold">
                         <h5>
-                            Tổng sản phẩm
+                            Tổng khoá học
                         </h5>
                     </div>
-                    <span class="widget-numbers">3M</span>
+                    <span class="widget-numbers"><?php echo $sum_khoa_hoc[0] ?> </span>
                 </div>
             </a>
         </div>
@@ -24,7 +31,7 @@
                             Tổng thành viên
                         </h5>
                     </div>
-                    <span class="widget-numbers">3M</span>
+                    <span class="widget-numbers"><?php echo $sum_user[0] ?> </span>
                 </div>
             </a>
         </div>
@@ -33,14 +40,14 @@
                 <div class="card mb-3 widget-chart">
                     <div class="widget-subheading fsize-1 pt-2 opacity-10 text-warning font-weight-bold">
                         <h5>
-                            Tổng doanh mục
+                            Tổng doanh thu
                         </h5>
                     </div>
-                    <span class="widget-numbers">3M</span>
+                    <span class="widget-numbers"><?php echo number_format($sum_doanh_thu[0]) ?>VNĐ</span>
                 </div>
             </a>
         </div>
-        <div class="col-sm-12 col-md-6 col-xl-3">
+        <!-- <div class="col-sm-12 col-md-6 col-xl-3">
             <a href="#">
                 <div class="card mb-3 widget-chart">
                     <div class="widget-subheading fsize-1 pt-2 opacity-10 text-warning font-weight-bold">
@@ -51,7 +58,7 @@
                     <span class="widget-numbers">3M</span>
                 </div>
             </a>
-        </div>
+        </div> -->
     </section>
     <section class="row">
         <div class="col-sm-12 col-md-6 col xl-6">
@@ -64,64 +71,25 @@
                         <button type="button" class="btn btn-primary">Xem</button>
                     </div>
                 </form>
-                <p>Tổng doanh thu: <span>100.000.000 VND</span></p>
+                <p>Tổng doanh thu: <span><?php echo number_format($sum_doanh_thu[0]) ?>VNĐ</span></p>
                 <table class="revenue table table-hover">
                     <thead>
                         <th>#</th>
-                        <th>Mã đơn hàng</th>
+                        <th>Tên khoá học</th>
+                        <th>Học phí</th>
+                        <!-- <th>Số lưọng</th> -->
                         <th>Doanh thu</th>
                     </thead>
                     <tbody>
+                        <?php foreach($list_doanh_thu_kh as $value): ?>
                         <tr>
-                            <td>1</td>
-                            <td>GIA001</td>
-                            <td>100.000</td>
+                            <td><?php echo $value['id_kh'] ?></td>
+                            <td><?php echo $value['ten_kh'] ?></td>
+                            <td><?php echo number_format($value['hoc_phi']) ?> VND</td>
+                            <!-- <td><?php echo $value['so_luong'] ?></td> -->
+                            <td><?php echo number_format($value['doanh_thu']) ?>VND</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>GIA002</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>GIA003</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>GIA004</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>GIA004</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>GIA004</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>GIA004</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>GIA004</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>GIA004</td>
-                            <td>100.000</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>GIA004</td>
-                            <td>100.000</td>
-                        </tr>
+                        <?php endforeach?>
                     </tbody>
                 </table>
             </div>
@@ -164,18 +132,12 @@
                         <th>Username</th>
                     </thead>
                     <tbody>
+                        <?php foreach($list_user_new as $value):?>
                         <tr>
-                            <td>1</td>
-                            <td>giangcoder1</td>
+                            <td><?php echo $value['id_nguoidung'] ?></td>
+                            <td><?php echo $value['user'] ?></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>giangcoder2</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>giangcoder3</td>
-                        </tr>
+                        <?php endforeach ?>
                     </tbody>
                 </table>
             </div>

@@ -55,3 +55,11 @@ function update_dk($id, $ten_lop, $ten_gv, $thoi_gian_hoc, $ca_hoc, $so_luong, $
     $stmt = $con->prepare($sql);
     $stmt->execute();
 }
+function search_dang_ky($keywork){
+    
+    $con = connection();
+    $sql ="select * from dangky join khoa_hoc on dangky.id_kh = khoa_hoc.id_kh join trang_thai_thanh_toan on dangky.id_trangthai = trang_thai_thanh_toan.id_trangthai WHERE khoa_hoc.ten_kh LIKE '%$keywork%' OR ten_gv LIKE '%$keywork%' OR dangky.ten_nguoi_dung LIKE '%$keywork%' OR dangky.email LIKE '%$keywork%' OR dangky.phone LIKE '%$keywork%' OR trang_thai_thanh_toan.name_trang_thai LIKE '%$keywork%'";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
