@@ -71,7 +71,7 @@ function thong_ke_khoahoc(){
     return $stm->fetchAll();
 }
 function thong_ke_sum_doanh_thu(){
-    $sql = "SELECT SUM(so_luong * hoc_phi) FROM dangky WHERE id_trangthai = 1";
+    $sql = "SELECT SUM(hoc_phi) FROM dangky WHERE id_trangthai = 1";
     $conn = connection();
     $stm = $conn->prepare($sql);
     $stm->execute();
@@ -85,7 +85,7 @@ function sum_khoa_hoc(){
     return $stm->fetch();
 }
 function thong_ke_khoahoc_doanh_thu(){
-    $sql = "SELECT dangky.*,khoa_hoc.*, SUM(so_luong*dangky.hoc_phi) AS doanh_thu FROM khoa_hoc JOIN dangky ON khoa_hoc.id_kh = dangky.id_kh WHERE id_trangthai = 1 ORDER BY SUM(so_luong*dangky.hoc_phi) DESC";
+    $sql = "SELECT khoa_hoc.*, SUM(khoa_hoc.hoc_phi) as sum_hoc_phi FROM `khoa_hoc` JOIN dangky ON khoa_hoc.id_kh = dangky.id_kh WHERE dangky.id_trangthai = 1 GROUP BY khoa_hoc.id_kh ORDER BY sum_hoc_phi DESC";
     $conn = connection();
     $stm = $conn->prepare($sql);
     $stm->execute();

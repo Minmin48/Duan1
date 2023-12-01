@@ -246,9 +246,11 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $phone = $_POST['phone'];
                 $trangthai = $_POST['trangthai'];
                 $id = $_POST['id'];
-                $sua = getid_dk($id);
-                update_dk($id, $ten_lop, $ten_gv, $thoi_gian_hoc, $ca_hoc, $so_luong, $hoc_phi, $ten_nguoi_dung, $email, $khoahoc, $phone, $trangthai);
-                include_once "oder_khoahoc/list.php";
+                // $sua = getid_dk($id);
+                
+                update_dk($id, $trangthai);
+                $dangky_all = list_dkkhoahoc();
+               include_once "oder_khoahoc/list.php";
             }
             break;
         case 'demo':

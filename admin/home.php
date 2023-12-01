@@ -87,7 +87,7 @@ $list_user_new =  user_new();
                             <td><?php echo $value['ten_kh'] ?></td>
                             <td><?php echo number_format($value['hoc_phi']) ?> VND</td>
                             <!-- <td><?php echo $value['so_luong'] ?></td> -->
-                            <td><?php echo number_format($value['doanh_thu']) ?>VND</td>
+                            <td><?php echo number_format($value['sum_hoc_phi']) ?>VND</td>
                         </tr>
                         <?php endforeach?>
                     </tbody>

@@ -62,7 +62,7 @@
             </select>
         </div>
         <div class="form-group">
-            <input type="text" hidden name="id" value="<?php echo $sua['id_dk'] ?>">
+            <input type="text" hidden name="id" value="<?php echo $_GET['id'] ?>">
             <input class="btn btn-primary" type="submit" name="update" value="CẬP NHẬT">
             <a class="btn btn-success" href="index.php?act=listdkkhoahoc">DANH SÁCH</a>
         </div>

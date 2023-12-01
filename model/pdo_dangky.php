@@ -48,10 +48,10 @@ function getall_trangthai()
     $stmt->execute();
     return $stmt->fetchAll();
 }
-function update_dk($id, $ten_lop, $ten_gv, $thoi_gian_hoc, $ca_hoc, $so_luong, $hoc_phi, $ten_nguoi_dung, $email, $khoahoc, $phone, $trangthai)
+function update_dk($id,$trangthai)
 {
     $con = connection();
-    $sql = "update dangky set ten_lop = '$ten_lop', ten_gv = '$ten_gv', thoi_gian_hoc = '$thoi_gian_hoc', ca_hoc = '$ca_hoc', so_luong = '$so_luong', hoc_phi = '$hoc_phi',ten_nguoi_dung = '$ten_nguoi_dung',email = '$email',id_kh = '$khoahoc',phone = '$phone',id_trangthai = '$trangthai' where id_dk = '$id'";
+    $sql = "UPDATE dangky SET id_trangthai='$trangthai' WHERE id_dk = '$id'";
     $stmt = $con->prepare($sql);
     $stmt->execute();
 }

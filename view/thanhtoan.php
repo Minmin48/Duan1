@@ -30,13 +30,13 @@
 $listKhoaHoc =  get_khoahoc_by_id($_GET['id']);
 ?>
 <div class="section contact-section section-padding">
-    <div class="container">
-        <div class="row">
+    <div class="container" >
+        <div class="row" >
             <div class="col-lg-8">
                 <div class="contact-info-wrap">
                     <form action="" method="POST">
                         <div class="row">
-                            <h2 style="color: #1CB098; text-align: center;">Thanh Toán</h2>
+                            <h2 style="color: #1CB098; text-align: center;" >Thanh Toán</h2>
                             <p style="text-align: center;">Vui lòng kiểm tra thông tin Khách Hàng, Thông tin Khóa Học trước khi đăng ký</p>
                             <h3 style="color: #0E2A47;"><br>Thông tin hóa đơn điện tử</h3>
                             <div class="col-md-6">
