@@ -1,30 +1,4 @@
-<!-- <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
-    <div class="shape-1">
-        <img src="assets/images/shape/shape-7.png" alt="">
-    </div>
-    <div class="shape-2">
-        <img src="assets/images/shape/shape-1.png" alt="">
-    </div>
-    <div class="shape-3"></div>
-    <div class="container">
-        <div class="page-banner-wrap">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-banner text-center">
-                        <h2 class="title">Liên Hệ</h2>
-                        <ul class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="index.php?act=khoahoc">Trang Chủ</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Liên Hệ</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- Page Banner End -->
 <br><br>
-<!-- Course List Start -->
 <div class="section section-padding" style="background-image: url(assets/images/bg/page-banner.jpg);">
     <div class="container">
         <div class="hihi">
@@ -56,7 +30,7 @@
                  <!-- hi --> <br>
                  <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: -80px;">
                     <div class="blog-image">
-                        <img style="margin-left: 70px;" src="assets/images/min.jpg" alt="" width="50%">
+                        <img style="margin-left: 70px;" src="assets/images/tuanem.jpg" alt="" width="50%">
                     </div>
                     <div class="blog-content" style="font-size: 20px;">
                         <strong>Mr. Tuan Em - Hotline tư vấn (Chiều) </strong><br><span>0123456789</span>

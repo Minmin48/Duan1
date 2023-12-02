@@ -5,7 +5,6 @@
                 <img src="assets/images/anh7.png" alt="" width="20%">
             </div>
             <div class="image">
-                <!-- <img src="assets/images/dautich.png" alt="" width="6%"> -->
                 <img style="margin-top: -200px;" src="assets/images/banner.png" alt="" width="100%">
             </div>
             <div style="margin-top: -450px;">

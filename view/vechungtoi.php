@@ -18,7 +18,6 @@ if (isset($_GET['id_gv']) && $_GET['id_gv']) {
         <div class="page-banner-wrap">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Page Banner Content Start -->
                     <div class="page-banner text-center">
                         <h2 class="title">Về Chúng Tôi</h2>
                         <ul class="breadcrumb justify-content-center">
@@ -26,40 +25,11 @@ if (isset($_GET['id_gv']) && $_GET['id_gv']) {
                             <li class="breadcrumb-item active" aria-current="page">Về Chúng Tôi</li>
                         </ul>
                     </div>
-                    <!-- Page Banner Content End -->
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Page Banner End -->
-
-<!-- Course List Start -->
-<!-- <div class="section section-padding" style="background-color: #F1F1F1;">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-lg-7">
-                <a href="#" style="font-size: 60px;">Về chúng tôi</a>
-                <div style="font-size: 16px;">
-                    <a href="index.php">ADM English course</a><span> luôn nỗ lực hết mình để mang tới cho học viên môi trường học tiếng Anh hiệu quả nhất!</span>
-                </div>
-                <div style="margin-top: 15px; font-size: 18px;">
-                    <ul><a style="text-decoration: underline;" href="index.php?act=khoahoc">Khóa học:</a></ul>
-                    <ul><a style="text-decoration: underline;" href="index.php?act=khoahoc&idkh=10">- khóa học toeic</a></ul>
-                    <ul><a style="text-decoration: underline;" href="index.php?act=khoahoc&idkh=11">- khóa học Ielts</a></ul>
-                    <ul><a style="text-decoration: underline;" href="index.php?act=khoahoc&idkh=12">- khóa học cơ bản đến nâng cao</a></ul>
-                    <ul><a style="text-decoration: underline;" href="index.php?act=khoahoc&idkh=13">- khóa học mất gốc</a></ul>
-                    <ul><a style="text-decoration: underline;" href="index.php?act=giangvien">Giảng viên</a></ul>
-                    <ul><a style="text-decoration: underline;" href="index.php?act=lienhe">Liên hệ</a></ul><br>
-                    <ul><a href="index.php?act=dangkytk" class="btn btn-primary mb-2">Đăng Ký Ngay</a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <img src="assets/images/hero-img.png" style="margin-top: -60px;" alt="" width="100%"></span>
-            </div>
-        </div>
-    </div>
-</div> -->
 <div class="section section-padding" style="margin-top: -100px;">
     <div class="container">
         <div style="text-align: center; font-size: 25px">
@@ -83,7 +53,6 @@ if (isset($_GET['id_gv']) && $_GET['id_gv']) {
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/gvxoggRzrvw?si=TUp-KiCSgvrB49LF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
-
         <br><br>
         <div style="text-align: center;">
             <h2 style="color:#1CB098;">Báo Chí Nói về Chúng Tôi</h2>
@@ -94,26 +63,21 @@ if (isset($_GET['id_gv']) && $_GET['id_gv']) {
         <br><br>
         <h2 style="color:#1CB098">Đội Ngũ Giáo Viên</h2>
         <div class="blog-wrap">
-
             <div class="row">
                 <?php foreach ($dssp as $value) : ?>
                     <div class="col-lg-4 col-sm-6">
-                        <!-- Latest Blog Item Start -->
-
                         <div class="single-blog text-center">
                             <div class="blog-img">
-                                <a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><img style="border-radius:8px" width="350px" height="350px" src="img/<?php echo $value['hinh_gv'] ?>" alt="Courses"></a>
+                                <a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><img style="border-radius:8px" width="280px" height="380px" src="img/<?php echo $value['hinh_gv'] ?>" alt="Courses"></a>
                             </div>
                             <div class="blog-content">
                                 <div class="blog-meta">
                                     <span><i class="far fa-user"></i><a href="index.php?act=giangvien&id=<?php echo $value['id_gv'] ?>"><?php echo $value['ten_gv'] ?></a></span>
-
                                 </div>
                                 <h3 class="title"><a href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"><?php echo $value['ten_gv'] ?></a></h3>
                                 <a class="blog-btn" href="index.php?act=ct_giangvien&id=<?php echo $value['id_gv'] ?>"> Chi Tiết</a>
                             </div>
                         </div>
-                        <!-- Latest Blog Item End -->
                     </div>
                 <?php endforeach; ?>
             </div>

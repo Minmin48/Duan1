@@ -36,20 +36,7 @@
 </head>
 
 <body>
-
     <div class="main-wrapper">
-
-
-        <!-- Preloader start -->
-        <div id="preloader">
-            <div class="preloader">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <!-- Preloader End -->
-
-        <!-- Header Start  -->
         <div class="section header">
             <div class="header-top-section">
                 <div class="container">
@@ -61,18 +48,14 @@
                 </div>
             </div>
             <div class="header-bottom-section">
-
                 <div class="container-fluid custom-container">
                     <div class="header-bottom-wrap">
-
                         <div class="header-logo-menu">
-
                             <!--  Header Logo Start  -->
                             <div class="header-logo">
                                 <a href="index.php"><img src="assets/images/anh7.png" alt="logo" width="100%" height="80px"></a>
                             </div>
                             <!--  Header Logo End  -->
-
                             <!--  Header Menu Start  -->
                             <div class="header-menu d-none d-lg-block">
                                 <ul class="main-menu">
@@ -85,7 +68,6 @@
                                             <li><a href="index.php?act=khoahoc&idkh=<?php echo $value['id_dm'] ?>"><?php echo $value['ten_dm'] ?></a></li>
                                         <?php endforeach ?>
                                     </li>
-
                                 </ul>
                                 </li>
                                 <li><a href="index.php?act=lopcuatoi">Lớp Của Tôi</a>
@@ -94,12 +76,10 @@
                                 <li><a href="index.php?act=lienhe">Liên Hệ</a>
                                 </li>
                                 <li><a href="index.php?act=vechungtoi">Thông Tin</a></li>
-
                                 </li>
                                 </ul>
                             </div>
                             <!--  Header Menu End  -->
-
                         </div>
                         <!-- Header Meta Start -->
                         <div class="header-meta">
@@ -116,10 +96,7 @@
                                     <?php if ($_SESSION['login']['id_cv']) : ?>
                                         <a class="link" href="admin/index.php"><i class="far fa-user"></i> Vào trang quản trị</a>
                                     <?php endif ?>
-                                    <!-- <label for="">Xin chào Trần Đình Minh</label> -->
-                                    <!-- <a style="background-color: #1CB098; color: black; margin-left: 100px;  width:70px ;height:30px ;" href="index.php?act=dangxuat"> Đăng xuất</a> -->
                                     <a style="margin-left: 90px;" href="index.php?act=dangxuat">Đăng Xuất</a>
-
                                 <?php else : ?>
                                     <a class="link" href="index.php?act=dangnhaptk"><i class="far fa-user"></i> Đăng nhập</a>
                                     <a class="link" href="index.php?act=dangkytk"> Đăng ký</a>
@@ -132,29 +109,9 @@
                                     <span></span>
                                 </button>
                             </div>
-
                         </div>
-                        <!-- Header Meta End -->
-
                     </div>
                 </div>
             </div>
         </div>
         <!-- Header End -->
-
-        <!-- Offcanvas Start -->
-        <div class="offcanvas offcanvas-start" id="offcanvasMenu">
-
-            <div class="offcanvas-header">
-                <!-- Offcanvas Logo Start -->
-                <div class="offcanvas-logo">
-                    <a href="index.html"><img src="assets/images/logo-white.png" alt=""></a>
-                </div>
-                <!-- Offcanvas Logo End -->
-
-                <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i class="flaticon-close"></i></button>
-
-            </div>
-           
-        </div>
-        <!-- Offcanvas End -->

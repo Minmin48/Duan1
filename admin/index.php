@@ -253,9 +253,6 @@ if (isset($_GET['act']) && $_GET['act']) {
                include_once "oder_khoahoc/list.php";
             }
             break;
-        case 'demo':
-            include_once 'demo.php';
-            break;
         default:
             include_once "home.php";
             break;

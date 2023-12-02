@@ -1,10 +1,4 @@
- <!-- <?php
-        include_once '../model/pdo.php';
-        include_once '../model/pdo_lop.php';
-
-        ?> -->
- <!-- Page Banner Start -->
- <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
+<div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
      <div class="shape-1">
          <img src="assets/images/shape/shape-7.png" alt="">
      </div>
@@ -16,7 +10,6 @@
          <div class="page-banner-wrap">
              <div class="row">
                  <div class="col-lg-12">
-                     <!-- Page Banner Content Start -->
                      <div class="page-banner text-center">
                          <h2 class="title">Đăng Ký</h2>
                          <ul class="breadcrumb justify-content-center">
@@ -24,7 +17,6 @@
                              <li class="breadcrumb-item active" aria-current="page">Đăng ký</li>
                          </ul>
                      </div>
-                     <!-- Page Banner Content End -->
                  </div>
              </div>
          </div>
@@ -112,7 +104,6 @@
                                  </div>
                                  <br><br>
                              </div>
-                             
                              <div class="col-md-12">
                                  <div class="form-btn">
                                      <input type="text" value="<?= $_GET['id_kh'] ?>" hidden name="id_kh">
@@ -127,13 +118,10 @@
                  </div>
              </div>
              <div class="col-lg-4">
-                 <!-- Contact Form Wrap Start -->
                  <div class="contact-form-wrap">
                      <img src="assets/images/hero-img.png" alt="">
                  </div>
-
              </div>
-             <!-- Contact Form Wrap End -->
          </div>
      </div>
  </div>

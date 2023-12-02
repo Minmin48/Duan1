@@ -1,17 +1,12 @@
-<!-- Login & Register Start -->
 <div class="section login-register-section section-padding"><br><br>
     <div class="container">
-        <!-- Login & Register Wrapper Start -->
         <div class="login-register-wrap">
             <div class="row gx-5">
                 <div class="col-lg-6">
-                    <!-- Login & Register Box Start -->
                     <div class="login-register-box">
-                        <!-- Section Title Start -->
                         <div class="section-title">
                             <h2 class="title">Quên Mật Khẩu</h2>
                         </div>
-                        <!-- Section Title End -->
                         <div class="login-register-form">
                             <form action="index.php?act=quenmatkhau" method="POST">
 
@@ -29,8 +24,8 @@
                                 } ?>
                             </div>
                             <div class="form-btn">
-                                    <a href="index.php?act=dangnhaptk">Đăng Nhập!</a>
-                                </div>
+                                <a href="index.php?act=dangnhaptk">Đăng Nhập!</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -44,7 +44,6 @@
                     <td> <?php echo $value['phone'] ?></td>
                     <td ><?php echo $value['name_trang_thai']  ?></td>
                     <td>
-                        <!-- <a href="index.php?act=delete_status&id=<?php echo $value['id_dk'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a> -->
                         <a href="index.php?act=update_status&id=<?php echo $value['id_dk'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i>Cập Nhật</a>
                     </td>
                 </tr>

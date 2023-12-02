@@ -47,18 +47,6 @@ $list_user_new =  user_new();
                 </div>
             </a>
         </div>
-        <!-- <div class="col-sm-12 col-md-6 col-xl-3">
-            <a href="#">
-                <div class="card mb-3 widget-chart">
-                    <div class="widget-subheading fsize-1 pt-2 opacity-10 text-warning font-weight-bold">
-                        <h5>
-                            Tổng doanh mục
-                        </h5>
-                    </div>
-                    <span class="widget-numbers">3M</span>
-                </div>
-            </a>
-        </div> -->
     </section>
     <section class="row">
         <div class="col-sm-12 col-md-6 col xl-6">

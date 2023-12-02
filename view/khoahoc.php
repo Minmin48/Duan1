@@ -22,7 +22,6 @@ $list = getid_danhmuc($_GET['idkh'])
         <div class="page-banner-wrap">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Page Banner Content Start -->
                     <div class="page-banner text-center">
                         <h2 class="title">KHÓA HỌC <?php
                                                     if (isset($_GET['idkh']) && $_GET['idkh']) {
@@ -40,7 +39,6 @@ $list = getid_danhmuc($_GET['idkh'])
                                                                                     ?></li>
                         </ul>
                     </div>
-                    <!-- Page Banner Content End -->
                 </div>
             </div>
         </div>
@@ -51,89 +49,37 @@ $list = getid_danhmuc($_GET['idkh'])
 <!-- Course List Start -->
 <div class="section section-padding">
     <div class="container">
-
-        <!-- Course List Wrapper Start -->
         <div class="course-list-wrapper">
             <div class="row">
                 <div class="col-lg-3">
-                    <!-- Sidebar Wrapper Start -->
                     <div class="sidebar-wrap-02">
-
-                        <!-- Sidebar Wrapper Start -->
                         <div class="sidebar-widget-02">
-                            <h3 class="widget-title">Type of Courses</h3>
-
-                            <div class="widget-checkbox">
-                                <ul class="checkbox-list">
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox1">
-                                        <label class="form-check-label" for="checkbox1">Free (11)</label>
-                                    </li>
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox2">
-                                        <label class="form-check-label" for="checkbox2">Paid (11)</label>
-                                    </li>
-                                </ul>
-                            </div>
+                            <h3 class="widget-title">Top 5 Khóa Học</h3>
+                            <br>
+                            <div class="image">
+                                <a href="index.php?act=ct_khoahoc&id=22"><img src="img/toeic1.jpg" alt="" width="30%">&nbsp;&nbsp;&nbsp;<span>Toeic 400+</span></a>
+                            </div><br>
+                            <div class="image">
+                                <a href="index.php?act=ct_khoahoc&id=21"><img src="img/toeic3.jpg" alt="" width="30%">&nbsp;&nbsp;&nbsp;<span>Toeic mất gốc</span></a>
+                            </div><br>
+                            <div class="image">
+                                <a href="index.php?act=ct_khoahoc&id=24"><img src="img/toeic4.png" alt="" width="30%">&nbsp;&nbsp;&nbsp;<span>Toeic Nâng Cao</span></a>
+                            </div><br>
+                            <div class="image">
+                                <a href="index.php?act=ct_khoahoc&id=36"><img src="assets/images/matgoc.jpg" alt="" width="30%">&nbsp;&nbsp;&nbsp;<span>Mất Gốc</span></a>
+                            </div><br>
+                            <div class="image">
+                                <a href="index.php?act=ct_khoahoc&id=32"><img src="assets/images/ielts.jpg" alt="" width="30%">&nbsp;&nbsp;&nbsp;<span>IELTS Mất Gốc</span></a>
+                            </div><br>
                         </div>
-                        <!-- Sidebar Wrapper End -->
-
-                        <!-- Sidebar Wrapper Start -->
-                        <div class="sidebar-widget-02">
-                            <h3 class="widget-title">Categories</h3>
-
-                            <div class="widget-checkbox">
-                                <ul class="checkbox-list">
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox3">
-                                        <label class="form-check-label" for="checkbox3">Technology (11)</label>
-                                    </li>
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox4">
-                                        <label class="form-check-label" for="checkbox4">Business (07)</label>
-                                    </li>
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox5">
-                                        <label class="form-check-label" for="checkbox5">Development (11)</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Sidebar Wrapper End -->
-
-                        <!-- Sidebar Wrapper Start -->
-                        <div class="sidebar-widget-02">
-                            <h3 class="widget-title">Instructor</h3>
-
-                            <div class="widget-checkbox">
-                                <ul class="checkbox-list">
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox6">
-                                        <label class="form-check-label" for="checkbox6">Jimmy Jason (11)</label>
-                                    </li>
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox7">
-                                        <label class="form-check-label" for="checkbox7">Harnold (07)</label>
-                                    </li>
-                                    <li class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkbox8">
-                                        <label class="form-check-label" for="checkbox8">Eric Madny (11)</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Sidebar Wrapper End -->
                     </div>
-                    <!-- Sidebar Wrapper End -->
                 </div>
                 <div class="col-lg-9">
-                    <!-- Course Collapse End -->
                     <div class="tab-content">
                         <div id="grid">
                             <div class="">
                                 <div class="row">
                                     <?php
-                                    // $list_kh = get_khoahoc();
                                     foreach ($dssp as $value) : ?>
                                         <div class="col-3">
                                             <div class="courses-image">

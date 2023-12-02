@@ -9,4 +9,4 @@ if (!isset($_SESSION)) {
 }
 update_soluong_hs($_SESSION['order']['id_lop']);
 oder_dkkhoahoc($_SESSION['order']['tenlop'], $_SESSION['order']['tengv'], $_SESSION['order']['thoigian'], $_SESSION['order']['cahoc'], $_SESSION['order']['soluong'], $_SESSION['order']['hocphi'], $_SESSION['order']['user'], $_SESSION['order']['email'], $_SESSION['order']['phone'], $_SESSION['order']['khoahoc']);
-header('location: http://localhost/Minhinh/index.php?act=order_khoahoc');
+header('location:http://localhost/adm/Duan1/index.php?act=order_khoahoc');

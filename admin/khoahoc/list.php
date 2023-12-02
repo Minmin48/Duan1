@@ -28,7 +28,7 @@
                     <td><?php echo $value['thoi_gian'] ?></td>
                     <td> <?php echo $value['thongtin_kh'] ?></td>
                     <td><img src="../img/<?php echo $value['hinh'] ?>" width="75px" height="60px" alt=""> </td>
-                    <td><?php echo $value['hoc_phi'] ?> VNĐ</td>
+                    <td><?php echo number_format($value['hoc_phi']) ?> VNĐ</td>
                     <td>
                         <?php
                         echo $value['ten_dm'];

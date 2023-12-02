@@ -1,13 +1,9 @@
        <!-- Footer Start -->
        <div class="footer-section section">
            <div class="container">
-
-               <!-- Footer Widget Wrapper Start -->
                <div class="footer-widget-wrap">
                    <div class="row">
-
                        <div class="col-lg-3 col-sm-6">
-                           <!-- Footer Widget Start -->
                            <div class="footer-widget widget-about">
                                <div class="footer-logo">
                                    <a href="index.php"><img src="assets/images/anh7_1.png" alt="" width="65%"></a>
@@ -23,11 +19,8 @@
                                    </div>
                                </div>
                            </div>
-                           <!-- Footer Widget End -->
                        </div>
-
                        <div class="col-lg-3 col-sm-6">
-                           <!-- Footer Widget Start -->
                            <div class="footer-widget">
                                <h4 class="footer-widget-title">Khóa học xu hướng</h4>
                                <div class="widget-link">
@@ -39,11 +32,8 @@
                                    </ul>
                                </div>
                            </div>
-                           <!-- Footer Widget End -->
                        </div>
-
                        <div class="col-lg-3 col-sm-6">
-                           <!-- Footer Widget Start -->
                            <div class="footer-widget">
                                <h4 class="footer-widget-title">Dậy Tiếng Anh</h4>
                                <div class="widget-link">
@@ -55,10 +45,8 @@
                                    </ul>
                                </div>
                            </div>
-                           <!-- Footer Widget End -->
                        </div>
                        <div class="col-lg-3 col-sm-6">
-                           <!-- Footer Widget Start -->
                            <div class="footer-widget">
                                <h4 class="footer-widget-title">Tải Ngay</h4>
                                <div class="widget-download">
@@ -66,25 +54,18 @@
                                    <a href="#"><img src="assets/images/app-2.png" alt=""></a>
                                </div>
                            </div>
-                           <!-- Footer Widget End -->
                        </div>
                    </div>
                </div>
-               <!-- Footer Widget Wrapper End -->
-
-               <!-- Footer Copyright Start -->
                <div class="footer-copyright">
                    <div class="copyright-wrapper">
                        <div class="row align-items-center">
                            <div class="col-lg-6 col-md-6">
-                               <!-- Footer Copyright Text Start -->
                                <div class="copyright-text">
                                    <p>© Copyright 2023 tienganhadm. </p>
                                </div>
-                               <!-- Footer Copyright Text End -->
                            </div>
                            <div class="col-lg-6 col-md-6">
-                               <!-- Footer Copyright Social Start -->
                                <div class="copyright-social">
                                    <ul class="social">
                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -92,13 +73,10 @@
                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                    </ul>
                                </div>
-                               <!-- Footer Copyright Social End -->
                            </div>
                        </div>
                    </div>
                </div>
-               <!-- Footer Copyright End -->
-
            </div>
        </div>
        <!-- Footer End -->

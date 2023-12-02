@@ -3,7 +3,8 @@ if (!isset($_POST)) {
     session_start();
     
 }
-var_dump($_SESSION);
+var_dump($_SESSION['login']['user']);
+$my_khoa_hoc =my_khoa_hoc($_SESSION['login']['user']);
 ?>
 <link rel="stylesheet" href="view/css/css.css">
 <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
@@ -18,7 +19,6 @@ var_dump($_SESSION);
         <div class="page-banner-wrap">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Page Banner Content Start -->
                     <div class="page-banner text-center">
                         <h2 class="title">Lớp Của Tôi</h2>
                         <ul class="breadcrumb justify-content-center">
@@ -26,7 +26,6 @@ var_dump($_SESSION);
                             <li class="breadcrumb-item active" aria-current="page">Lớp Của Tôi</li>
                         </ul>
                     </div>
-                    <!-- Page Banner Content End -->
                 </div>
             </div>
         </div>
@@ -54,35 +53,35 @@ var_dump($_SESSION);
                                 <th>Email</th>
                                 <th>SĐT</th>
                                 <th>Khóa Học</th>
+                                <th>Trạng Thái</th>
                                 <th></th>
                             </tr>
                         </thead>
-                        <?php if (isset($_SESSION['order'])): ?>
+                        <?php
+                        $index = 0;
+                         foreach($my_khoa_hoc as $value):$index++ ?>
                         <tbody>
-                            <?php
-                            $index = 0;
-                            $index++ ?>
                                 <tr class="table-primary">
                                     <td><?php echo $index; ?></td>
-                                    <td><?php echo $_SESSION['order']['tenlop']?></td>
-                                    <td><?php echo $_SESSION['order']['tengv']?></td>
-                                    <td><?php echo $_SESSION['order']['thoigian']?></td>
-                                    <td><?php echo $_SESSION['order']['cahoc']?></td>
-                                    <td><?php echo $_SESSION['order']['soluong']?></td>
-                                    <td><?php echo $_SESSION['order']['hocphi']?></td>
-                                    <td><?php echo $_SESSION['order']['user']?></td>
-                                    <td><?php echo $_SESSION['order']['email']?></td>
-                                    <td><?php echo $_SESSION['order']['phone']?></td>
-                                    <td><?php echo $_SESSION['order']['khoahoc']?></td>
+                                    <td><?php echo $value['ten_lop']?></td>
+                                    <td><?php echo $value['ten_gv']?></td>
+                                    <td><?php echo $value['thoi_gian_hoc']?></td>
+                                    <td><?php echo $value['ca_hoc']?></td>
+                                    <td><?php echo $value['so_luong']?></td>
+                                    <td><?php echo number_format($value['hoc_phi'])?> VNĐ</td>
+                                    <td><?php echo $value['ten_nguoi_dung']?></td>
+                                    <td><?php echo $value['email']?></td>
+                                    <td><?php echo $value['phone']?></td>
+                                    <td><?php echo $value['ten_kh']?></td>
+                                    <td><?php echo $value['name_trang_thai']?></td>
                                     <td>
                                     </td>
                                 </tr>
                         </tbody>
-                        <?php endif?>
+                        <?php endforeach?>
                     </table>
                 </section>
             </main>
         </div>
     </div>
 </div>
-<?php echo $_SESSION['order']['id_lop']?>
