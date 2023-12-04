@@ -217,7 +217,7 @@ if (isset($_GET['act']) && $_GET['act']) {
         case 'listdkkhoahoc':
             if (isset($_POST['search'])) {
                 $dangky_all = search_dang_ky($_POST['timkiem']);
-            }else {
+            } else {
                 $dangky_all = list_dkkhoahoc();
             }
             include_once 'oder_khoahoc/list.php';
@@ -247,10 +247,10 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $trangthai = $_POST['trangthai'];
                 $id = $_POST['id'];
                 // $sua = getid_dk($id);
-                
+
                 update_dk($id, $trangthai);
                 $dangky_all = list_dkkhoahoc();
-               include_once "oder_khoahoc/list.php";
+                include_once "oder_khoahoc/list.php";
             }
             break;
         default:

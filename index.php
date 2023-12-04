@@ -76,13 +76,10 @@ if (isset($_GET['act'])) {
                 if (is_array($checkemail)) {
                     $thongbao = "Mật khẩu của bạn là: " . $checkemail['pass'];
                 } else {
-                    $thongbao = "email này không tồn tại!";
+                    $thongbao = "Email này không tồn tại!";
                 }
             }
             include_once 'view/taikhoan/quenmatkhau.php';
-            break;
-        case 'thanhtoan':
-            include_once 'vnpay_php/vnpay_php/index.php';
             break;
         case 'giangvien':
             include_once 'view/giangvien.php';
@@ -97,20 +94,15 @@ if (isset($_GET['act'])) {
             include_once 'view/vechungtoi.php';
             break;
         case 'order_khoahoc':
-            echo 'In4 khoá học lấy từ $session order';
-            var_dump($_SESSION['order']);
-            //Code giao diện thành công hiện thị thông tin khoá học start
             include_once 'view/thanks.php';
-            //Code giao diện thành công hiện thị thông tin khoá học end
-            // unset($_SESSION['order']);
             break;
 
         case 'lopcuatoi':
             if (!isset($_SESSION['login'])) {
-                $error_login = 'Bạn cần login để xem được những khoá học đã mua';
+                $error_login = 'Bạn cần login để xem được những khoá học đã đăng ký';
                 include_once 'view/taikhoan/dangnhap.php';
-            }else
-            include_once 'view/lopcuatoi.php';
+            } else
+                include_once 'view/lopcuatoi.php';
             break;
         default:
             break;
