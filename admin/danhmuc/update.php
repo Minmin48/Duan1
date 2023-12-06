@@ -6,7 +6,8 @@
 
         <div class="form-group">
             <label class="form-label" for="name">Tên danh mục</label>
-            <input type="text" class="form-control" name="name" id="name" value="<?php echo $sua['ten_dm'] ?>" required>
+            <input type="text" class="form-control" name="name" value="<?php echo $sua['ten_dm'] ?>">
+            <span style="color: red;"><?php echo isset($err['name']) ? $err['name'] : '' ?></span>
         </div>
         <div class="form-group">
             <input class="btn btn-primary" type="submit" name="update" value="CẬP NHẬT">
@@ -15,7 +16,7 @@
         </div>
         <?php
         if (isset($thongbao) && ($thongbao != ""))
-            echo $thongbao;
+            echo '<span style="color: red;">' . $thongbao . '</span>';
         ?>
     </form>
 </div>

@@ -75,6 +75,4 @@ function getid_lop_gv_kh($id)
     $stmt = $con->prepare($sql);
     $stmt->execute();
     return $stmt->fetch();
-    // join nguoi_dung on lop.id_nd = nguoi_dung.id_nguoidung 
 }
-

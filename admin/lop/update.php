@@ -5,15 +5,18 @@
     <form class="addPro" action="index.php?act=updatelop" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label class="form-label" for="name">Tên Lớp</label>
-            <input value="<?php echo $sua['ten_lop'] ?>" type="text" class="form-control" name="lop" required>
+            <input value="<?php echo $sua['ten_lop'] ?>" type="text" class="form-control" name="tenlop">
+            <span style="color: red;"><?php echo isset($err['tenlop']) ? $err['tenlop'] : '' ?></span>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Thời Gian Học</label>
-            <input value="<?php echo $sua['thoi_gian_hoc'] ?>" class="form-control" type="date" name="thoigian" required>
+            <input value="<?php echo $sua['thoi_gian_hoc'] ?>" class="form-control" type="date" name="thoigian">
+            <span style="color: red;"><?php echo isset($err['thoigian']) ? $err['thoigian'] : '' ?></span>
         </div>
         <div class="form-group">
-            <label class="form-label" for="">Ca học</label>
-            <input value="<?php echo $sua['ca_hoc'] ?>" class="form-control" type="text" name="cahoc" required>
+            <label class="form-label">Ca học</label>
+            <input value="<?php echo $sua['ca_hoc'] ?>" class="form-control" type="text" name="cahoc">
+            <span style="color: red;"><?php echo isset($err['cahoc']) ? $err['cahoc'] : '' ?></span>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Khóa Học</label>
@@ -39,7 +42,8 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="">Số Lượng Học Sinh</label>
-            <input class="form-control" type="text" name="soluong" value="<?php echo $sua['soluong_hs'] ?>" required>
+            <input class="form-control" type="text" name="soluong" value="<?php echo $sua['soluong_hs'] ?>">
+            <span style="color: red;"><?php echo isset($err['soluong']) ? $err['soluong'] : '' ?></span>
         </div>
 
         <div class="form-group">
@@ -49,7 +53,7 @@
         </div>
         <?php
         if (isset($thongbao) && ($thongbao != ""))
-            echo $thongbao;
+            echo '<span style="color: red;">' . $thongbao . '</span>';
         ?>
     </form>
 </div>

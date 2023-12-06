@@ -39,18 +39,28 @@
                                 <span class="text-danger"><?php echo (isset($error_dky_khoa_hoc)) ? $error_dky_khoa_hoc : '' ?></span>
                                 <div class="single-form">
                                     <input type="text" class="form-control" placeholder="Email" name="email">
+                                    <span style="color: red;"><?php echo isset($err['email']) ? $err['email'] : '' ?></span>
                                 </div>
                                 <div class="single-form">
-                                    <input type="text" class="form-control" placeholder="Username" name="user">
+                                    <input type="text" class="form-control" placeholder="Họ & tên" name="user">
+                                    <span style="color: red;"><?php echo isset($err['user']) ? $err['user'] : '' ?></span>
                                 </div>
                                 <div class="single-form">
                                     <input type="text" class="form-control" placeholder="Phone" name="phone">
+                                    <span style="color: red;"><?php echo isset($err['phone']) ? $err['phone'] : '' ?></span>
                                 </div>
                                 <div class="single-form">
                                     <input type="password" class="form-control" placeholder="Password " name="pass">
+                                    <span style="color: red;"><?php echo isset($err['pass']) ? $err['pass'] : '' ?></span>
                                 </div>
                                 <div class="form-btn">
                                     <input type="submit" name="submit" value="Đăng Ký" class="btn btn-success">
+                                </div>
+                                <div>
+                                    <?php
+                                    if (isset($thongbao) && ($thongbao != ""))
+                                        echo '<span style="color: red;">' . $thongbao . '</span>';
+                                    ?>
                                 </div>
                                 <div class="form-btn">
                                     <a href="index.php?act=dangnhaptk">Bạn đã có tài khoản!</a>

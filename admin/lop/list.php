@@ -34,7 +34,7 @@
                     <td>
                         <a href="index.php?act=updatelop&id=<?php echo $value['id_lop'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
 
-                        <a href="index.php?act=deletelop&id=<?php echo $value['id_lop'] ?>" onclick="return confirm('Bạn muốn xóa không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
+                        <a href="index.php?act=deletelop&id=<?php echo $value['id_lop'] ?>" onclick="return confirm('Bạn muốn xóa lớp không')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
                     </td>
                 </tr>
             <?php endforeach ?>

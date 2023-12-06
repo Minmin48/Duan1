@@ -43,7 +43,7 @@ $list_user_new =  user_new();
                             Tổng doanh thu các khóa học
                         </h5>
                     </div>
-                    <span class="widget-numbers"><?php echo number_format($sum_doanh_thu[0]) ?>VNĐ</span>
+                    <span class="widget-numbers"><?php echo number_format($sum_doanh_thu[0]) ?> VNĐ</span>
                 </div>
             </a>
         </div>
@@ -67,9 +67,9 @@ $list_user_new =  user_new();
                             <tr>
                                 <td><?php echo $index ?></td>
                                 <td><?php echo $value['ten_kh'] ?></td>
-                                <td><?php echo number_format($value['hoc_phi']) ?> VND</td>
+                                <td><?php echo number_format($value['hoc_phi']) ?> VNĐ</td>
                                 <!-- <td><?php echo $value['so_luong'] ?></td> -->
-                                <td><?php echo number_format($value['sum_hoc_phi']) ?>VND</td>
+                                <td><?php echo number_format($value['sum_hoc_phi']) ?> VNĐ</td>
                             </tr>
                         <?php endforeach ?>
                     </tbody>

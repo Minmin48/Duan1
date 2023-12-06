@@ -46,15 +46,42 @@ if (isset($_GET['act'])) {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
                 $phone = $_POST['phone'];
-                insert_taikhoan($email, $user, $pass, $phone);
-                include_once 'view/taikhoan/dangnhap.php';
-            } else
-                include_once 'view/taikhoan/dangky.php';
+                if (empty($user)) {
+                    $err['user'] = "Không được để trống";
+                }
+                if (empty($email)) {
+                    $err['email'] = "Không được để trống";
+                } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $err['email'] = "Sai định dạng email";
+                }
+                if (empty($pass)) {
+                    $err['pass'] = "Không được để trống";
+                }
+                $number = '/^0\d{9}$/';
+                if (empty($phone)) {
+                    $err['phone'] = "Không được để trống";
+                } else if (!preg_match($number, $phone)) {
+                    $err['phone'] = "Sai định dạng số điện thoại";
+                }
+                if (!$err) {
+                    insert_taikhoan($email, $user, $pass, $phone);
+                    $thongbao = "Đăng ký thành công";
+                }
+            }
+            include_once 'view/taikhoan/dangky.php';
             break;
         case 'dangnhaptk':
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
                 $email = $_POST['email'];
                 $pass = $_POST['pass'];
+                if (empty($email)) {
+                    $err['email'] = "Không được để trống";
+                } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $err['email'] = "Sai định dạng email";
+                }
+                if (empty($pass)) {
+                    $err['pass'] = "Không được để trống";
+                }
                 $kq = getuserinfo($email, $pass);
                 if ($kq) {
                     $_SESSION['login'] = $kq;
@@ -70,13 +97,15 @@ if (isset($_GET['act'])) {
             header('location: index.php');
             break;
         case 'quenmatkhau':
-            if (isset($_POST['guiemail']) && ($_POST['guiemail'])) {
+            if (isset($_POST['submit']) && ($_POST['submit'])) {
                 $email = $_POST['email'];
                 $checkemail = checkemail($email);
                 if (is_array($checkemail)) {
                     $thongbao = "Mật khẩu của bạn là: " . $checkemail['pass'];
-                } else {
-                    $thongbao = "Email này không tồn tại!";
+                } else if (empty($email)) {
+                    $err['email'] = "Không được để trống";
+                } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $err['email'] = "Sai định dạng email";
                 }
             }
             include_once 'view/taikhoan/quenmatkhau.php';

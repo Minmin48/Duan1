@@ -1,10 +1,9 @@
 <?php
 if (!isset($_POST)) {
     session_start();
-    
 }
 var_dump($_SESSION['login']['user']);
-$my_khoa_hoc =my_khoa_hoc($_SESSION['login']['user']);
+$my_khoa_hoc = my_khoa_hoc($_SESSION['login']['user']);
 ?>
 <link rel="stylesheet" href="view/css/css.css">
 <div class="section page-banner-section" style="background-image: url(assets/images/bg/page-banner.jpg);">
@@ -59,26 +58,26 @@ $my_khoa_hoc =my_khoa_hoc($_SESSION['login']['user']);
                         </thead>
                         <?php
                         $index = 0;
-                         foreach($my_khoa_hoc as $value):$index++ ?>
-                        <tbody>
+                        foreach ($my_khoa_hoc as $value) : $index++ ?>
+                            <tbody>
                                 <tr class="table-primary">
                                     <td><?php echo $index; ?></td>
-                                    <td><?php echo $value['ten_lop']?></td>
-                                    <td><?php echo $value['ten_gv']?></td>
-                                    <td><?php echo $value['thoi_gian_hoc']?></td>
-                                    <td><?php echo $value['ca_hoc']?></td>
-                                    <td><?php echo $value['so_luong']?></td>
-                                    <td><?php echo number_format($value['hoc_phi'])?> VNĐ</td>
-                                    <td><?php echo $value['ten_nguoi_dung']?></td>
-                                    <td><?php echo $value['email']?></td>
-                                    <td><?php echo $value['phone']?></td>
-                                    <td><?php echo $value['ten_kh']?></td>
-                                    <td><?php echo $value['name_trang_thai']?></td>
+                                    <td><?php echo $value['ten_lop'] ?></td>
+                                    <td><?php echo $value['ten_gv'] ?></td>
+                                    <td><?php echo $value['thoi_gian_hoc'] ?></td>
+                                    <td><?php echo $value['ca_hoc'] ?></td>
+                                    <td><?php echo $value['so_luong'] ?></td>
+                                    <td><?php echo number_format($value['hoc_phi']) ?> VNĐ</td>
+                                    <td><?php echo $value['ten_nguoi_dung'] ?></td>
+                                    <td><?php echo $value['email'] ?></td>
+                                    <td><?php echo $value['phone'] ?></td>
+                                    <td><?php echo $value['ten_kh'] ?></td>
+                                    <td><?php echo $value['name_trang_thai'] ?></td>
                                     <td>
                                     </td>
                                 </tr>
-                        </tbody>
-                        <?php endforeach?>
+                            </tbody>
+                        <?php endforeach ?>
                     </table>
                 </section>
             </main>

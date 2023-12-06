@@ -7,6 +7,7 @@ include_once "../model/pdo_lop.php";
 include_once "../model/pdo_taikhoan.php";
 include_once "../model/pdo_dangky.php";
 include_once "header.php";
+$err = [];
 if (isset($_GET['act']) && $_GET['act']) {
     $act = $_GET['act'];
     switch ($act) {
@@ -14,8 +15,12 @@ if (isset($_GET['act']) && $_GET['act']) {
         case 'adddm':
             if (isset($_POST['submit']) && $_POST['submit']) {
                 $name = $_POST['name'];
-                add_danhmuc($name);
-                $thongbao = "Thêm thành công";
+                if (empty($name)) {
+                    $err['name'] = "Không được để trống";
+                } else {
+                    add_danhmuc($name);
+                    $thongbao = "Thêm thành công";
+                }
             }
             include_once "danhmuc/add.php";
             break;
@@ -27,7 +32,6 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $id = $_GET['id'];
                 delete_danhmuc($id);
                 include_once "danhmuc/list.php";
-                $thongbao = "Xóa thành công";
             }
             break;
         case 'updatedm':
@@ -39,12 +43,18 @@ if (isset($_GET['act']) && $_GET['act']) {
             if (isset($_POST['update']) && $_POST['update']) {
                 $name = $_POST['name'];
                 $id = $_POST['id'];
-                update_danhmuc($id, $name);
-                include_once "danhmuc/list.php";
+                $sua = getid_danhmuc($id);
+                if (empty($name)) {
+                    $err['name'] = "Không được để trống";
+                } else {
+                    update_danhmuc($id, $name);
+                    $thongbao = "Cập nhật thành công";
+                }
             }
+            include_once "danhmuc/update.php";
             break;
 
-            // Khóa học
+            // Quản lý khóa học
 
         case 'addkhoahoc':
             if (isset($_POST['submit']) && ($_POST['submit'])) {
@@ -57,8 +67,21 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $luu_anh = "../img/";
                 $tai_file = $luu_anh . basename($_FILES['hinh']['name']);
                 move_uploaded_file($_FILES['hinh']['tmp_name'], $tai_file);
-                add_khoahoc($tenkh, $tendm, $thoigian, $text, $hinh, $hocphi);
-                $thongbao = "Thêm thành công";
+                if (empty($tenkh)) {
+                    $err['name'] = "Không được để trống";
+                }
+                if (empty($thoigian)) {
+                    $err['thoigian'] = "Không được để trống";
+                }
+                if (empty($hocphi)) {
+                    $err['hocphi'] = "Không được để trống";
+                } else if ($hocphi < 0) {
+                    $err['hocphi'] = "Nhập học phí lớn hơn 0";
+                }
+                if (!$err) {
+                    add_khoahoc($tenkh, $tendm, $thoigian, $text, $hinh, $hocphi);
+                    $thongbao = "Thêm thành công";
+                }
             }
             include_once "khoahoc/add.php";
             break;
@@ -92,12 +115,27 @@ if (isset($_GET['act']) && $_GET['act']) {
                 } else {
                     $hinh = $sua['hinh'];
                 }
-                update_khoahoc($id, $tenkh, $tendm, $thoigian, $text, $hinh, $hocphi);
-                include_once "khoahoc/list.php";
-                echo '<span>Cập nhật thành công</span>';
+                if (empty($tenkh)) {
+                    $err['name'] = "Không được để trống";
+                }
+                if (empty($thoigian)) {
+                    $err['thoigian'] = "Không được để trống";
+                }
+                if (empty($hocphi)) {
+                    $err['hocphi'] = "Không được để trống";
+                } else if ($hocphi < 0) {
+                    $err['hocphi'] = "Nhập học phí lớn hơn 0";
+                }
+                if (!$err) {
+                    update_khoahoc($id, $tenkh, $tendm, $thoigian, $text, $hinh, $hocphi);
+                    $thongbao = "Cập nhật thành công";
+                }
             }
+            include_once "khoahoc/update.php";
             break;
-            // Giảng viên
+
+            //Quản lý giảng viên
+
         case 'addgv':
             if (isset($_POST['submit']) && ($_POST['submit'])) {
                 $tengv = $_POST['name'];
@@ -108,6 +146,11 @@ if (isset($_GET['act']) && $_GET['act']) {
                     $anh = $hinh['name'];
                     $file = $dir . $anh;
                     move_uploaded_file($hinh['tmp_name'], $file);
+                }
+                if (empty($tengv)) {
+                    $err['name'] = "Không được để trống";
+                }
+                if (!$err) {
                     add_giangvien($tengv, $anh, $text);
                     $thongbao = "Thêm thành công";
                 }
@@ -141,21 +184,43 @@ if (isset($_GET['act']) && $_GET['act']) {
                 } else {
                     $hinh = $sua['hinh_gv'];
                 }
-                update_giangvien($id, $tengv, $text, $hinh);
-                include_once "giangvien/list.php";
+                if (empty($tengv)) {
+                    $err['name'] = "Không được để trống";
+                }
+                if (!$err) {
+                    update_giangvien($id, $tengv, $text, $hinh);
+                    $thongbao = "Cập nhật thành công";
+                }
             }
+            include_once "giangvien/update.php";
             break;
-            //Lớp
+            //Quản lý lớp
         case 'addlop':
             if (isset($_POST['submit']) && ($_POST['submit'])) {
-                $tenlop = $_POST['lop'];
+                $tenlop = $_POST['tenlop'];
                 $thoigian = $_POST['thoigian'];
                 $cahoc = $_POST['cahoc'];
                 $khoahoc = $_POST['dmkhoahoc'];
                 $giangvien = $_POST['dmgiangvien'];
                 $soluong = $_POST['soluong'];
-                add_lop($tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong);
-                $thongbao = "Thêm thành công";
+                if (empty($tenlop)) {
+                    $err['tenlop'] = "Không được để trống";
+                }
+                if (empty($thoigian)) {
+                    $err['thoigian'] = "Không được để trống";
+                }
+                if (empty($cahoc)) {
+                    $err['cahoc'] = "Không được để trống";
+                }
+                if (empty($soluong)) {
+                    $err['soluong'] = "Không được để trống";
+                } else if ($soluong < 0) {
+                    $err['soluong'] = "Nhập số lượng lớn hơn 0";
+                }
+                if (!$err) {
+                    add_lop($tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong);
+                    $thongbao = "Thêm thành công";
+                }
             }
             include_once "lop/add.php";
             break;
@@ -174,7 +239,7 @@ if (isset($_GET['act']) && $_GET['act']) {
                 include_once "lop/update.php";
             }
             if (isset($_POST['update']) && $_POST['update']) {
-                $tenlop = $_POST['lop'];
+                $tenlop = $_POST['tenlop'];
                 $thoigian = $_POST['thoigian'];
                 $cahoc = $_POST['cahoc'];
                 $khoahoc = $_POST['dmkhoahoc'];
@@ -182,11 +247,30 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $soluong = $_POST['soluong'];
                 $id = $_POST['id'];
                 $sua = getid_lop($id);
-                update_lop($id, $tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong);
-                include_once "lop/list.php";
+                if (empty($tenlop)) {
+                    $err['tenlop'] = "Không được để trống";
+                }
+                if (empty($thoigian)) {
+                    $err['thoigian'] = "Không được để trống";
+                }
+                if (empty($cahoc)) {
+                    $err['cahoc'] = "Không được để trống";
+                }
+                if (empty($soluong)) {
+                    $err['soluong'] = "Không được để trống";
+                } else if ($soluong < 0) {
+                    $err['soluong'] = "Nhập số lượng lớn hơn 0";
+                }
+                if (!$err) {
+                    update_lop($id, $tenlop, $thoigian, $cahoc, $khoahoc, $giangvien, $soluong);
+                    $thongbao = "Cập nhật thành công";
+                }
             }
+            include_once "lop/update.php";
             break;
-            // Đăng ký tài khoản của người dùng
+
+            // Quản lý tài khoản người dùng
+
         case 'list_user':
             include_once 'dangky/list.php';
             break;
@@ -203,17 +287,39 @@ if (isset($_GET['act']) && $_GET['act']) {
                 $phone = $_POST['phone'];
                 $chucvu = $_POST['chucvu'];
                 $id = $_POST['id'];
-                $sua = getid_lop($id);
-                update_tk($id, $user, $email, $pass, $phone, $chucvu);
-                include_once "dangky/list.php";
+                $sua = getid_tk($id);
+                if (empty($user)) {
+                    $err['user'] = "Không được để trống";
+                }
+                if (empty($email)) {
+                    $err['email'] = "Không được để trống";
+                } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $err['email'] = "Sai định dạng email";
+                }
+                if (empty($pass)) {
+                    $err['pass'] = "Không được để trống";
+                }
+                $number = '/^0\d{9}$/';
+                if (empty($phone)) {
+                    $err['phone'] = "Không được để trống";
+                } else if (!preg_match($number, $phone)) {
+                    $err['phone'] = "Sai định dạng số điện thoại";
+                }
+                if (!$err) {
+                    update_tk($id, $user, $email, $pass, $phone, $chucvu);
+                    $thongbao = "Cập nhật thành công";
+                }
             }
+            include_once "dangky/update.php";
             break;
         case 'delete_user':
             $id = $_GET['id'];
             delete_tk($id);
             include_once 'dangky/list.php';
             break;
+
             // trạng thái đăng ký khóa học của người dùng
+
         case 'listdkkhoahoc':
             if (isset($_POST['search'])) {
                 $dangky_all = search_dang_ky($_POST['timkiem']);
@@ -234,20 +340,9 @@ if (isset($_GET['act']) && $_GET['act']) {
                 include_once "oder_khoahoc/update.php";
             }
             if (isset($_POST['update']) && $_POST['update']) {
-                $ten_lop = $_POST['ten_lop'];
-                $ten_gv = $_POST['ten_gv'];
-                $thoi_gian_hoc = $_POST['thoi_gian_hoc'];
-                $ca_hoc = $_POST['ca_hoc'];
-                $so_luong = $_POST['so_luong'];
-                $hoc_phi = $_POST['hoc_phi'];
-                $ten_nguoi_dung = $_POST['ten_nguoi_dung'];
-                $email = $_POST['email'];
-                $khoahoc = $_POST['khoahoc'];
-                $phone = $_POST['phone'];
                 $trangthai = $_POST['trangthai'];
                 $id = $_POST['id'];
-                // $sua = getid_dk($id);
-
+                $sua = getid_dk($id);
                 update_dk($id, $trangthai);
                 $dangky_all = list_dkkhoahoc();
                 include_once "oder_khoahoc/list.php";

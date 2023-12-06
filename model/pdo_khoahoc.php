@@ -64,37 +64,42 @@ function show_khoahoc($idkh)
 }
 
 // thống kê khoá học theo số lượng đăng ký
-function thong_ke_khoahoc(){
+function thong_ke_khoahoc()
+{
     $sql = "SELECT * FROM khoa_hoc JOIN dangky ON khoa_hoc.id_kh = dangky.id_kh ORDER BY dangky.so_luong DESC";
     $conn = connection();
     $stm = $conn->prepare($sql);
     $stm->execute();
     return $stm->fetchAll();
 }
-function thong_ke_sum_doanh_thu(){
+function thong_ke_sum_doanh_thu()
+{
     $sql = "SELECT SUM(hoc_phi) FROM dangky WHERE id_trangthai = 1";
     $conn = connection();
     $stm = $conn->prepare($sql);
     $stm->execute();
     return $stm->fetch();
 }
-function sum_khoa_hoc(){
+function sum_khoa_hoc()
+{
     $sql = "SELECT COUNT(*) FROM khoa_hoc";
     $conn = connection();
     $stm = $conn->prepare($sql);
     $stm->execute();
     return $stm->fetch();
 }
-function thong_ke_khoahoc_doanh_thu(){
-    $sql = "SELECT khoa_hoc.*, SUM(khoa_hoc.hoc_phi) as sum_hoc_phi FROM `khoa_hoc` JOIN dangky ON khoa_hoc.id_kh = dangky.id_kh WHERE dangky.id_trangthai = 1 GROUP BY khoa_hoc.id_kh ORDER BY sum_hoc_phi DESC";
+function thong_ke_khoahoc_doanh_thu()
+{
+    $sql = "SELECT khoa_hoc.*, SUM(khoa_hoc.hoc_phi) as sum_hoc_phi FROM khoa_hoc JOIN dangky ON khoa_hoc.id_kh = dangky.id_kh WHERE dangky.id_trangthai = 1 GROUP BY khoa_hoc.id_kh ORDER BY sum_hoc_phi DESC";
     $conn = connection();
     $stm = $conn->prepare($sql);
     $stm->execute();
     return $stm->fetchAll();
 }
 // list khóa học đã đăng ký.
-function my_khoa_hoc($ten_nguoi_dung){
-    $sql = "SELECT * FROM `dangky` JOIN khoa_hoc ON khoa_hoc.id_kh = dangky.id_kh JOIN trang_thai_thanh_toan ON dangky.id_trangthai = trang_thai_thanh_toan.id_trangthai WHERE dangky.ten_nguoi_dung ='$ten_nguoi_dung'";
+function my_khoa_hoc($ten_nguoi_dung)
+{
+    $sql = "SELECT * FROM dangky JOIN khoa_hoc ON khoa_hoc.id_kh = dangky.id_kh JOIN trang_thai_thanh_toan ON dangky.id_trangthai = trang_thai_thanh_toan.id_trangthai WHERE dangky.ten_nguoi_dung ='$ten_nguoi_dung'";
     $conn = connection();
     $stm = $conn->prepare($sql);
     $stm->execute();

@@ -9,7 +9,8 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="name">Tên Danh Mục</label>
-            <input type="text" class="form-control" name="name" id="name" required>
+            <input type="text" class="form-control" name="name">
+            <span style="color: red;"><?php echo isset($err['name']) ? $err['name'] : '' ?></span>
         </div>
         <div class="form-group">
             <input class="btn btn-primary" type="submit" name="submit" value="THÊM MỚI">
@@ -17,7 +18,7 @@
         </div>
         <?php
         if (isset($thongbao) && ($thongbao != ""))
-            echo $thongbao;
+            echo '<span style="color: red;">' . $thongbao . '</span>';
         ?>
     </form>
 </div>

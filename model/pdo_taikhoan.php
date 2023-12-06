@@ -61,18 +61,19 @@ function checkemail($email)
     $kq = $stm->fetch();
     return $kq;
 }
-function sum_user() {
+function sum_user()
+{
     $con = connection();
     $sql = "SELECT COUNT(*) FROM nguoi_dung";
     $stmt = $con->prepare($sql);
     $stmt->execute();
     return $stmt->fetch();
 }
-function user_new(){
+function user_new()
+{
     $con = connection();
-    $sql = "SELECT * FROM `nguoi_dung` ORDER BY id_nguoidung DESC";
+    $sql = "SELECT * FROM nguoi_dung ORDER BY id_nguoidung DESC";
     $stmt = $con->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll();
-
 }

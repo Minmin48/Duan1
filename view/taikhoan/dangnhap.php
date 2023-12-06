@@ -39,9 +39,11 @@
                                 <span class="text-danger"><?php echo (isset($error_login)) ? $error_login : '' ?></span>
                                 <div class="single-form">
                                     <input type="text" class="form-control" placeholder="Email" name="email">
+                                    <span style="color: red;"><?php echo isset($err['email']) ? $err['email'] : '' ?></span>
                                 </div>
                                 <div class="single-form">
                                     <input type="password" class="form-control" placeholder="Password" name="pass">
+                                    <span style="color: red;"><?php echo isset($err['pass']) ? $err['pass'] : '' ?></span>
                                 </div>
                                 <div class="form-btn">
                                     <input type="submit" name="dangnhap" value="Đăng Nhập Ngay" class="btn btn-success">

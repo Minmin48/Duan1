@@ -12,16 +12,17 @@
 
                                 <div class="single-form">
                                     <input type="text" class="form-control" placeholder="Email" name="email">
+                                    <span style="color: red;"><?php echo isset($err['email']) ? $err['email'] : '' ?></span>
                                 </div>
                                 <div class="form-btn">
-                                    <input type="submit" name="guiemail" value="Gửi" class="btn btn-success">
+                                    <input type="submit" name="submit" value="Gửi" class="btn btn-success">
                                 </div>
                             </form>
-                            <div style="color: red"><br>
+                            <div><br>
                                 <?php
-                                if (isset($thongbao) && ($thongbao != "")) {
-                                    echo $thongbao;
-                                } ?>
+                                if (isset($thongbao) && ($thongbao != ""))
+                                    echo '<span style="color: red;">' . $thongbao . '</span>';
+                                ?>
                             </div>
                             <div class="form-btn">
                                 <a href="index.php?act=dangnhaptk">Đăng Nhập!</a>

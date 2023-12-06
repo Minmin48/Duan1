@@ -6,7 +6,8 @@
 
         <div class="form-group">
             <label class="form-label">Tên Khóa Học</label>
-            <input required type="text" class="form-control" name="name" placeholder="Nhập tên khóa học" value="<?php echo $sua['ten_kh'] ?>">
+            <input type="text" class="form-control" name="name" value="<?php echo $sua['ten_kh'] ?>">
+            <span style="color: red;"><?php echo isset($err['name']) ? $err['name'] : '' ?></span>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Chọn Danh Mục</label>
@@ -19,8 +20,9 @@
             </select>
         </div>
         <div class="form-group">
-            <label class="form-label" for="">Thời Gian Học</label>
-            <input value="<?php echo $sua['thoi_gian'] ?>" class="form-control" type="datetime-local" name="thoigian" required>
+            <label class="form-label">Thời Gian Học</label>
+            <input value="<?php echo $sua['thoi_gian'] ?>" class="form-control" type="datetime-local" name="thoigian">
+            <span style="color: red;"><?php echo isset($err['thoigian']) ? $err['thoigian'] : '' ?></span>
         </div>
         <div class="form-group">
             <label class="form-label" for="">Thông Tin</label>
@@ -33,7 +35,8 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="">Học Phí</label>
-            <input value="<?php echo $sua['hoc_phi'] ?>" type="text" name="hocphi" class="form-control" placeholder="Nhập vào học phí" required>
+            <input value="<?php echo $sua['hoc_phi'] ?>" type="text" name="hocphi" class="form-control">
+            <span style="color: red;"><?php echo isset($err['hocphi']) ? $err['hocphi'] : '' ?></span>
         </div>
 
         <div class="form-group">
@@ -43,7 +46,7 @@
         </div>
         <?php
         if (isset($thongbao) && ($thongbao != ""))
-            echo $thongbao;
+            echo '<span style="color: red;">' . $thongbao . '</span>';
         ?>
     </form>
 </div>

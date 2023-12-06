@@ -37,7 +37,7 @@ $listgv =   getid_giangvien($_GET['id']);
                     <div class="blog-details-post">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 30px;" class="single-blog-post single-blog">
                             <div class="blog-image">
-                                <img src="img/<?php echo $listgv['hinh_gv'] ?>" alt="Author" width="420px" height="400px">
+                                <img src="img/<?php echo $listgv['hinh_gv'] ?>" alt="Author" width="350px" height="400px">
                             </div>
                             <div class="blog-content">
                                 <h3 class="title" style=" color:#1CB098">Thông Tin Giảng Viên</h3><br>

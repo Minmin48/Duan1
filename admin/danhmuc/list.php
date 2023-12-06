@@ -22,7 +22,7 @@
                     <td><?php echo $value['ten_dm'] ?></td>
                     <td>
                         <a href="index.php?act=updatedm&id=<?php echo $value['id_dm'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i>Sửa</a>
-                        <a href="index.php?act=deletedm&id=<?php echo $value['id_dm'] ?>" onclick="return confirm('Bạn có muốn xóa không?')" class="btn btn-danger"><i class="fa-solid fa-trash"></i>Xóa</a>
+                        <a href="index.php?act=deletedm&id=<?php echo $value['id_dm'] ?>" onclick="return confirm('Bạn có muốn xóa danh mục không?')" class="btn btn-danger"><i class="fa-solid fa-trash"></i>Xóa</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
