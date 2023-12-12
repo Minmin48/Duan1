@@ -128,7 +128,7 @@ if (isset($_GET['act'])) {
 
         case 'lopcuatoi':
             if (!isset($_SESSION['login'])) {
-                $error_login = 'Bạn cần login để xem được những khoá học đã đăng ký';
+                $error_login = 'Bạn cần đăng nhập để xem được những khoá học đã đăng ký';
                 include_once 'view/taikhoan/dangnhap.php';
             } else
                 include_once 'view/lopcuatoi.php';

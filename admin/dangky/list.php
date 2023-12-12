@@ -4,12 +4,12 @@
         <thead>
             <tr class="table-success">
                 <th>STT</th>
-                <th>User</th>
+                <th>Tên Người Dùng</th>
                 <th>Email</th>
                 <th>Password</th>
-                <th>Phone</th>
-                <th>Chức vụ</th>
-                <th>Chức năng</th>
+                <th>SĐT</th>
+                <th>Chức Vụ</th>
+                <th>Chức Năng</th>
             </tr>
         </thead>
 

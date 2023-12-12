@@ -10,18 +10,18 @@
         <thead>
             <tr class="table-success">
                 <th>STT</th>
-                <th>Tên lớp</th>
-                <th>Giảng viên</th>
-                <th>Thời gian học</th>
-                <th>Ca học</th>
-                <th>Số lượng</th>
-                <th>Học phí</th>
-                <th>User</th>
+                <th>Tên Lớp</th>
+                <th>Giảng Viên</th>
+                <th>Thời Gian Học</th>
+                <th>Ca Học</th>
+                <th>Slot</th>
+                <th>Học Phí</th>
+                <th>Tên Người Dùng</th>
                 <th>Email</th>
-                <th>Khóa học</th>
-                <th>Phone</th>
-                <th>Trạng thái</th>
-                <th>Chức năng</th>
+                <th>Khóa Học</th>
+                <th>SĐT</th>
+                <th>Trạng Thái</th>
+                <th>Chức Năng</th>
             </tr>
         </thead>
 

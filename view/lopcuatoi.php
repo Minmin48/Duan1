@@ -46,7 +46,7 @@ $my_khoa_hoc = my_khoa_hoc($_SESSION['login']['user']);
                                 <th>Tên Giảng Viên</th>
                                 <th>Thời Gian Học</th>
                                 <th>Ca Học</th>
-                                <th>Số Lượng</th>
+                                <th>Slot</th>
                                 <th>Học Phí</th>
                                 <th>Họ Tên</th>
                                 <th>Email</th>
